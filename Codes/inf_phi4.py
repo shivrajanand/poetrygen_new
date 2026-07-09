@@ -28,11 +28,15 @@ if tokenizer.pad_token is None:
 model = AutoModelForCausalLM.from_pretrained(
     BASE_MODEL,
     torch_dtype=torch.bfloat16,
+    device_map="cuda",
+    attn_implementation="flash_attention_2",
 )
 
-model.to(device)
 model.eval()
 
+# model.to(device)
+model.eval()
+model = torch.compile(model)
 # =========================
 # GENERATION
 # =========================

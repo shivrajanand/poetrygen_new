@@ -42,6 +42,7 @@
 
 # Prompts
 
+- Prompts rules received from file [gitapress_with_prompts.csv](https://drive.google.com/file/d/16-a-ZbmWgr_Qf4p_2HR2olGrIVBdwmbw/view?usp=sharing)
 ## Generic Prompt structure
 
 ```
