@@ -12,7 +12,7 @@ INPUT_CSV = "Files/v3_gitapress_final.csv"
 OUTPUT_CSV = "Outputs/phi4_ut_zs.csv"
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
-BATCH_SIZE = 16
+BATCH_SIZE = 12
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # =========================
@@ -96,30 +96,72 @@ def generate_batch(batch_df):
 
 
 
+# # =========================
+# # RUN
+# # =========================
+# df = pd.read_csv(INPUT_CSV)
+# df = df[df["split"] == "test"].reset_index(drop=True)
+# size = df.shape[0]
+# print("Total Samples = ", size)
+
+
+# df["model_out"] = ""
+
+# for start in tqdm(range(0, size, BATCH_SIZE)):
+#     end = min(start + BATCH_SIZE, size)
+
+#     batch = df.iloc[start:end]
+
+#     preds = generate_batch(batch)
+
+#     df.loc[start:end-1, "model_out"] = preds
+
+#     if end % SAVE_FREQUENCY == 0:
+#         df.to_csv(OUTPUT_CSV, index=False)
+
+
+# df.to_csv(OUTPUT_CSV, index=False)
+
+# print(f"Output file saved to {OUTPUT_CSV}")
+
+
+
 # =========================
 # RUN
 # =========================
-df = pd.read_csv(INPUT_CSV)
-df = df[df["split"] == "test"].reset_index(drop=True)
-size = df.shape[0]
-print("Total Samples = ", size)
+import os
 
+if os.path.exists(OUTPUT_CSV):
+    print(f"Resuming from {OUTPUT_CSV}")
+    df = pd.read_csv(OUTPUT_CSV)
+else:
+    df = pd.read_csv(INPUT_CSV)
+    df = df[df["split"] == "test"].reset_index(drop=True)
+    df["model_out"] = ""
 
-df["model_out"] = ""
+size = len(df)
 
-for start in tqdm(range(0, size, BATCH_SIZE)):
-    end = min(start + BATCH_SIZE, size)
+# Find rows that still need inference
+pending_mask = df["model_out"].isna() | (df["model_out"].astype(str).str.strip() == "")
+pending_indices = df.index[pending_mask].tolist()
 
-    batch = df.iloc[start:end]
+print(f"Total Samples     = {size}")
+print(f"Remaining Samples = {len(pending_indices)}")
+
+for start in tqdm(range(0, len(pending_indices), BATCH_SIZE)):
+    batch_indices = pending_indices[start:start + BATCH_SIZE]
+
+    batch = df.loc[batch_indices]
 
     preds = generate_batch(batch)
 
-    df.loc[start:end-1, "model_out"] = preds
+    df.loc[batch_indices, "model_out"] = preds
 
-    if end % SAVE_FREQUENCY == 0:
+    # Save periodically
+    if ((start // BATCH_SIZE) + 1) % SAVE_FREQUENCY == 0:
         df.to_csv(OUTPUT_CSV, index=False)
 
-
+# Final save
 df.to_csv(OUTPUT_CSV, index=False)
 
 print(f"Output file saved to {OUTPUT_CSV}")

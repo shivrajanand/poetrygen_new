@@ -78,6 +78,8 @@ Output Verse:
 
 # Token count analysis on train split only
 
-| Model           | Dataset                      | Split   | Columns   |   Samples |   Min |   Median |   Mean |   90p |   95p |   99p |   Max |
-|:----------------|:-----------------------------|:--------|:----------|----------:|------:|---------:|-------:|------:|------:|------:|------:|
-| microsoft/phi-4 | Files/v3_gitapress_final.csv | train   | sa        |     23346 |    63 |       86 |  90.46 |    98 |   125 |   202 |   248 |
+| Model           | Dataset                      | Split   | Columns    |   Samples |   Min |   Median |   Mean |   90p |   95p |   99p |   Max |
+|:----------------|:-----------------------------|:--------|:-----------|----------:|------:|---------:|-------:|------:|------:|------:|------:|
+| microsoft/phi-4 | Files/v3_gitapress_final.csv | train   | sa         |     23346 |    63 |       86 |  90.46 |    98 |   125 |   202 |   248 |
+| Qwen/Qwen3-14B  | Files/v3_gitapress_final.csv | train   | sa         |     23346 |    58 |       80 |  83.31 |    91 |   115 |   186 |   231 |
+| unsloth/phi-4   | Files/v3_gitapress_final.csv | train   | prompt, hi |     23346 |   509 |      612 | 625.11 |   684 |   726 |   860 |  1305 |

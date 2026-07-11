@@ -4,9 +4,10 @@ from transformers import AutoTokenizer
 # ======================================================
 # Hyperparameters
 # ======================================================
-MODEL_NAME = "microsoft/phi-4"
+MODEL_NAME = "unsloth/phi-4"
 CSV_FILE = "Files/v3_gitapress_final.csv"
-TEXT_COLUMNS = ["sa"]   
+TEXT_COLUMNS = ['prompt',"hi"]  #Uncomment this for training
+# TEXT_COLUMNS = ['sa'] #Uncomment this for infernece  
 SPLIT = "train"            
 
 # ======================================================
