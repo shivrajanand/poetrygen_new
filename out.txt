@@ -1,136 +1,0 @@
-🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
-Unsloth: Your Flash Attention 2 installation seems to be broken. Using Xformers instead. No performance changes will be seen.
-🦥 Unsloth Zoo will now patch everything to make training faster!
-==((====))==  Unsloth 2026.5.2: Fast Llama patching. Transformers: 5.5.0.
-   \\   /|    NVIDIA A40. Num GPUs = 1. Max memory: 44.424 GB. Platform: Linux.
-O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 8.6. CUDA Toolkit: 12.8. Triton: 3.6.0
-\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.35. FA2 = False]
- "-____-"     Free license: http://github.com/unslothai/unsloth
-Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
-Loading weights:   0%|          | 0/363 [00:00<?, ?it/s]Loading weights:   2%|▏         | 9/363 [00:00<00:03, 89.47it/s]Loading weights:   6%|▌         | 20/363 [00:00<00:03, 89.09it/s]Loading weights:   8%|▊         | 29/363 [00:00<00:04, 73.28it/s]Loading weights:  20%|█▉        | 71/363 [00:00<00:01, 187.32it/s]Loading weights:  28%|██▊       | 103/363 [00:00<00:01, 227.25it/s]Loading weights:  37%|███▋      | 134/363 [00:00<00:00, 251.68it/s]Loading weights:  44%|████▍     | 161/363 [00:00<00:00, 254.45it/s]Loading weights:  52%|█████▏    | 190/363 [00:00<00:00, 260.63it/s]Loading weights:  60%|█████▉    | 217/363 [00:00<00:00, 258.71it/s]Loading weights:  67%|██████▋   | 245/363 [00:01<00:00, 261.73it/s]Loading weights:  76%|███████▌  | 275/363 [00:01<00:00, 271.07it/s]Loading weights:  87%|████████▋ | 315/363 [00:01<00:00, 308.82it/s]Loading weights:  97%|█████████▋| 353/363 [00:01<00:00, 324.83it/s]Loading weights: 100%|██████████| 363/363 [00:01<00:00, 252.45it/s]
-Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
-Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
-Unsloth 2026.5.2 patched 40 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
-warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
-`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
-Train: 23346
-Val: 2918
---------------------------------------------------------------------------------------
-sa
-ब्रह्मादयः सुरगणा मुनयोऽथ सिद्धाः सत्त्वैकतानमतयो वचसां प्रवाहैः नाराधितुं पुरुगुणैरधुनापि पित्रः किं तोष्टुमर्हति स मे हरिरुग्रजातेः ॥
-
-hi
-प्रह्लादजी बोले जिनकी बुद्धि एकमात्र सत्त्वगुणमें ही स्थित है, वे ब्रह्मादि देवगण तथा मुनि और सिद्धगण भी अपने वचनोंके प्रवाहसे, अनन्त गुणों के कारण अभीतक जिनकी आराधना नहीं कर सके, वे भगवान् हरि मुझ उग्रजातिमें उत्पन्न हुए दैत्यपर कैसे सन्तुष्ट हो सकते हैं ? ॥
-
-skr_out
-vasantatilakā [14: tBjjgg]
-
-syllable_count
-56
-
-skr_meter
-Vasantatilakā
-
-meter_cd
-Vasantatilakā
-
-comments
-None
-
-prompt
-Objective:
-
-Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
-
-Rules of Chandas:
-Syllable Rules:
-LAGHU vowels: अ, इ, उ, ऋ, ऌ
-GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
-HRASVA vowels: अ, इ, उ, ऋ, ऌ
-DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
-Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
-Syllable containing anusvāra("ं") or visarga("ः") is always marked as guru.
-Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
-is always marked guru.
-
-Verse Rules:
-The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
-The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
-The complete pattern for each pāda is: GGL GLL LGL LGL GG.
-L means Laghu, G means Guru.
-
-Language:
-The generated verse must be in sanskrit in Devanagri script.
-The Input given is in the hindi.
-Do NOT include English words, transliteration, labels, or explanations.
-
-Output Format:
-(Output exactly 4 lines, one pada per line. Nothing else.)
-
-
-split
-train
-
-text
-<|im_start|>system<|im_sep|>Objective:
-
-Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
-
-Rules of Chandas:
-Syllable Rules:
-LAGHU vowels: अ, इ, उ, ऋ, ऌ
-GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
-HRASVA vowels: अ, इ, उ, ऋ, ऌ
-DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
-Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
-Syllable containing anusvāra("ं") or visarga("ः") is always marked as guru.
-Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
-is always marked guru.
-
-Verse Rules:
-The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
-The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
-The complete pattern for each pāda is: GGL GLL LGL LGL GG.
-L means Laghu, G means Guru.
-
-Language:
-The generated verse must be in sanskrit in Devanagri script.
-The Input given is in the hindi.
-Do NOT include English words, transliteration, labels, or explanations.
-
-Output Format:
-(Output exactly 4 lines, one pada per line. Nothing else.)
-<|im_end|><|im_start|>user<|im_sep|>Meaning:
-प्रह्लादजी बोले जिनकी बुद्धि एकमात्र सत्त्वगुणमें ही स्थित है, वे ब्रह्मादि देवगण तथा मुनि और सिद्धगण भी अपने वचनोंके प्रवाहसे, अनन्त गुणों के कारण अभीतक जिनकी आराधना नहीं कर सके, वे भगवान् हरि मुझ उग्रजातिमें उत्पन्न हुए दैत्यपर कैसे सन्तुष्ट हो सकते हैं ? ॥
-
-Generate the Sanskrit verse.
-<|im_end|><|im_start|>assistant<|im_sep|>ब्रह्मादयः सुरगणा मुनयोऽथ सिद्धाः सत्त्वैकतानमतयो वचसां प्रवाहैः नाराधितुं पुरुगुणैरधुनापि पित्रः किं तोष्टुमर्हति स मे हरिरुग्रजातेः ॥<|im_end|>
-
---------------------------------------------------------------------------------------
-Unsloth: Tokenizing ["text"] (num_proc=64):   0%|          | 0/23346 [00:00<?, ? examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   2%|▏         | 365/23346 [00:06<06:33, 58.45 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   3%|▎         | 730/23346 [00:07<03:23, 111.26 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   5%|▍         | 1095/23346 [00:08<02:21, 157.53 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   6%|▋         | 1460/23346 [00:09<01:51, 195.72 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   8%|▊         | 1825/23346 [00:10<01:35, 226.38 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   9%|▉         | 2190/23346 [00:12<01:25, 246.48 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  11%|█         | 2555/23346 [00:13<01:19, 260.67 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  13%|█▎        | 2920/23346 [00:14<01:13, 279.12 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  14%|█▍        | 3285/23346 [00:15<01:09, 289.10 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  16%|█▌        | 3650/23346 [00:16<01:06, 296.38 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  17%|█▋        | 4015/23346 [00:18<01:05, 297.17 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  19%|█▉        | 4380/23346 [00:19<01:02, 301.98 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  20%|██        | 4745/23346 [00:20<01:01, 304.64 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  22%|██▏       | 5110/23346 [00:21<00:59, 305.93 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  23%|██▎       | 5475/23346 [00:22<00:58, 306.22 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  25%|██▌       | 5840/23346 [00:23<00:57, 307.01 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  27%|██▋       | 6205/23346 [00:25<00:55, 306.15 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  28%|██▊       | 6570/23346 [00:26<00:54, 309.10 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  30%|██▉       | 6935/23346 [00:27<00:53, 309.23 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  31%|███▏      | 7300/23346 [00:28<00:51, 309.55 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  33%|███▎      | 7665/23346 [00:29<00:50, 308.97 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  34%|███▍      | 8030/23346 [00:31<00:49, 310.23 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  36%|███▌      | 8395/23346 [00:32<00:48, 309.28 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  38%|███▊      | 8760/23346 [00:33<00:47, 310.00 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  39%|███▉      | 9125/23346 [00:34<00:45, 309.56 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  41%|████      | 9490/23346 [00:35<00:44, 310.78 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  42%|████▏     | 9855/23346 [00:36<00:43, 310.02 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  44%|████▍     | 10220/23346 [00:38<00:42, 310.84 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  45%|████▌     | 10585/23346 [00:39<00:41, 309.67 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  47%|████▋     | 10950/23346 [00:40<00:40, 308.54 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  48%|████▊     | 11315/23346 [00:41<00:38, 308.66 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  50%|█████     | 11680/23346 [00:42<00:37, 308.61 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  52%|█████▏    | 12045/23346 [00:44<00:36, 309.36 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  53%|█████▎    | 12410/23346 [00:45<00:35, 310.51 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  55%|█████▍    | 12775/23346 [00:46<00:34, 310.43 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  56%|█████▋    | 13140/23346 [00:47<00:32, 311.20 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  58%|█████▊    | 13505/23346 [00:48<00:31, 313.02 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  59%|█████▉    | 13870/23346 [00:49<00:30, 313.66 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  61%|██████    | 14235/23346 [00:50<00:29, 313.64 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  63%|██████▎   | 14600/23346 [00:52<00:27, 314.05 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  64%|██████▍   | 14965/23346 [00:53<00:26, 313.02 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  66%|██████▌   | 15330/23346 [00:54<00:25, 312.51 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  67%|██████▋   | 15695/23346 [00:55<00:24, 313.80 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  69%|██████▉   | 16060/23346 [00:56<00:23, 311.95 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  70%|███████   | 16425/23346 [00:57<00:22, 313.53 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  72%|███████▏  | 16790/23346 [00:59<00:20, 313.55 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  73%|███████▎  | 17155/23346 [01:00<00:19, 313.94 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  75%|███████▌  | 17520/23346 [01:01<00:18, 312.82 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  77%|███████▋  | 17885/23346 [01:02<00:17, 313.55 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  78%|███████▊  | 18250/23346 [01:03<00:16, 312.42 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  80%|███████▉  | 18614/23346 [01:04<00:15, 312.30 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  81%|████████▏ | 18978/23346 [01:06<00:14, 311.00 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  83%|████████▎ | 19342/23346 [01:07<00:12, 308.53 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  84%|████████▍ | 19706/23346 [01:08<00:11, 310.56 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  86%|████████▌ | 20070/23346 [01:09<00:10, 310.24 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  88%|████████▊ | 20434/23346 [01:10<00:09, 311.60 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  89%|████████▉ | 20798/23346 [01:12<00:08, 311.06 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  91%|█████████ | 21162/23346 [01:13<00:06, 313.02 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  92%|█████████▏| 21526/23346 [01:14<00:05, 312.88 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  94%|█████████▍| 21890/23346 [01:15<00:04, 313.69 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  95%|█████████▌| 22254/23346 [01:16<00:03, 311.53 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  97%|█████████▋| 22618/23346 [01:17<00:02, 313.29 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  98%|█████████▊| 22982/23346 [01:19<00:01, 310.64 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64): 100%|██████████| 23346/23346 [01:20<00:00, 310.42 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64): 100%|██████████| 23346/23346 [01:20<00:00, 288.75 examples/s]
-Unsloth: Tokenizing ["text"] (num_proc=64):   0%|          | 0/2918 [00:00<?, ? examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   2%|▏         | 46/2918 [00:07<07:30,  6.37 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   3%|▎         | 92/2918 [00:08<03:47, 12.44 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   5%|▍         | 138/2918 [00:09<02:32, 18.19 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   6%|▋         | 184/2918 [00:10<01:58, 23.05 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   8%|▊         | 230/2918 [00:11<01:39, 26.99 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):   9%|▉         | 276/2918 [00:13<01:27, 30.04 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  11%|█         | 322/2918 [00:14<01:19, 32.50 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  13%|█▎        | 368/2918 [00:15<01:14, 34.11 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  14%|█▍        | 414/2918 [00:16<01:10, 35.47 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  16%|█▌        | 460/2918 [00:17<01:07, 36.38 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  17%|█▋        | 506/2918 [00:19<01:05, 37.02 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  19%|█▉        | 552/2918 [00:20<01:03, 37.49 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  20%|██        | 598/2918 [00:21<01:01, 37.72 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  22%|██▏       | 644/2918 [00:22<01:00, 37.60 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  24%|██▎       | 690/2918 [00:23<00:58, 38.19 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  25%|██▌       | 736/2918 [00:25<00:56, 38.39 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  27%|██▋       | 782/2918 [00:26<00:55, 38.55 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  28%|██▊       | 828/2918 [00:27<00:54, 38.56 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  30%|██▉       | 874/2918 [00:28<00:52, 38.67 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  32%|███▏      | 920/2918 [00:29<00:51, 38.54 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  33%|███▎      | 966/2918 [00:31<00:50, 38.78 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  35%|███▍      | 1012/2918 [00:32<00:49, 38.75 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  36%|███▋      | 1058/2918 [00:33<00:47, 38.84 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  38%|███▊      | 1104/2918 [00:34<00:46, 38.69 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  39%|███▉      | 1150/2918 [00:35<00:45, 38.71 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  41%|████      | 1196/2918 [00:36<00:44, 38.75 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  43%|████▎     | 1242/2918 [00:38<00:43, 38.68 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  44%|████▍     | 1288/2918 [00:39<00:42, 38.80 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  46%|████▌     | 1334/2918 [00:40<00:40, 38.85 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  47%|████▋     | 1380/2918 [00:41<00:39, 38.87 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  49%|████▉     | 1426/2918 [00:42<00:38, 38.88 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  50%|█████     | 1472/2918 [00:44<00:36, 39.11 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  52%|█████▏    | 1518/2918 [00:45<00:35, 39.10 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  54%|█████▎    | 1564/2918 [00:46<00:34, 38.98 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  55%|█████▌    | 1610/2918 [00:47<00:33, 38.99 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  57%|█████▋    | 1656/2918 [00:48<00:32, 38.91 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  58%|█████▊    | 1702/2918 [00:49<00:31, 38.90 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  60%|█████▉    | 1748/2918 [00:51<00:30, 38.96 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  61%|██████▏   | 1793/2918 [00:52<00:29, 38.76 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  63%|██████▎   | 1838/2918 [00:53<00:28, 38.49 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  65%|██████▍   | 1883/2918 [00:54<00:27, 38.22 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  66%|██████▌   | 1928/2918 [00:55<00:25, 38.12 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  68%|██████▊   | 1973/2918 [00:57<00:24, 38.08 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  69%|██████▉   | 2018/2918 [00:58<00:23, 38.09 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  71%|███████   | 2063/2918 [00:59<00:22, 38.11 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  72%|███████▏  | 2108/2918 [01:00<00:21, 38.10 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  74%|███████▍  | 2153/2918 [01:01<00:20, 37.84 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  75%|███████▌  | 2198/2918 [01:02<00:18, 38.05 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  77%|███████▋  | 2243/2918 [01:04<00:17, 38.03 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  78%|███████▊  | 2288/2918 [01:05<00:16, 37.73 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  80%|███████▉  | 2333/2918 [01:06<00:15, 38.16 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  81%|████████▏ | 2378/2918 [01:07<00:14, 38.22 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  83%|████████▎ | 2423/2918 [01:08<00:12, 38.22 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  85%|████████▍ | 2468/2918 [01:10<00:11, 38.16 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  86%|████████▌ | 2513/2918 [01:11<00:10, 38.26 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  88%|████████▊ | 2558/2918 [01:12<00:09, 38.36 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  89%|████████▉ | 2603/2918 [01:13<00:08, 38.27 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  91%|█████████ | 2648/2918 [01:14<00:07, 38.14 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  92%|█████████▏| 2693/2918 [01:15<00:05, 38.08 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  94%|█████████▍| 2738/2918 [01:17<00:04, 38.12 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  95%|█████████▌| 2783/2918 [01:18<00:03, 37.99 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  97%|█████████▋| 2828/2918 [01:19<00:02, 38.11 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64):  98%|█████████▊| 2873/2918 [01:20<00:01, 38.29 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64): 100%|██████████| 2918/2918 [01:21<00:00, 38.52 examples/s]Unsloth: Tokenizing ["text"] (num_proc=64): 100%|██████████| 2918/2918 [01:22<00:00, 35.40 examples/s]
-🦥 Unsloth: Padding-free auto-enabled, enabling faster training.
-Map (num_proc=64):   0%|          | 0/23346 [00:00<?, ? examples/s]Map (num_proc=64):   2%|▏         | 365/23346 [00:06<06:20, 60.43 examples/s]Map (num_proc=64):  20%|██        | 4745/23346 [00:06<00:17, 1070.50 examples/s]Map (num_proc=64):  59%|█████▉    | 13870/23346 [00:06<00:02, 3949.92 examples/s]Map (num_proc=64): 100%|██████████| 23346/23346 [00:06<00:00, 3512.18 examples/s]
-Filter (num_proc=64):   0%|          | 0/23346 [00:00<?, ? examples/s]Filter (num_proc=64):   2%|▏         | 365/23346 [00:06<06:55, 55.37 examples/s]Filter (num_proc=64):  23%|██▎       | 5475/23346 [00:06<00:15, 1137.51 examples/s]Filter (num_proc=64):  58%|█████▊    | 13505/23346 [00:06<00:02, 3460.34 examples/s]Filter (num_proc=64): 100%|██████████| 23346/23346 [00:07<00:00, 3227.57 examples/s]
-Unsloth: Removed 2 out of 23346 samples from train_dataset where all labels were -100 (no response found after truncation). This prevents NaN loss during training.
-Map (num_proc=64):   0%|          | 0/2918 [00:00<?, ? examples/s]Map (num_proc=64):   2%|▏         | 46/2918 [00:05<06:13,  7.69 examples/s]Map (num_proc=64):  13%|█▎        | 368/2918 [00:06<00:30, 82.42 examples/s]Map (num_proc=64):  91%|█████████ | 2648/2918 [00:06<00:00, 812.43 examples/s]Map (num_proc=64): 100%|██████████| 2918/2918 [00:06<00:00, 447.13 examples/s]
-Filter (num_proc=64):   0%|          | 0/2918 [00:00<?, ? examples/s]Filter (num_proc=64):   2%|▏         | 46/2918 [00:06<06:21,  7.54 examples/s]Filter (num_proc=64):  11%|█         | 322/2918 [00:06<00:37, 70.02 examples/s]Filter (num_proc=64): 100%|██████████| 2918/2918 [00:06<00:00, 882.96 examples/s]Filter (num_proc=64): 100%|██████████| 2918/2918 [00:06<00:00, 438.79 examples/s]
-==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
-   \\   /|    Num examples = 23,344 | Num Epochs = 10 | Total steps = 3,650
-O^O/ \_/ \    Batch size per device = 32 | Gradient accumulation steps = 2
-\        /    Data Parallel GPUs = 1 | Total batch size (32 x 2 x 1) = 64
- "-____-"     Trainable parameters = 65,536,000 of 14,725,043,200 (0.45% trained)
-  0%|          | 0/3650 [00:00<?, ?it/s]`use_return_dict` is deprecated! Use `return_dict` instead!
-In file included from /home/shivraj-pg/miniconda3/envs/poetrygen/include/python3.10/Python.h:8,
-                 from /tmp/tmp5ef521s_/__triton_launcher.c:7:
-/home/shivraj-pg/miniconda3/envs/poetrygen/include/python3.10/pyconfig.h:1643:9: warning: ‘_POSIX_C_SOURCE’ redefined
- 1643 | #define _POSIX_C_SOURCE 200809L
-      |         ^~~~~~~~~~~~~~~
-In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
-                 from /usr/include/stdlib.h:26,
-                 from /home/shivraj-pg/miniconda3/envs/poetrygen/lib/python3.10/site-packages/triton/backends/nvidia/include/cuda.h:56,
-                 from /tmp/tmp5ef521s_/__triton_launcher.c:2:
-/usr/include/features.h:319:10: note: this is the location of the previous definition
-  319 | # define _POSIX_C_SOURCE        202405L
-      |          ^~~~~~~~~~~~~~~
-  0%|          | 1/3650 [01:26<87:21:26, 86.18s/it]  0%|          | 2/3650 [02:44<82:31:50, 81.44s/it]  0%|          | 3/3650 [03:45<72:55:50, 71.99s/it]  0%|          | 4/3650 [04:43<67:23:23, 66.54s/it]  0%|          | 5/3650 [05:58<70:32:47, 69.68s/it]  0%|          | 6/3650 [07:07<70:27:26, 69.61s/it]  0%|          | 7/3650 [08:20<71:27:35, 70.62s/it]  0%|          | 8/3650 [09:22<68:42:30, 67.92s/it]  0%|          | 9/3650 [10:28<67:59:02, 67.22s/it]  0%|          | 10/3650 [11:42<69:59:58, 69.23s/it]  0%|          | 11/3650 [12:43<67:29:51, 66.77s/it]  0%|          | 12/3650 [13:47<66:39:34, 65.96s/it]  0%|          | 13/3650 [14:45<64:08:52, 63.50s/it]  0%|          | 14/3650 [16:06<69:26:47, 68.76s/it]  0%|          | 15/3650 [17:07<67:13:08, 66.57s/it]  0%|          | 16/3650 [18:23<70:07:31, 69.47s/it]  0%|          | 17/3650 [19:39<72:05:30, 71.44s/it]  0%|          | 18/3650 [20:49<71:26:26, 70.81s/it]  1%|          | 19/3650 [21:58<70:53:02, 70.28s/it]  1%|          | 20/3650 [23:18<73:57:34, 73.35s/it]  1%|          | 21/3650 [24:17<69:38:28, 69.08s/it]  1%|          | 22/3650 [25:32<71:18:26, 70.76s/it]  1%|          | 23/3650 [26:35<68:50:35, 68.33s/it]  1%|          | 24/3650 [27:33<65:37:36, 65.16s/it]  1%|          | 25/3650 [28:36<65:00:24, 64.56s/it]  1%|          | 26/3650 [29:55<69:23:34, 68.93s/it]  1%|          | 27/3650 [30:58<67:34:07, 67.14s/it]  1%|          | 28/3650 [32:01<66:12:55, 65.81s/it]  1%|          | 29/3650 [33:09<67:00:40, 66.62s/it]  1%|          | 30/3650 [34:15<66:43:57, 66.36s/it]  1%|          | 31/3650 [35:36<71:14:15, 70.86s/it]  1%|          | 32/3650 [36:46<70:52:24, 70.52s/it]  1%|          | 33/3650 [37:56<70:40:28, 70.34s/it]  1%|          | 34/3650 [39:17<73:49:04, 73.49s/it]  1%|          | 35/3650 [40:39<76:28:35, 76.16s/it]  1%|          | 36/3650 [41:41<72:08:21, 71.86s/it]  1%|          | 37/3650 [42:43<69:07:42, 68.88s/it]  1%|          | 38/3650 [43:46<67:23:07, 67.16s/it]  1%|          | 39/3650 [44:56<68:07:25, 67.92s/it]  1%|          | 40/3650 [46:10<70:03:45, 69.87s/it]  1%|          | 41/3650 [47:34<74:11:13, 74.00s/it]  1%|          | 42/3650 [48:38<71:21:20, 71.20s/it]  1%|          | 43/3650 [49:39<68:00:48, 67.88s/it]  1%|          | 44/3650 [50:43<67:02:45, 66.93s/it]  1%|          | 45/3650 [51:49<66:46:54, 66.69s/it]  1%|▏         | 46/3650 [52:54<66:17:37, 66.22s/it]  1%|▏         | 47/3650 [54:01<66:24:35, 66.35s/it]  1%|▏         | 48/3650 [55:00<64:16:45, 64.24s/it]  1%|▏         | 49/3650 [56:00<62:48:30, 62.79s/it]  1%|▏         | 50/3650 [57:09<64:37:56, 64.63s/it]                                                      1%|▏         | 50/3650 [57:09<64:37:56, 64.63s/it]  1%|▏         | 51/3650 [58:08<63:06:58, 63.13s/it]  1%|▏         | 52/3650 [59:09<62:12:03, 62.24s/it]  1%|▏         | 53/3650 [1:00:09<61:37:42, 61.68s/it]  1%|▏         | 54/3650 [1:01:19<64:00:34, 64.08s/it]

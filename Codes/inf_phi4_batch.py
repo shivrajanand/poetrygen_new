@@ -2,24 +2,49 @@ import torch
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
-
+from peft import PeftModel
+import json
+import os
+import sys
 
 # =========================
 # PATHS
 # =========================
-BASE_MODEL = "microsoft/phi-4"
+BASE_MODEL = "unsloth/phi-4"
 INPUT_CSV = "Files/v3_gitapress_final.csv"
-OUTPUT_CSV = "Outputs/phi4_ut_zs.csv"
+OUTPUT_CSV = "Outputs/unsloth_phi4_UT_ZS.csv"
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
 BATCH_SIZE = 12
+CONFIG_FILE = "Trained_Models/Phi4-14B-DEV/essential_config.json"
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
+
+SET_LORA = False
+
+if SET_LORA:
+    with open(CONFIG_FILE, "r") as f:
+        config = json.load(f)
+    LORA_PATH = config["best_model"]["best_model_checkpoint"]
+    
+# =========================
+# Existing file warning
+# =========================
+
+if os.path.exists(OUTPUT_CSV):
+    choice = input(
+        f"{OUTPUT_CSV} already exists.\n"
+        "Do you want to overwrite it? (y/n): "
+    ).strip().lower()
+
+    if choice not in ("y", "yes"):
+        print("Exiting without overwriting.")
+        sys.exit(0)
 
 # =========================
 # LOAD MODEL
 # =========================
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
-
 
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
@@ -27,17 +52,30 @@ if tokenizer.pad_token is None:
 tokenizer.padding_side = "left"
 
 
-model = AutoModelForCausalLM.from_pretrained(
+base_model = AutoModelForCausalLM.from_pretrained(
     BASE_MODEL,
     torch_dtype=torch.bfloat16,
     device_map="cuda",
-    attn_implementation="flash_attention_2",
+    # attn_implementation="flash_attention_2",
 )
+print(f"Model used is {BASE_MODEL}", end="")
+
+model=base_model
+if SET_LORA:
+    print(f" with PEFT LORA path = {LORA_PATH}", end="")
+    model = PeftModel.from_pretrained(
+        model,
+        LORA_PATH,
+    )
+    
+    model = model.merge_and_unload()
+
+print()
+
 
 model.eval()
 
 # model.to(device)
-model.eval()
 model = torch.compile(model)
 # =========================
 # GENERATION
