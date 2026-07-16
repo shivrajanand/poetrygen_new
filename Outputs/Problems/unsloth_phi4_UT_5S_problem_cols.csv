@@ -1,0 +1,2064 @@
+sa,hi,skr_out,syllable_count,skr_meter,meter_cd,comments,prompt,split,model_out,out_meter
+यदा सच्चे प्रवृद्धे तु प्रलयं याति देहभृत् तदोत्तमविदां लोकानमलान्प्रतिपद्यते ॥,"और हे अर्जुन ! जब यह जीवात्मा सत्त्वगुणकी वृद्धि में मृत्युको प्राप्त होता है, तब तो उत्तम कर्म करनेवालोंके मलरहित अर्थात् दिव्य स्वर्गादि लोकोंको प्राप्त होता है ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,सत्त्vगुणवृद्धौ मृत्युं प्राप्य यदा जीवति तदा विमलान् लोकान् विशति तेषां कर्मणां फलं श्रेष्ठम् ॥,
+श्रवणाचैव तेषां त्वं पुण्यमाप्स्यसि पाण्डव गत्वा शतगुणं चैव तेभ्य एव नरोत्तम ॥,नरश्रेष्ठ पाण्डुनन्दन ! उनका श्रवण करनेमात्रसे तुम्हें उनके सेवनका पुण्य प्राप्त होगा और वहाँ जाने से सौगुने पुण्यकी प्राप्ति होगी  ,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,पा<|repo_name|>jamesmccaffrey/CS-3500<|file_sep|>/Project 1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/,
+येन प्रीणात्युपाध्यायं तेन स्याद् ब्रह्म पूजितम् मातृतः पितृतश्चैव तस्मात् पूज्यतमो गुरुः,"जिस कर्मसे शिष्य उपाध्याय को प्रसन्न करता है, उसीके द्वारा परब्रह्म परमात्माकी पूजा सम्पन्न हो जाती है; अतः गुरु माता पितासे भी अधिक पूजनीय है","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"शि<|repo_name|>jamesmccaffrey/azure-docs<|file_sep|>/articles/azure-monitor/app/java-standalone-config.md
+---
+title: Azure Application Insights Java standalone agent configuration | Microsoft Docs
+description: Configure the Azure Application Insights Java standalone agent
+ms.topic: conceptual
+ms.date: 09/15/2020
+---
+
+# Azure Application Insights Java standalone agent configuration
+
+The Azure Application Insights Java standalone agent is configured using a JSON file. The file is passed to the Java Virtual Machine (JVM) using the `-javaagent` option. The following example shows how to pass the configuration file to the JVM:
+
+```cmd
+java -javaagent:applicationinsights-agent-3.0.0-PREVIEW.jar -Dapplicationinsights.config.file=applicationinsights.json -jar yourapp.jar
+```
+
+The configuration file is a JSON file that contains the following properties:
+
+| Property | Description | Required | Default |
+| --- | --- | --- | --- |
+| instrumentationKey | The Application Insights instrumentation key. | Yes | None |
+| disableAutoDependencyTracking | Disables automatic dependency tracking. | No | false |
+| disableAutoPerformanceCounters | Disables automatic performance counters",
+वैदिकस्तान्त्रिको मिश्र इति मे त्रिविधो मखः त्रयाणामीप्सितेनैव विधिना मां समर्चयेत् ॥,"मेरी पूजा की तीन विधियाँ हैंवैदिक, तान्त्रिक और मिश्रित इन तीनों में से मेरे भक्त को जो भी अपने अनुकूल जान पड़े, उसी विधि से मेरी आराधना करनी चाहिये ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,वैदिकी तान्त्रिकी मि<|repo_name|>jamesmccaffrey/CS-3500<|file_sep|>/Project 1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1,
+अनपेक्षः शुचिर्दक्ष उदासीनो गतव्यथः सर्वारम्भपरित्यागी यो मद्भक्तः स मे प्रियः ॥,"और जो पुरुष आकाङ्क्षासे रहित तथा बाहर भीतरसे शुद्ध और चतुर है अर्थात् जिस कामके लिये आया था उसको पूरा कर चुका है एवं पक्षपातसे रहित और दुःखोंसे छूटा हुआ है, वह सर्व आरम्भों का त्यागी अर्थात् मन, वाणी और शरीरद्वारा प्रारब्धसे होनेवाले सम्पूर्ण स्वाभाविक कमोंमें कर्तापनके अभिमानका त्यागी मेरा भक्त मेरको प्रिय है ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"आकाṅkṣārataḥ śuddho'ntaḥśuddho vītaḥ parāṅmukhaḥ |  
+kṛtārthaḥ pāṣaṇḍaḥ śānto mām ārādhyaḥ priyo'smiyam ||
+
+karmāṇi sarvaṁ tyajan mānātmānaṁ na kārayet |  
+mama bhaktaḥ priyo'smiyam mām ārādhyaḥ priyo'smiyam ||",
+सम्मन्त्र्य चाशु गच्छामः साधनार्थं महीपतेः किं च नः पाण्डवैः कार्य हीनार्थबलपौरुषः ॥,"आपस में अच्छी तरह सवाद करके हमें राजा विराटको वश करनेके लिये शीघ्र प्रस्थान कर देना चाहिये पाण्डव लोग चनः बल तथा पौरुष तीनोंसे हीन है, अतः उनसे हमें क्या काम है ? ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,विरा<|repo_name|>jamesmccaffrey/CS-3500<|file_sep|>/Project 1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/,
+रागादिदोषरहितं स्वजनानुरागं वैराग्यशान्तिनिलयं गिरिजासहायम्‌ माधुर्यधैर्यसुभगं गरलाभिरामं वाराणसीपुरपतिं भज विश्चनाथम्‌॥,"जो रागादि दोषोंसे रहित हैं, अपने भक्तोंपर कृपा रखते हैं, वैराग्य और शान्तिके स्थान हैं, पार्वतीजी सदा जिनके साथ रहती हैं, जो धीरता और मधुर स्वभावसे सुन्दर जान पड़ते हैं तथा जो कण्ठमें गरलके चिह्नसे सुशोभित हैं, उन काशीपति विश्वनाथको भज॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+प्रह्लादजी बोले जिनकी बुद्धि एकमात्र सत्त्वगुणमें ही स्थित है, वे ब्रह्मादि देवगण तथा मुनि और सिद्धगण भी अपने वचनोंके प्रवाहसे, अनन्त गुणों के कारण अभीतक जिनकी आराधना नहीं कर सके, वे भगवान् हरि मुझ उग्रजातिमें उत्पन्न हुए दैत्यपर कैसे सन्तुष्ट हो सकते हैं ? ॥
+
+Sanskrit Verse:
+ब्रह्मादयः सुरगणा मुनयोऽथ सिद्धाः सत्त्वैकतानमतयो वचसां प्रवाहैः नाराधितुं पुरुगुणैरधुनापि पित्रः किं तोष्टुमर्हति स मे हरिरुग्रजातेः ॥
+
+
+Example 2:
+Meaning:
+हे समस्त दुःखोंके विध्वंसक, विभु, हे गिरिजेश!, हे शूली, आपका स्वरूप वेद एवं शास्त्रसे ही गम्य है, समस्त चराचरके एकमात्र बन्धुरूप, हे व्योमकेश, हे त्रिभुवनके स्वामी, जगत्से विलक्षण, हे जगदीश्वर! इस संसारके गहन दुःखोंसे आप मेरी रक्षा कीजिये॥
+
+Sanskrit Verse:
+हे दुःखभञ्जक विभो गिरिजेश शूलिन्‌ हे वेदशास्त्रविनिवेद्य जनैकबन्धो है व्योमकेश भुवनेश जगद्विशिष्टं संसारदुःखगहनाज्जगदीश रक्ष॥
+
+
+Example 3:
+Meaning:
+जो व्यक्ति योगीशमिश्रके मुखकमलसे निर्गत इस विश्वेश्वराष्टक का प्रभातवेलामें पाठ करता है, वह इस लोकमें भगवान्‌ शङ्करके चरणकमलोंकी भक्ति प्राप्त करके समृद्धिका भोग प्राप्त करता है और अन्तमें भगवान्‌ शिवका सांनिध्य प्राप्त कर लेता है॥
+
+Sanskrit Verse:
+योगीशमिश्रमुखपङ्कजनिर्गतं यो विश्चेश्वराष्टकमिदं पठति प्रभाते आसाद्य शङ्करपदाम्बुजयुग्मभक्तिं भुक्त्वा समृद्धिमिह याति शिवान्तिकेऽन्ते॥
+
+
+Example 4:
+Meaning:
+जो दूसरोंके लिये मनसे भी अगम्य हैं, महर्षि भृगुने हिमालय पर्वतके निकुञ्जमें होमका धुआँ पीकर कठोर तपस्याके द्वारा जिनकी आराधना की थी तथा जिन महात्माने भृगुको संजीवनी विद्या प्रदान की, उन शरणदाता भगवान्‌ श्रीशङ्करकी मैं शरण लेता हूँ॥
+
+Sanskrit Verse:
+आराधितः सुतपसा हिमवन्निकुञ्जे धूम्रव्रतेन मनसाऽपि परैरगम्यः सञ्जीवनी समददाद्‌ भृगवे महात्मा तं शङ्करं शरणदं शरणं व्रजामि॥
+
+
+Example 5:
+Meaning:
+उस समय धीरसाधनचतुष्टयसम्पन्न मुनिमण्डली के चित्त से भी दूर रहनेवाले अर्थात् ध्यान में न आनेवाले आपके श्रीविग्रह को अपने नेत्रोंद्वारा अवलोकन करके वसुदेवजी के नेत्रों में आनन्दाश्रु छलक आये, उनका शरीर पुलकित हो उठा और उनकी वाणी हर्षगद्गद हो गयी तब वे नेत्रों के लिये मकरन्दरसस्वरूप आपकी स्तुति करने लगे ॥
+
+Sanskrit Verse:
+शौरिस्तु धीरमुनिमण्डलचेतसोऽपि दूरस्थितं वपुरुदीक्ष्य निजेक्षणाभ्याम् आनन्दवाष्पपुलकोद्गमगद्गदाद्र स्तुष्टाव दृष्टिमकरन्दरसं भवन्तम् ॥
+
+",test,"रा<|repo_name|>jameskyle/ember-cli-leaflet<|file_sep|>/tests/dummy/app/templates/application.hbs
+{{#leaflet-map lat=lat lng=lng zoom=zoom}}
+  {{#leaflet-tile-layer url=""http://{s}.tile.osm.org/{z}/{x}/{y}.png"" attribution=""&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors""}}
+  {{/leaflet-tile-layer}}
+
+  {{#leaflet-marker lat=lat lng=lng}}
+    {{#leaflet-popup}}
+      <h1>Hello World!</h1>
+    {{/leaflet-popup}}
+  {{/leaflet-marker}}
+{{/leaflet-map}}
+
+{{outlet}}
+<|repo_name|>jameskyle/ember-cli-leaflet<|file_sep|>/tests/dummy/app/templates/components/leaflet-map.hbs
+{{#leaflet-map lat=lat lng=lng zoom=zoom}}
+  {{#leaflet-tile-layer url=""http://{s}.tile.osm.org/{z}/{x}/{y}.png"" attribution=""&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors""}}
+  {{",
+अर्थस्य संग्रहे चैनां व्यये चैव नियोजयेत् शौचे धर्मेऽनपक्त्यां च परिणाह्यस्य वेक्षणे ॥,"धनसंग्रह, व्यय, शरीर आदिकी शुद्धि, धर्म,रसोई बनाना तथा घरकी सामग्रीकी देखभाल इन कार्यों में हीस्त्रियोंको लगावे  ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"धनसंग्रहव्ययशुद्धिश् शरीरादिकां च शुद्धये ।  
+धर्‌मरसायनकर्मणि गृहस्थ्यानां च रक्षणे ॥
+
+अथवा
+
+धनसंग्रहव्ययशुद्धिश् शरीरादिकां च शुद्धये ।  
+धर्‌मरसायनकर्मणि गृहस्थ्यानां च रक्षणे ॥
+
+Both options adhere to the Anuṣṭubh meter rules.",
+शिशुपालो दशग्रीवो रैभ्यो5थोपदिशो बली सर्वास्त्रकुशला वीरा वीर्यवन्तो महाबला: ॥,"उनके नाम इस प्रकार हैंशिशुपाल, दशग्रीव, रैभ्य, उपदिश और बली ये सबकेसब सम्पूर्ण अस्त्रोंके ज्ञानमें निपुण, वीर, पराक्रमी और महाबली थे॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"शि<|repo_name|>jamesmccaffrey/CS-3500-Project<|file_sep|>/src/edu/ncsu/csc326/lexer/Token.java
+package edu.ncsu.csc326.lexer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * A Token is a single unit of lexical analysis. It is a pair of a token type and a
+ * string value.
+ * 
+ * @author James McCaffrey
+ *
+ */
+public class Token {
+    private TokenType type;
+    private String value;
+    private int line;
+    private int column;
+
+    /**
+     * Creates a new Token with the given type and value.
+     * 
+     * @param type
+     *            the type of the token
+     * @param value
+     *            the value of the token
+     */
+    public Token(TokenType type, String value) {
+        this.type = type;
+        this.value = value;
+    }
+
+    /**
+     * Creates a new Token with the given type, value, line, and column.
+     * 
+     * @param type
+     *            the type of the token
+     * @param value
+     *            the value of the token",
+अनपेक्षः शुचिर्दक्ष उदासीनो गतव्यथः सर्वारम्भपरित्यागी यो मद्भक्तः स मे प्रियः ॥,"और जो पुरुष आकाङ्क्षासे रहित तथा बाहर भीतरसे शुद्ध और चतुर है अर्थात् जिस कामके लिये आया था उसको पूरा कर चुका है एवं पक्षपातसे रहित और दुःखोंसे छूटा हुआ है वह सर्व आरम्भोंका त्यागी अर्थात् मन, वाणी और शरीरद्वारा प्रारब्धसे होनेवाले सम्पूर्ण खाभाविक कर्मों में कर्तापन के अभिमान का त्यागी, मेरा भक्त मेरेको प्रिय है ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"आकाṅkṣārataḥ śuddho'ntaḥśuddho vītaḥ parāṅmukhaḥ |  
+kṛtārthaḥ pāṣaṇḍaḥ śānto mām āśritya gacchati ||
+
+karmāṇi kṛtvā sarvāṇi mānātmānaṁ vinirmukhaḥ |  
+bhaktaḥ sa me priyo bhaktyā māṁ prapadyate naraḥ ||",
+चापानां पञ्चशत्या प्रसभमुपगते छिन्नचापेऽथ बाणे व्यर्थे याते समेतो ज्वरपतिरशनैरज्वरि त्वज्ज्वरेण ज्ञानी स्तुत्वाथ दत्त्वा तव चरितजुषां विज्वरं स ज्वरोऽगात् प्रायोऽन्तर्ज्ञानवन्तोऽपि च बहुतमसा रौद्रचेष्टा हि रौद्राः ॥,"तब बाणासुर पाँच सौ धनुष धारण करके बलपूर्वक युद्धस्थल में आ डटा परंतु जब उसके सभी धनुष कट गये और वह विरथ हो गया, तब रणभूमि से हट गया उसी समय माहेश्वर ज्वर आपके ज्वर के साथ लोहा लेने लगा; परंतु वह शीघ्र ही संतप्त हो उठा वह माहेश्वर ज्वर ज्ञानी था, अतः वह आपकी स्तुति करके तथा आपके भक्तों को ज्वराभाव का वरदान देकर वहाँ से चला गया; हृदय में ज्ञानयुक्त होने पर भी तमोगुण की अधिकता से प्रायः रुद्रपार्षद क्रूर कर्म करनेवाले हो जाते हैं ॥",sragdharā [21: mrBnyyy],84,Sragdharā,Sragdharā,,"Objective:
+
+Generate a sanskrit verse in Sragdharā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 84 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 21 syllables.
+The pattern of syllables in every pāda must be: मगण (GGG), रगण (GLG), भगण (GLL), नगण (LLL), followed by three यगण (LGG LGG LGG). A caesura (yati) occurs at every 7th syllable.
+The complete pattern for each pāda is: GGG GLG GLL LLL LGG LGG LGG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+जो अविद्या न सती, न असती है और न सदसती ही है, अतः जिसके स्वरूप का वर्णन करना अशक्य है, जो रज्जु में सर्प की भ्रान्तिसदृश सकल जगत् को अवभासित करनेवाला रूप धारण करती है, वही अविद्या जिसकी कृपा के प्रवाह में पड़नेपर वेदान्तवाक्योंद्वारा विद्यारूपिणी होकर संसाररूपी वन को तत्काल काट डालने के लिये फरसेकासा काम करती है, ऐसे आपको अभिवादन है ॥
+
+Sanskrit Verse:
+सत्त्वेनासत्तया वा न च खलु सदसत्त्वेन निर्वाच्यरूपा धत्ते यासावविद्या गुणफणिमतिवद्विश्वदृश्यावभासम् विद्यात्वं सैव याता श्रुतिवचनलवैर्यत्कृपास्यन्दलाभे संसारारण्यसद्यस्त्रुटनपरशुतामेति तस्मै नमस्ते ॥
+
+
+Example 2:
+Meaning:
+भूमन् ! 'सत्त्वगुण के उद्रेक से कभीकभी विषयरस के आस्वादन में दोष का ज्ञान होनेपर भी रजोगुण और तमोगुण के उत्कृष्ट होनेपर उन विषयों में प्रवृत्ति को रोकना दुष्कर हो जाता है; क्योंकि उस समय विषय और चित्त परस्पर ग्रथित हो जाते हैं, अतः उन सबका त्याग करने के लिये अवस्थात्रयातीत आपकी भक्ति ही एकमात्र शरण है' ऐसा उपदेश हंसरूपधारी आपने ब्रह्मा के समक्ष सनकादिकों को दिया था ॥
+
+Sanskrit Verse:
+सत्त्वोन्मेषात् कदाचित् खलु विषयरसे दोषबोधेऽपि भूमन् भूयोऽप्येषु प्रवृत्तिः सतमसि रजसि प्रोद्धते दुर्निवारा चित्तं तावद् गुणाश्च ग्रथितमिह मिथस्तानि सर्वाणि रोद्धुं तुर्ये त्वय्येकभक्तिः शरणमिति भवान् हंसरूपी न्यगादीत् ॥
+
+
+Example 3:
+Meaning:
+एक बार रावण आदि राक्षसोंके भारसे व्यथित हो पृथिवी गौ का रूप धारण कर देवता और मुनिजनों के सहित श्रीब्रह्माजी के लोक को गयी वहाँ पहुँचकर उसने रोते हुए, अपनेपर पड़ा हुआ सारा दुःख ब्रह्माजी से कहा तब ब्रह्माजी ने एक मुहूर्त तक ध्यानस्थ हो अपने मनमें उसकी दुःखनिवृत्तिका सम्पूर्ण उपाय जान लिया क्योंकि वे सर्वान्तर्यामी है ॥
+
+Sanskrit Verse:
+भूमिर्भारेण भग्ना दशवदनमुखाशेषरक्षोगणानां धृत्वा गोरूपमादौ दिविजमुनिजनैः साकमब्जासनस्य गत्वा लोकं रुदन्ती व्यसनमुपगतं ब्रह्मणे प्राह सर्वं ब्रह्मा ध्यात्वा मुहूर्तं सकलमपि हृदावेदशेषात्मकत्वात् ॥
+
+
+Example 4:
+Meaning:
+तदनन्तर अर्जुन के साथ आप अपने परम वेगशाली रथ के द्वारा पश्चिम दिशा की ओर प्रस्थित हुए चलतेचलते जब लोकालोक पर्वत को लाँघ गये तो वहाँ गहन अन्धकार का भय प्राप्त हुआ उस अन्धकारभय को सुदर्शन चक्र के प्रकाश से चीरते हुए आप उसकी अन्तिम सीमापर जा पहुँचे उस समय अर्जुन की दृष्टि चक्र की किरणों के प्रकाश से चौंधिया गयो थी तब 'अर्जुन ! देखो, वह देखो'यों कहते हुए आपने उन्हें जलराशि के पार विराजमान और अन्धकार से बहुत दूर स्थित अपने किसी अनिर्देश्य पद का दर्शन कराया ॥
+
+Sanskrit Verse:
+सार्द्धं तेन प्रतीचीं दिशमतिजविना स्यन्दनेनाभियातो लोकालोकं व्यतीतस्तिमिरभयमथो चक्रधाम्ना निरुन्धन् चक्रांशुक्लिष्टदृष्टिं स्थितमथ विजयं पश्य पश्येति वारां पारे त्वं प्राददर्शः किमपि हि तमसां दूरदूरं पदं ते ॥
+
+
+Example 5:
+Meaning:
+घरमें रहते हुए वे मनहीमन सोचा करते थे कि 'जनकनन्दिनी महारानी सीता और लक्ष्मणके सहित श्रीरघुनाथजीके भयंकर वनमें चले जानेसे माता कैकेयी अपने दर्शनमात्रसे ही राक्षसीके समान मेरे हृदयमें दाह उत्पन्न करती है अतः अब मैं निस्सन्देह शीघ्र ही सब राजपाट छोड़कर वनको जाऊँगा और मधुर मुसकानसे जिनका मुखारविन्द अति शोभित हो रहा है उन राम और सीताकी नित्यप्रति सेवा करूँगा' ॥
+
+Sanskrit Verse:
+रामेऽरण्यं प्रयाते सह जनकसुतालक्ष्मणाभ्यां सुघोरं माता मे राक्षसीव प्रदहति हृदयं दर्शनादेव सद्यः गच्छाम्यारण्यमद्य स्थिरमतिरखिलं दूरतोऽपास्य राज्यं रामं सीतासमेतं स्मितरुचिरमुखं नित्यमेवानुसेवे ॥
+
+",test,"बाṇāsuraṃ pañcaśaḍdhanuṣāṃ vṛṣṭvā yuddhasthale balāt sthitaṃ  
+tasya sarvāṇi dhanuḥ kṛtāṅgāni vṛthāṃ gataṃ rathāt pratiṣṭhitaḥ ।  
+tadā rājannamahāśvaram jvaram āgatam ātmanaḥ saha śāśvatam  
+jñānī jvālām ivāśuṣṭaḥ stutvā bhaktaṃś ca jvaramābhavam dadāt  
+tadā gataḥ saha jñānenaiva tamoṣāṇiṣṭhitaḥ pramāṇaṃ  
+rudrā",
+सा लतेव महाशालं फुलं गोमतितीरजम् परिष्वजत पाञ्चाली मध्यमं पाण्डुनन्दनम् ॥,"जैसे लता गोमती तटपर उत्पन्न एवं सिले हुए ऊँचे शालवृक्ष में लिपट जाती है, उसी प्रकार सतीसाध्वी पाचालीने मध्य पाण्डव भीमसेनका आलिङ्गन किया ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"गोमत्यां तीरजा लता शाले शाले विल्यते यथा ।  
+पा<|repo_name|>jamesmccaffrey/CS-3500<|file_sep|>/Project 1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/",
+यस्येमे कुण्डले दिव्ये सहजे देवनिर्मिते कवचं च महाबाहो बालार्कसदृशप्रभम् ॥,"महाबाहो ! इन कर्णके ये दोनों दिव्य कुण्डल जन्मके साथ ही प्रकट हुए हैं किसी देवताने ही इन कुण्डलोंका निर्माण किया है कुण्डलोंके साथसाथ इनके शरीरपर यह दिव्य कवच भी जन्मसे ही पैदा हुआ है, जो प्रातःकालके सूर्यके समान प्रकाशित हो रहा है ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"कर्\n्णयोर्दिव्यकुण्डले जन्मना सह प्रकाशिते ।  
+देवेनैव निर्मिते ते युगपद्विभूषिते शरीरे ॥  
+कवचं दिव्यमेतद्वै जन्मना सह जायते ।  
+प्रातर्भास्करसदृशं प्रकाशं यद्विधत्ते च ॥",
+द्वारं तु वितताकारं समापेदे पुनश्च सः तद्वत्तं चेति मन्वानो द्वारस्थानादुपारमत् ॥,आगे जानेपर उसे एक बहुत बड़ा फाटक और मिलाः परंतु कहीं पिछले दरवाजोंकी भौति यहाँ भी कोई अप्रिय घटना न घठित हो इस भयसे वह उस दरवाजेके इधरसे ही लौट आया ॥,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"अग्रे गत्वा द्वारम् अतीव महत् तथा मि<|repo_name|>jamesmccaffrey/CS-445-Project-1<|file_sep|>/src/Makefile
+CC = g++
+CFLAGS = -Wall -g -std=c++11
+
+all: main
+
+main: main.o
+	$(CC) $(CFLAGS) -o main main.o
+
+main.o: main.cpp
+	$(CC) $(CFLAGS) -c main.cpp
+
+clean:
+	rm -f *.o main
+<|file_sep|>#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <sstream>
+#include <iterator>
+#include <map>
+#include <set>
+#include <queue>
+#include <stack>
+#include <cmath>
+#include <climits>
+#include <iomanip>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <cassert>
+#include <unordered_map>
+#include <unordered_set>
+#include <list>
+#include <bitset>
+#include <chrono>
+#include <random>
+#include <functional>
+#include <utility>
+#include <numeric>",
+ततो वैतरणी सर्वे पाण्डवा द्रौपदी तथा अवतीर्य महाभागास्तर्पयांचक्रिरे पितॄन् ॥,वैशम्पायनजी कहते हैंराजन् ! तदनन्तर महान् भाग्यशाली समस्त पाण्डवों और द्रौपदीने वैतरणीके जलमें उतरकर अपने पितरोंका तर्पण किया ॥,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"वैशम् पायन उवाच राजन् पा<|repo_name|>jamesmccaffrey/CS-445-Project<|file_sep|>/src/edu/ncsu/csc/compilers/ast/ASTNode.java
+package edu.ncsu.csc.compilers.ast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import edu.ncsu.csc.compilers.symboltable.SymbolTable;
+
+public abstract class ASTNode {
+	
+	protected ASTNode parent;
+	protected List<ASTNode> children;
+	protected SymbolTable symbolTable;
+	
+	public ASTNode() {
+		children = new ArrayList<ASTNode>();
+	}
+	
+	public ASTNode(SymbolTable symbolTable) {
+		this();
+		this.symbolTable = symbolTable;
+	}
+	
+	public void addChild(ASTNode child) {
+		children.add(child);
+		child.parent = this;
+	}
+	
+	public void removeChild(ASTNode child) {
+		children.remove(child);
+		child.parent = null;
+	}
+	
+	public void setParent(ASTNode parent) {
+		this.parent = parent;
+	}
+	
+	public ASTNode getParent() {
+		return parent;
+	}
+	
+	public List<ASTNode> get",
+सीतापि दुःखसन्तप्ता विललापातिमुग्धवत् शिष्यैः श्रुत्वा च वाल्मीकिः सीतां ज्ञात्वा स दिव्यदृक् ॥,उस समय सीताजी अत्यन्त दुःखातुरा होकर अति मूर्खा स्त्रियोंके समान विलाप करने लगीं महर्षि वाल्मीकिने जब शिष्योंके मुखसे यह बात सुनी तो उन्होंने दिव्यदृष्टिसे जान लिया कि वह सीताजी ही हैं ॥,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"सा दुःखातुरया भूत्वा वि विल्पे विप्रकीर्णधी:  
+श्रुत्वा शि<|repo_name|>jameskyle/ember-cli-leaflet<|file_sep|>/tests/dummy/app/templates/application.hbs
+{{#leaflet-map lat=lat lng=lng zoom=zoom}}
+  {{#leaflet-tile-layer url=""http://{s}.tile.osm.org/{z}/{x}/{y}.png"" attribution=""&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors""}}
+  {{/leaflet-tile-layer}}
+
+  {{#leaflet-marker lat=lat lng=lng}}
+    {{#leaflet-popup}}
+      <h1>Hello World!</h1>
+    {{/leaflet-popup}}
+  {{/leaflet-marker}}
+{{/leaflet-map}}
+
+{{outlet}}
+<|repo_name|>jameskyle/ember-cli-leaflet<|file_sep|>/tests/dummy/app/templates/components/leaflet-map.hbs
+{{#leaflet-map lat=lat lng=",
+बिल्वाष्टकमिदं पुण्यं यः पठेच्छिवसन्निधौ सर्वपापविनिर्मुक्तः शिवलोकमवाप्नुयात्‌॥,"जो भगवान्‌ शिवके समीप इस पुण्य प्रदान करनेवाले 'बिल्वाष्टक'का पाठ करता है, वह समस्त पापोंसे मुक्त होकर अन्तमें शिवलोकको प्राप्त करता है॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"बि<|repo_name|>jamesmccaffrey/azure-docs<|file_sep|>/articles/azure-monitor/app/java-standalone-config.md
+---
+title: Azure Application Insights Java standalone configuration | Microsoft Docs
+description: Configure the Java standalone Application Insights SDK
+services: application-insights
+documentationcenter: java
+author: mrbullwinkle
+manager: carmonm
+ms.assetid: 0e1e6c3a-4a1b-4a0b-9a0b-6a0b6a0b6a0b
+ms.service: application-insights
+ms.workload: tbd
+ms.tgt_pltfrm: ibiza
+ms.topic: conceptual
+ms.date: 04/25/2017
+ms.author: mbullwin
+ms.openlocfilehash: 9b0a1b1b7a1a1b1b7a1a1b1b7a1a1b1b7a1a1b1b
+ms.sourcegitcommit: 2ec4b3d0bad7dc0071400c2a2264399e4fe34897
+ms.translation",
+मुखे ते ताम्बूलं नयनयुगले कज्जलकला ललाटे काश्मीरं विलसति गले मौक्तिकलता स्फुरत्काञ्ची शाटी पृथुकटितटे हाटकमयी भजामि त्वां गौरीं नगपतिकिशोरीमविरतम् ॥,"तुम्हारे मुखमें पान है, नेत्रोंमें काजलकी पतली रेखा है, ललाटमें केसरकी बेंदी है, गलेमें मोतीका हार सुशोभित हो रहा है, कटिके निम्नभागमें सुनहली साड़ी है, जिसपर रत्नमयी मेखला चमक रही है, ऐसी वेषभूषासे सजी हुई गिरिराज हिमालयकी गौरवर्णा कन्या तुमको मैं सदा ही भजता हूँ ॥",śikhariṇī [17: ymnsBlg],68,Śikhariṇī,Śikhariṇī,,"Objective:
+
+Generate a sanskrit verse in Śikhariṇī meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 68 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 17 syllables.
+The pattern of syllables in every pāda must be: यगण (LGG), मगण (GGG), नगण (LLL), सगण (LLG), भगण (GLL), followed by a Laghu (L) and a Guru (G). A caesura (yati) occurs after the 6th syllable.
+The complete pattern for each pāda is: LGG GGG LLL LLG GLL LG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+हे भगवति ! जिसमें विशाल चन्दनके रस, कस्तूरी और केसरके फूल मिले हुए हैं ऐसे तुम्हारे अनुलेपनके जलको और चलते हुए तुम्हारे चरणोंकी धूलिको ही लेकर ब्रह्माजी सुरपुरकी कमलनयनी वनिताओं की सृष्टि करते हैं ॥
+
+Sanskrit Verse:
+विशालश्रीखण्डद्रवमृगमदाकीर्णघुसृण प्रसूनव्यामिश्रं भगवति तवाभ्यङ्गसलिलम् समादाय स्रष्टा चलितपदपांसून्निजकरैः समाधत्ते सृष्टिं विबुधपुरपङ्केरुहदृशाम् ॥
+
+
+Example 2:
+Meaning:
+हे स्वामिन्‌! कामुक ब्रह्माने अपनी दुहितासे हठपूर्वक रमण करनेकी इच्छा की वह लज्जासे मृगी बनकर भागी; तब ब्रह्मा भी मृग बनकर उसके पीछे दौड़े आपने भी उन्हें दण्ड देनेके लिये मृगके शिकारीके वेगके समान हाथमें धनुष लेकर बाण चला दिया स्वर्गमें जानेपर भी ब्रह्मा आपके बाणसे भयभीत हो रहे हैं उन्हें बाणने आज भी नहीं छोड़ा है; अर्थात्‌ ब्रह्मा 'मृगशिरा' नक्षत्र बनकर भागे तो बाण 'आर्द्रा' नक्षत्र बनकर आज भी पीछा करता है' ॥
+
+Sanskrit Verse:
+प्रजानाथं नाथ प्रसभमभिकं स्वां दुहितरं गतं रोहिद्भूतां रिरमयिषुमृष्यस्य वपुषा धनुष्पाणेर्यातं दिवमपि सपत्राकृतममुं त्रसन्तं तेऽद्यापि त्यजति न मृगव्याधरभसः॥
+
+
+Example 3:
+Meaning:
+भगवन् ! आपको देखते ही जब वह 'अहो ! यह तो एक जंगली सूकर हैं' यों हँसता हुआ बहुतसी कटूक्तियोंद्वारा आपको कष्ट पहुँचाने लगा तब आपने भी उस दितिपुत्र की अवज्ञा करके अपने दंष्ट्राग्रभागपर स्थित भूमि को भयचकित देखकर उसे अपनी अप्रमेय महिमा से प्रलयपयोधि के जलपर स्थापित कर दिया और स्वयं बलपूर्वक युद्ध करने के लिये उद्यत हो गये ॥
+
+Sanskrit Verse:
+अहो आरण्योऽयं मृग इति हसन्तं बहुतरै र्दुरुक्तैर्विध्यन्तं दितिसुतमवज्ञाय भगवन् महीं दृष्ट्वा दंष्ट्रा शिरसि चकितां स्वेन महसा पयोधावाधाय प्रसभमुदयुङ्क्था मृधविधौ ॥
+
+
+Example 4:
+Meaning:
+हे जगदम्ब ! हे मातः ! मैंने तुम्हारे चरणोंकी सेवा नहीं की अथवा तुम्हारे लिये प्रचुर धन भी समर्पण नहीं किया; तो भी मेरे ऊपर यदि तुम ऐसा अनुपम स्नेह रखती हो तो यह सच ही है कि पूत तो कुपूत हो जाता है पर माता कुमाता नहीं होती ॥
+
+Sanskrit Verse:
+जगन्मातर्मातस्तव चरणसेवा न रचिता न वा दत्तं देवि द्रविणमपि भूयस्तव मया तथापि त्वं स्नेहं मयि निरुपमं यत्प्रकुरुषे कुपुत्रो जायेत क्वचिदपि कुमाता न भवति ॥
+
+
+Example 5:
+Meaning:
+अति निर्मल तेजोमय आत्मतत्त्वके तिरोभूत होनेपर पुरुष अनात्मदेहको ही मोहसे 'मैं हूँ' ऐसा मानने लगता है तब रजोगुणकी विक्षेप नामवाली अति प्रबल शक्ति कामक्रोधादि अपने बन्धनकारी गुणोंसे इसको व्यथित करने लगती है 1
+
+Sanskrit Verse:
+तिरोभूते स्वात्मन्यमलतरतेजोवति पुमा ननात्मानं मोहादहमिति शरीरं कलयति ततः कामक्रोधप्रभृतिभिरमुं बन्धनगुणैः परं विक्षेपाख्या रजस उरुशक्तिर्व्यथयति ॥
+
+",test,मुखे पानं नेत्रयोः काजलविलासः कर्णयोः केर्\nशराभरणं ललाटे गलगुणगण्डे मुक्ताहारः\nकटीनिम्ने सुवर्णां साडिकमलिनीं रत्नमयीं च\nमया भज्यसे गिरीशस्य गिरिजे गौरी गिरिसुता ॥,
+पश्य सात्वतमुख्येन शिशुपालो निपातितः न चतत्र पुमानासीत् कश्चित्तस्य पदानुगः ॥,"और भीदेखिये, यदुवंशशिरोमणि श्रीकृष्णने शिशुपालको मार गिरायाः परंतु वहाँ कोई भी वीर पुरुष उसका पदला लेनेको तैयार नहीं हुआ ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,यदुवंशशिरोमणिः श्रीकृष्णो विनिपातयत् शि<|repo_name|>jamesmccaffrey/CS-3500<|file_sep|>/Project 1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project,
+न जानपदिकं दुःखमेकः शोचितुमर्हति अशोचन् प्रतिकुर्वीत यदि पश्येदुपक्रमम् ॥,"जो दुःख सारे देशपर है, उसके लिये किसी एक व्यक्तिको शोक नहीं करना चाहिये यदि उसे टालनेका कोई उपाय दिखायी दे तो शोक न करके उस दुःखके निवारणका प्रयत्न करना चाहिये","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"देशदुःखे न विष्<|repo_name|>jameskyle/ember-cli-leaflet<|file_sep|>/tests/dummy/app/templates/application.hbs
+{{#leaflet-map lat=lat lng=lng zoom=zoom}}
+  {{#leaflet-tile-layer url=""http://{s}.tile.osm.org/{z}/{x}/{y}.png"" attribution=""&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors""}}
+  {{/leaflet-tile-layer}}
+
+  {{#leaflet-marker lat=lat lng=lng}}
+    {{#leaflet-popup}}
+      <h1>Hello World!</h1>
+    {{/leaflet-popup}}
+  {{/leaflet-marker}}
+{{/leaflet-map}}
+
+{{outlet}}
+<|repo_name|>jameskyle/ember-cli-leaflet<|file_sep|>/tests/dummy/app/templates/components/leaflet-map.hbs
+{{#leaflet-map lat=lat lng=lng zoom=zoom}}
+  {{#leaflet-tile-layer url=""http://{s}.tile.osm.org/{z}/{x}/{y}.png"" attribution=""&copy; <a href='http",
+प्रवादेनेह मत्स्यानां राजा नाम्नायमुच्यते अहमेव हि मत्स्यानां राजा वै बाहिनीपतिः ॥,राजा विराट तो कहने के लिये ही मत्स्यदेशका नाममात्र का राजा है वास्तयों में ही यहाँका राजा हूँ क्योंकि सेनाका मालिक मैं हूँ ॥,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"विरा<|repo_name|>jameskyle/ember-cli-leaflet<|file_sep|>/tests/dummy/app/templates/application.hbs
+{{#leaflet-map lat=lat lng=lng zoom=zoom}}
+  {{#leaflet-tile-layer url=""http://{s}.tile.osm.org/{z}/{x}/{y}.png"" attribution=""&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors""}}
+  {{/leaflet-tile-layer}}
+
+  {{#leaflet-marker lat=lat lng=lng}}
+    {{#leaflet-popup}}
+      <h1>Hello World!</h1>
+    {{/leaflet-popup}}
+  {{/leaflet-marker}}
+{{/leaflet-map}}
+
+{{outlet}}
+<|file_sep|>import Ember from 'ember';
+import { moduleForComponent, test } from 'ember-qunit';
+import hbs from 'htmlbars-inline-precompile';
+
+moduleForComponent('leaflet-marker', 'Integration | Component | leaflet marker', {
+  integration: true
+});
+
+test('it renders', function(assert) {
+  this.render(hbs`{{leaflet-marker}}`);
+
+  assert.equal(this.$().text().trim(), '');
+});
+
+test('it renders a",
+अयं तु पुरुषो बालः शिशुपालो न बुध्यते सर्वत्र सर्वदा कृष्णं तस्मादेवं प्रभाषते ॥,"यह शिशुपाल मूद्‌बुद्धि पुरुष है यह भगवान् श्रीकृष्णको सर्वत्र व्यापक तथा सर्वदा स्थिर नहीं जानता है, इसीलिये उनके सम्बन्धमें ऐसी बातें कहता है ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"शि<|repo_name|>jamesmccaffrey/azure-docs<|file_sep|>/articles/azure-monitor/app/java-standalone-config.md
+---
+title: Configure Azure Application Insights for Java Standalone | Microsoft Docs
+description: Configure Azure Application Insights for Java Standalone
+ms.topic: conceptual
+ms.date: 09/24/2018
+ms.reviewer: mbullwin
+ms.openlocfilehash: 6a1a0a1a0b0a7b7a7b7a7b7a7b7a7b7a7b7a7b7a
+ms.sourcegitcommit: 2ec4b3d0bad7dc0071400c2a2264399e4fe34897
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/28/2020
+ms.locfileid: ""77670400""
+---
+# <a name=""configure-azure-application-insights-for-java-standalone""></a>為 Java 獨立應用程式設定 Azure Application Insights
+
+本文介紹如何使用 Azure Application",
+वेदवादरतो न स्यान्न पाखण्डी न हैतुकः शुष्कवादविवादे न कञ्चित् पक्षं समाश्रयेत् ॥,"उसे चाहिये कि वेदों के कर्मकाण्डभाग की व्याख्या में न लगे, पाखण्ड न करे, तर्कवितर्क से बचे और जहाँ कोरा वादविवाद हो रहा हो, वहाँ कोई पक्ष न ले ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+
+Example 2:
+Meaning:
+कारण कि यज्ञसे शेष बचे हुए अन्नको खानेवाले श्रेष्ठ पुरुष सब पापोंसे छूटते हैं और जो पापीलोग अपने शरीरपोषणके लिये ही पकाते हैं, वे तो पापको ही खाते हैं ॥
+
+Sanskrit Verse:
+यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः भुञ्जते ते त्वयं पापा ये पचन्त्यात्मकारणात् ॥
+
+
+Example 3:
+Meaning:
+वहाँसे सेनाविन्दुकी राजधानी देवप्रश्वमें आकर चतु रंगिणी सेनाके साथ शक्तिशाली अर्जुनने यहीं पड़ाव डाला ॥
+
+Sanskrit Verse:
+स देवप्रस्थमासाद्य सेनाविन्दोः पुरं प्रति बलेन चतुरङ्गेण निवेशमकरोत् प्रभुः ॥
+
+
+Example 4:
+Meaning:
+दिन और रात्रि उनके नेत्र हैं, वे दिव्यस्वरूप हैं वेद उनका अड्ग और श्रुतियाँ आभूषण हैं हविष्य नासिका, खुवा थूथन और सामवेदका गम्भीर घोष ही उनका स्वर है वे महान्‌ हैं ॥
+
+Sanskrit Verse:
+अहोरात्रेक्षणो दिव्यो वेदाड़ः श्रुतिभूषण: आज्यनास: स्त्रुवातुण्डः सामघोषस्वनो महान्‌॥
+
+
+Example 5:
+Meaning:
+ये धर्मज्ञ, कृतज्ञ, दयावान्‌ और प्रिय भाषण करनेवाले हैं ये माननीय हैं और मान करनेवाले हैं यज्ञ करनेवाले, ब्राह्मणभक्त तथा सत्यप्रतिज्ञ हैं॥
+
+Sanskrit Verse:
+धर्मज्ञश्न कृतज्ञश्न दयावान्‌ प्रियभाषण: मान्यो मानयिता यज्वा ब्रह्मण्य: सत्यसंगर: ॥
+
+",test,"वेदकर्‌मकाण्‌डव्याख्यां न कुर्यात् पा<|repo_name|>jamesmccaffrey/CS-445-Project-1<|file_sep|>/src/Makefile
+# Makefile for CS 445 Project 1
+# James McCaffrey
+# 10/10/2018
+
+# Compiler
+CC = g++
+
+# Compiler flags
+CFLAGS = -Wall -Wextra -Werror -std=c++11
+
+# Source files
+SOURCES = main.cpp
+
+# Object files
+OBJECTS = $(SOURCES:.cpp=.o)
+
+# Executable name
+EXECUTABLE = project1
+
+# Default target
+all: $(SOURCES) $(EXECUTABLE)
+
+# Linking
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $@
+
+# Compiling
+.cpp.o:
+	$(CC) $(CFLAGS) -c $<  -o $@
+
+# Clean
+clean:
+	rm -f $(OBJECTS) $(EXECUTABLE)
+<|file_sep|>/*
+ * CS",
+सत्त्वं यत्तत्पराभ्यामपरिकलनतो निर्मलं तेन तावद् भूतैर्भूतेन्द्रियैस्ते वपुरिति बहुशः श्रूयते व्यासवाक्यम् तत् स्वच्छत्वाद्यदच्छादितपरसुखचिद्गर्भनिर्भासरूपं तस्मिन् धन्या रमन्ते श्रुतिमतिमधुरे सुग्रहे विग्रहे ते ॥,"रजोगुण और तमोगुण के मिश्रण से रहित होने के कारण जो शुद्ध सत्त्व है, उसी के उपादानद्वारा सात्त्विक भूतों तथा इन्द्रियों सहित आपका स्वेच्छामय लीलाशरीर निर्मित हुआ है ऐसे व्यासजी के वाक्य बारंबार पुराणों में सुने जाते हैं आपका वह वपु निर्मल है अतएव निरावृत परमानन्द चिन्मय ब्रह्म उसके भीतर प्रविष्ट हो नितरां भासित होता है श्रवणमननादि काल में अति मधुर लगनेवाला अर्थात् सकलेन्द्रियाह्लादक जो आपका सुग्राह्य श्रीविग्रह है, उसमें जो भक्तिसम्पन्न जन रमतेप्रेमलक्षणा भक्ति करते हैं, वे धन्य हैं ॥",sragdharā [21: mrBnyyy],84,Sragdharā,Sragdharā,,"Objective:
+
+Generate a sanskrit verse in Sragdharā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 84 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 21 syllables.
+The pattern of syllables in every pāda must be: मगण (GGG), रगण (GLG), भगण (GLL), नगण (LLL), followed by three यगण (LGG LGG LGG). A caesura (yati) occurs at every 7th syllable.
+The complete pattern for each pāda is: GGG GLG GLL LLL LGG LGG LGG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example 1:
+Meaning:
+जो अविद्या न सती, न असती है और न सदसती ही है, अतः जिसके स्वरूप का वर्णन करना अशक्य है, जो रज्जु में सर्प की भ्रान्तिसदृश सकल जगत् को अवभासित करनेवाला रूप धारण करती है, वही अविद्या जिसकी कृपा के प्रवाह में पड़नेपर वेदान्तवाक्योंद्वारा विद्यारूपिणी होकर संसाररूपी वन को तत्काल काट डालने के लिये फरसेकासा काम करती है, ऐसे आपको अभिवादन है ॥
+
+Sanskrit Verse:
+सत्त्वेनासत्तया वा न च खलु सदसत्त्वेन निर्वाच्यरूपा धत्ते यासावविद्या गुणफणिमतिवद्विश्वदृश्यावभासम् विद्यात्वं सैव याता श्रुतिवचनलवैर्यत्कृपास्यन्दलाभे संसारारण्यसद्यस्त्रुटनपरशुतामेति तस्मै नमस्ते ॥
+
+
+Example 2:
+Meaning:
+भूमन् ! 'सत्त्वगुण के उद्रेक से कभीकभी विषयरस के आस्वादन में दोष का ज्ञान होनेपर भी रजोगुण और तमोगुण के उत्कृष्ट होनेपर उन विषयों में प्रवृत्ति को रोकना दुष्कर हो जाता है; क्योंकि उस समय विषय और चित्त परस्पर ग्रथित हो जाते हैं, अतः उन सबका त्याग करने के लिये अवस्थात्रयातीत आपकी भक्ति ही एकमात्र शरण है' ऐसा उपदेश हंसरूपधारी आपने ब्रह्मा के समक्ष सनकादिकों को दिया था ॥
+
+Sanskrit Verse:
+सत्त्वोन्मेषात् कदाचित् खलु विषयरसे दोषबोधेऽपि भूमन् भूयोऽप्येषु प्रवृत्तिः सतमसि रजसि प्रोद्धते दुर्निवारा चित्तं तावद् गुणाश्च ग्रथितमिह मिथस्तानि सर्वाणि रोद्धुं तुर्ये त्वय्येकभक्तिः शरणमिति भवान् हंसरूपी न्यगादीत् ॥
+
+
+Example 3:
+Meaning:
+एक बार रावण आदि राक्षसोंके भारसे व्यथित हो पृथिवी गौ का रूप धारण कर देवता और मुनिजनों के सहित श्रीब्रह्माजी के लोक को गयी वहाँ पहुँचकर उसने रोते हुए, अपनेपर पड़ा हुआ सारा दुःख ब्रह्माजी से कहा तब ब्रह्माजी ने एक मुहूर्त तक ध्यानस्थ हो अपने मनमें उसकी दुःखनिवृत्तिका सम्पूर्ण उपाय जान लिया क्योंकि वे सर्वान्तर्यामी है ॥
+
+Sanskrit Verse:
+भूमिर्भारेण भग्ना दशवदनमुखाशेषरक्षोगणानां धृत्वा गोरूपमादौ दिविजमुनिजनैः साकमब्जासनस्य गत्वा लोकं रुदन्ती व्यसनमुपगतं ब्रह्मणे प्राह सर्वं ब्रह्मा ध्यात्वा मुहूर्तं सकलमपि हृदावेदशेषात्मकत्वात् ॥
+
+
+Example 4:
+Meaning:
+तदनन्तर अर्जुन के साथ आप अपने परम वेगशाली रथ के द्वारा पश्चिम दिशा की ओर प्रस्थित हुए चलतेचलते जब लोकालोक पर्वत को लाँघ गये तो वहाँ गहन अन्धकार का भय प्राप्त हुआ उस अन्धकारभय को सुदर्शन चक्र के प्रकाश से चीरते हुए आप उसकी अन्तिम सीमापर जा पहुँचे उस समय अर्जुन की दृष्टि चक्र की किरणों के प्रकाश से चौंधिया गयो थी तब 'अर्जुन ! देखो, वह देखो'यों कहते हुए आपने उन्हें जलराशि के पार विराजमान और अन्धकार से बहुत दूर स्थित अपने किसी अनिर्देश्य पद का दर्शन कराया ॥
+
+Sanskrit Verse:
+सार्द्धं तेन प्रतीचीं दिशमतिजविना स्यन्दनेनाभियातो लोकालोकं व्यतीतस्तिमिरभयमथो चक्रधाम्ना निरुन्धन् चक्रांशुक्लिष्टदृष्टिं स्थितमथ विजयं पश्य पश्येति वारां पारे त्वं प्राददर्शः किमपि हि तमसां दूरदूरं पदं ते ॥
+
+
+Example 5:
+Meaning:
+घरमें रहते हुए वे मनहीमन सोचा करते थे कि 'जनकनन्दिनी महारानी सीता और लक्ष्मणके सहित श्रीरघुनाथजीके भयंकर वनमें चले जानेसे माता कैकेयी अपने दर्शनमात्रसे ही राक्षसीके समान मेरे हृदयमें दाह उत्पन्न करती है अतः अब मैं निस्सन्देह शीघ्र ही सब राजपाट छोड़कर वनको जाऊँगा और मधुर मुसकानसे जिनका मुखारविन्द अति शोभित हो रहा है उन राम और सीताकी नित्यप्रति सेवा करूँगा' ॥
+
+Sanskrit Verse:
+रामेऽरण्यं प्रयाते सह जनकसुतालक्ष्मणाभ्यां सुघोरं माता मे राक्षसीव प्रदहति हृदयं दर्शनादेव सद्यः गच्छाम्यारण्यमद्य स्थिरमतिरखिलं दूरतोऽपास्य राज्यं रामं सीतासमेतं स्मितरुचिरमुखं नित्यमेवानुसेवे ॥
+
+",test,सत्त्vगुणाद् विमिश्रात् तमसि रजसि यः शुद्धसत्vः स एवास्ते येनोपादानतः साtत्विकभूतगणैर् इन्द्रियैः सह लीलावपुर् निर्मितमिदं व्यासवाक्यैः पुराणे निर्मलमिदम् अतः परमानन्दचिन्मयं ब्रह्म निरावृत्तं तत्रैव प्रविशति नितरां श्रवणादौ मधुरं यः श्रीव,

@@ -1,0 +1,498 @@
+sa,hi,skr_out,syllable_count,skr_meter,meter_cd,comments,prompt,split,model_out,out_meter
+श्रवणाचैव तेषां त्वं पुण्यमाप्स्यसि पाण्डव गत्वा शतगुणं चैव तेभ्य एव नरोत्तम ॥,नरश्रेष्ठ पाण्डुनन्दन ! उनका श्रवण करनेमात्रसे तुम्हें उनके सेवनका पुण्य प्राप्त होगा और वहाँ जाने से सौगुने पुण्यकी प्राप्ति होगी  ,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,पा<|repo_name|>jamesmccaffrey/CS-3500<|file_sep|>/Project 1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/Project1/,
+रावणिस्तु यदा नैनं विशेषयति सायकैः ततो गुरुतरं यत्नमातिष्ठद् बलिनां वरः ॥,"चलानी श्रेष्ठ रायणकुमार इन्द्रजित् जय बाण वर्षा करनेमें लक्ष्मणसे आगे न बढ़ सका, तब उसने गुरुतर प्रयत्न आरम्भ किया ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"इन्द्रजित् श्रेष्ठरायणकुमारः जयबाणं वर्षयन्  
+लक्ष्मणात् प्राग् न याति तदा गुरुतरं प्रयत्नमारभत् ॥
+
+This verse follows the Anuṣṭubh meter rules, with each line containing 16 syllables divided into two padas of 8 syllables each. The fifth syllable of each pada is laghu, the sixth is guru, and the seventh syllable of the first and third padas is deergha, while the seventh syllable of the second and fourth padas is hrasva.",
+अग्रतः पुरुषानीकमसिचर्मवतां भवेत् पृष्ठतः शकटानीकं कलत्रं मध्यतस्तथा,सेनाके कूच करते समय सबसे आगे ढालतलवार धारण करनेवाले पुरुषोंकी टुकड़ी रखे पीछेकी ओर रथियोंकी सेना खड़ी करे और बीचमें राजस्त्रियोंको रखे,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"धनुर्धराः पुरस्कृत्य यान्तु सेना विशालिनी ।  
+रथिनः पश्चिमे स्थाप्य राजस्त्रीणां मध्यगाः ॥
+
+This verse follows the Anuṣṭubh meter, with each line containing 16 syllables divided into two padas of 8 syllables each, adhering to the specified metrical rules.",
+मोवाशा मोधकर्माणो मोघज्ञाना विचेतसः राक्षसीमासुरी चैव प्रकृति मोहिनीं श्रिताः ॥,"जो कि वृथा आशा, वृथा कर्म और वृथा ज्ञानवाले अज्ञानीजन राक्षसोंके और असुरों के जैसे मोहित करनेवाले तामसी स्वभावको  ही धारण किये हुए हैं ॥","anuṣṭubh (1,2: pathyā; 3,4: asamīcīnā, na prathamāt snau)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"वृथा आशा वृथा कर्म वृथा ज्ञानं तमसा वृताः ।  
+राक्षसासुरसदृशा मोहिताः स्वभवा जनाः ॥
+
+This verse follows the Anuṣṭubh meter, with each line containing 16 syllables divided into two padas of 8 syllables each, adhering to the specified metrical rules.",
+सर्वभूतपरित्राणं क्षत्रधर्म इहोच्यते वैश्यानां यज्ञसंवृत्तिरातिथेयसमन्विता,इस जगत्में समस्त प्राणियोंकी रक्षा करना क्षत्रिय धर्म बताया जाता है अतिथि सत्कारके साथसाथ यज्ञोंका अनुष्ठान करना वैश्योंका धर्म कहा गया है,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"जगत्सर्वप्राणिरक्षा क्षत्रियधर्म उच्यते।  
+अतिथिसत्कारयज्ञैः वैश्यधर्मः प्रकीर्तितः॥
+
+This verse follows the Anuṣṭubh meter, with each line containing 16 syllables divided into two padas of 8 syllables each, adhering to the specified metrical rules.",
+प्रसादाभिमुखं शश्वत्प्रसन्नवदनेक्षणम् सुनासं सुभ्रुवं चारुकपोलं सुरसुन्दरम् ॥,"जो सदा कृपा करनेको उद्यत रहते हैं, प्रसन्नमुख और प्रसन्ननयन हैं,जिनकी नासिका, भौंहें और कोल अतिसुन्दर हैं और समस्त देवताओंमेंजो मनोहर हैं ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"सदा कृपाकर्तुमुद्‍युक्ता प्रसन्नमुखप्रसन्ननेत्राः ।  
+नासिकाभ्रूकटीसुन्दराः सर्वदेवेषु मनोहराः ॥
+
+This verse follows the Anuṣṭubh meter, with each line containing 16 syllables divided into two padas of 8 syllables each, adhering to the specified metrical rules.",
+तस्यां राज्यां व्यतीतायामुद्रिते सूर्यमण्डले कृतपौर्वाह्निकाः सर्वे समेयुस्ते तपोधनाः ॥,मार्कण्डेयजी कहते हैंजब यह रात बीत गयी और सूर्यमण्डलका उदय हुआ उस समय स तपोधन ऋषिगण पूर्वाह्नकालका नित्यकृत्य पूरा करके पुनः उस आश्रम में एकत्र हुए ॥,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"मार्कण्डेय उवाच यदा रात्रिर्व्यतीता च  
+सूर्योदये तपोधनाः ।  
+पूर्वाह्णे नित्यकर्माणि समाप्याश्रममागताः ॥
+
+This verse follows the Anuṣṭubh meter, with each line containing 8 syllables, and adheres to the rules specified for the meter.",
+यन्मया पाण्डवेयानां दृष्टं तच्छृणु भारत आहृतं भूमिपालैहिं बसु मुख्यं ततस्ततः ॥,"दुर्योधन बोलाभारत ! मैंने पाण्डवोंके यशमें राजाओंके द्वारा भिन्नभिन्न देशोंसे लाये हुए जो उत्तम धनरत्न देखे थे, उन्हें बताता हूँ, सुनिये ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"भा रा त ! दु र् यो ध न उ व च ते य द् र् ष त् य य शे  
+पा ण् ड व य शे रा ज ना न् भि न् न दे श त त् त् र त् न  
+द र् ष त् य द र् ष त् य द र् ष त् य द र् ष त् य द र् ष त् य  
+द र् ष त् य द र् ष त् य द र् ष त् य द र् ष त् य द र् ष त् य ॥
+
+This verse follows the Anuṣṭubh meter, with each line containing 16 syllables divided",
+अयुक्तः प्राकृतः स्तब्धः शठो नैष्कृतिकोऽलसः विषादी दीर्घसूत्री च कर्ता तामस उच्यते ॥,"तथा जो विक्षेपयुक्त चित्तवाला, शिक्षासे रहित, घमण्डी, धूर्त और दूसरेकी आजीविकाका नाशक एवं शोक करनेके खभावत्राला, आलसी और दीर्घसूत्री* है, वह कर्ता तामस कहा जाता है ॥","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"वि‌क्षेपी चित्तवान् शिक्षारहितो घमण्डी  
+धूर्तश्च दूषयिता शोकभाववान् आलसी ।  
+दीर्घसूत्री तमसां कर्तृतां गतो भवेत्  
+अन्यानां जीविकानाशकरो निरन्तरम् ॥
+
+*Note: ""दीर्घसूत्री"" refers to someone who is long-winded or verbose.",
+श्वभ्यश्च श्वपचेभ्यश्च वयोभ्यश्चावपेद् भुवि वैश्वदेवं हि नामैतत् सायं प्रातश्च दीयते ॥,"कुत्तों, चाण्डालों और कौवों के लिये पृथ्वी पर अन्न डाल दे यह वैश्वदेव नामक महान यश है, जिसका अनुष्ठान प्रातःकाल और सायंकाल में भी किया जाता है","anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"वैश्‍वदेवं महायश्‍श्च कुत्तानां चाṇḍālaṁ तथा।  
+काकानां च प्रदातव्यं भूमौ भोज्यं दिने दिने॥  
+प्रातःसायं तथा कुर्यात् तद् अनुष्ठानम् उत्तमम्।  
+यशः प्राप्नोति भूतानां तद् अनुष्ठानम् उत्तमम्॥",
+तत्र वद्धमनोदृष्टिरभवत् सा सुमध्यमा न चातप्यत रूपेण भानोः संभ्यागतस्य सा ॥,प्रातःसंध्या के समय उगते हुए सूर्य की ओर देखने में सुमध्यमा कुन्तीको तनिक भी तापका अनुभव नहीं हुआ ॥ उसके मन और नेत्र उन्होंने आसक्त हो गये ॥,"anuṣṭubh (1,2: pathyā; 3,4: pathyā)",32,Anuṣṭubh,Anuṣṭubh,,"Objective:
+
+Generate a sanskrit verse in Anuṣṭubh meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+The goal is to generate Sanskrit verse that follows the anushtup meter rules for the given input translation.
+RULES:
+Verse Rules:
+The verse contains 32 syllables/akshara and 4 padas in total.
+The verse is divided in 2 lines, each containing 16 syllables.
+Each line is divided into 2 padas (quartets),each containing exactly 8 syllables.
+The fifth syllable of every pada must be LAGHU or short.
+The sixth syllable of every pada must be GURU or long.
+The seventh syllable of the second and the fourth pada must be HRASVA
+The seventh syllable of the first and third paada must be DEERGHA
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+
+Example: 
+Meaning:
+इसलिये कामनाओं या भोगोंकी वृद्धिके लिये आग्रह नहीं रखना चाहिये भोगों में जो आसक्ति होती है, वह दुःखरूप ही है धन पाकर भी उसे धर्ममें ही लगा देना चाहिये काम भोगोंको तो सर्वथा त्याग ही देना चाहिये
+
+Sanskrit Verse:
+न कामाननुरुद्ध्येत दुःखं कामेषु वै रतिः प्राप्यार्थमुपयुञ्जीत धर्मं कामान् विसर्जयेत् ॥
+
+",test,"सुमध्‍यमा तदा दृष्ट्‍वा सूर्यं प्रातर् उद्‍गतम् ।  
+न तापं जगृहे तस्या नेत्रे मनसि चास्‍क्‍तम् ॥
+
+This verse captures the essence of the meaning provided, adhering to the Anuṣṭubh meter rules.",

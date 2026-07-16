@@ -11,8 +11,8 @@ import sys
 # PATHS
 # =========================
 BASE_MODEL = "unsloth/phi-4"
-INPUT_CSV = "Files/v3_gitapress_final_1shot_prompts.csv"
-OUTPUT_CSV = "Outputs/unsloth_phi4_UT_1S.csv"
+INPUT_CSV = "Files/v3_gitapress_final.csv"
+OUTPUT_CSV = "Outputs/unsloth_phi4_FT1S_Eval0S.csv"
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
 BATCH_SIZE = 24
@@ -138,39 +138,6 @@ def generate_batch(batch_df):
 
     return preds
 
-
-
-
-# # =========================
-# # RUN
-# # =========================
-# df = pd.read_csv(INPUT_CSV)
-# df = df[df["split"] == "test"].reset_index(drop=True)
-# size = df.shape[0]
-# print("Total Samples = ", size)
-
-
-# df["model_out"] = ""
-
-# for start in tqdm(range(0, size, BATCH_SIZE)):
-#     end = min(start + BATCH_SIZE, size)
-
-#     batch = df.iloc[start:end]
-
-#     preds = generate_batch(batch)
-
-#     df.loc[start:end-1, "model_out"] = preds
-
-#     if end % SAVE_FREQUENCY == 0:
-#         df.to_csv(OUTPUT_CSV, index=False)
-
-
-# df.to_csv(OUTPUT_CSV, index=False)
-
-# print(f"Output file saved to {OUTPUT_CSV}")
-
-
-
 # =========================
 # RUN
 # =========================
@@ -187,8 +154,7 @@ else:
 size = len(df)
 
 # Find rows that still need inference
-pending_mask = df["model_out"].isna() | (df["model_out"].astype(str).str.strip() == "")
-pending_indices = df.index[pending_mask].tolist()
+pending_indices = df.index[df["model_out"].isna()].tolist()
 
 print(f"Total Samples     = {size}")
 print(f"Remaining Samples = {len(pending_indices)}")
