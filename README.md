@@ -7,7 +7,8 @@
 | `v3_gitapress_meter_analysed`      | **74941** | File with skrutable meters, our verifier meters and syllable counts              | 
 | `v3_gitapress_skr_equal_verifier`  | **29183** | Subset of above file, after adjusting the meter names, where both skrutable and our verifier gives the same meters.| 
 | `v3_gitapress_final`               | **29183** | v3_gitapress_skr_equal_verifier with prompts and splits |
-| `v3_gitapress_final_1shot_prompts` | **29173** | v3_gitapress_skr_equal_verifier with prompts and splits, 10 samples taken from train set for 1shot, one for each meter and updated to prompts. So this file has 1-shot prompts |
+| `v3_gitapress_final_1shot_prompts` | **29173** | v3_gitapress_final with prompts and splits, 10 samples taken from train set for 1shot, one for each meter and updated to prompts. So this file has 1-shot prompts |
+| `v3_gitapress_final_5shot_prompts` | **29133** | v3_gitapress_final with prompts and splits, 50 samples taken from train set for 5shot, one for each meter and updated to prompts. So this file has 1-shot prompts |
 
 # Column descriptions 
 

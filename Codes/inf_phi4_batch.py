@@ -15,7 +15,7 @@ INPUT_CSV = "Files/v3_gitapress_final_1shot_prompts.csv"
 OUTPUT_CSV = "Outputs/unsloth_phi4_UT_1S.csv"
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
-BATCH_SIZE = 12
+BATCH_SIZE = 24
 CONFIG_FILE = "Trained_Models/Phi4-14B-DEV-1SHOT/essential_config.json"
 
 print("Test File in use: ", INPUT_CSV)
@@ -64,7 +64,6 @@ base_model = AutoModelForCausalLM.from_pretrained(
     BASE_MODEL,
     torch_dtype=torch.bfloat16,
     device_map="cuda",
-    # attn_implementation="flash_attention_2",
 )
 print(f"Model used is {BASE_MODEL}", end="")
 
@@ -83,7 +82,7 @@ print()
 
 model.eval()
 
-# model.to(device)
+model.to(device)
 model = torch.compile(model)
 # =========================
 # GENERATION

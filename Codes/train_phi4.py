@@ -20,9 +20,9 @@ HYPERPARAMS = {
     "MODEL_NAME": "unsloth/phi-4",
     "MAX_LEN": 1300, 
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE": 32,
-    "GRAD_ACC": 2,
-    "EPOCHS": 10,
+    "BATCH_SIZE": 64,
+    "GRAD_ACC": 1,
+    "EPOCHS": 5,
     "LR": 2e-4,
     "LOG_STEPS": 50,
     "SAVE_STEPS": 200,
@@ -110,7 +110,7 @@ trainer = SFTTrainer(
     eval_dataset=val_ds,
     dataset_text_field="text",
     max_seq_length=HYPERPARAMS["MAX_LEN"],
-    packing=False,
+    packing=True,
     dataset_num_proc=1,
     callbacks=[EarlyStoppingCallback(early_stopping_patience=HYPERPARAMS["ES_PATIENCE"], early_stopping_threshold = HYPERPARAMS["ES_THRESHOLD"])],
     args=SFTConfig(
@@ -121,7 +121,7 @@ trainer = SFTTrainer(
         num_train_epochs=HYPERPARAMS["EPOCHS"],
 
         learning_rate=HYPERPARAMS["LR"],
-        lr_scheduler_type="linear",
+        lr_scheduler_type="cosine",
         warmup_ratio=HYPERPARAMS["WARMUP_RATIO"],
         weight_decay=HYPERPARAMS["WEIGHT_DECAY"],
 
