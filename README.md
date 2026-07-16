@@ -1,12 +1,13 @@
 # FILES
 
-| File Name                        | Size  | Description   |
-|:------------------------:        |:-----:|:------------- |
-| gitapress_v3_sn_hi               | 74941 | Original file | 
-| gitapress_v3_sn_hi_uvach_removed | 74941 | Original file with occurence of `uvach with noun` removed from sanskrit verse| 
-| v3_gitapress_meter_analysed      | 74941 | File with skrutable meters, our verifier meters and syllable counts              | 
-| v3_gitapress_skr_equal_verifier  | 29183 | Subset of above file, after adjusting the meter names, where both skrutable and our verifier gives the same meters.| 
-| v3_gitapress_final               | 29813 | v3_gitapress_skr_equal_verifier with prompts and splits |
+| File Name                          | Size      | Description   |
+|:------------------------           |:-----:    |:------------- |
+| `gitapress_v3_sn_hi`               | **74941** | Original file | 
+| `gitapress_v3_sn_hi_uvach_removed` | **74941** | Original file with occurence of `uvach with noun` removed from sanskrit verse| 
+| `v3_gitapress_meter_analysed`      | **74941** | File with skrutable meters, our verifier meters and syllable counts              | 
+| `v3_gitapress_skr_equal_verifier`  | **29183** | Subset of above file, after adjusting the meter names, where both skrutable and our verifier gives the same meters.| 
+| `v3_gitapress_final`               | **29183** | v3_gitapress_skr_equal_verifier with prompts and splits |
+| `v3_gitapress_final_1shot_prompts` | **29173** | v3_gitapress_skr_equal_verifier with prompts and splits, 10 samples taken from train set for 1shot, one for each meter and updated to prompts. So this file has 1-shot prompts |
 
 # Column descriptions 
 
@@ -61,7 +62,18 @@ Do NOT include English words, transliteration, labels, or explanations.
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
 
-Output Verse: 
+Examples: [Only present in few-shot prompts files]
+Meaning:
+<hi>
+
+Sanskrit Verse:
+<sa>
+
+Meaning: [From here written in the model's user-instruction in inference/training file, not in csv file]
+{row['hi']}
+
+Generate the Sanskrit verse.
+
 ```
 
 - `target_language` = Sanskrit

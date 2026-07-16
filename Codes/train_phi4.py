@@ -37,8 +37,9 @@ HYPERPARAMS = {
     
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
-
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV",
+    
+    "DATA_FILE_PATH": "Files/v3_gitapress_final_1shot_prompts.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-1SHOT",
 
 }
 
@@ -63,7 +64,7 @@ model = FastLanguageModel.get_peft_model(
     loftq_config=None,
 )
 
-ds = load_dataset('csv', data_files="Files/v3_gitapress_final.csv")["train"]
+ds = load_dataset('csv', data_files=HYPERPARAMS["DATA_FILE_PATH"])["train"]
 train_ds = ds.filter(lambda x: x["split"] == "train")
 val_ds = ds.filter(lambda x: x["split"] == "val")
 print(f"Train: {len(train_ds)}")
@@ -155,19 +156,45 @@ trainer = train_on_responses_only(
     response_part="<|im_start|>assistant<|im_sep|>",
 )
 
-trainer.train()
+checkpoint = "Trained_Models/Phi4-14B-DEV-1SHOT/checkpoint-2200"
 
-print("BEST MODEL STATS")
-print(trainer.state.best_model_checkpoint)
-print(trainer.state.best_metric)
+try:
+    trainer.train(resume_from_checkpoint=checkpoint)
+except KeyboardInterrupt:
+    print("Training interrupted by user.")
+finally:
+    print("BEST MODEL STATS")
+    print(trainer.state.best_model_checkpoint)
+    print(trainer.state.best_metric)
 
-essential_config = {
-    "HYPER-PARAMETERS": HYPERPARAMS,
-    "TRAIN_DATASET_LEN": len(train_ds),
-    "VAL_DATASET_LEN": len(val_ds),
-    "best_model": {"best_model_checkpoint": trainer.state.best_model_checkpoint,
-    "best_model_metric": trainer.state.best_metric}
-}
+    essential_config = {
+        "HYPER-PARAMETERS": HYPERPARAMS,
+        "TRAIN_DATASET_LEN": len(train_ds),
+        "VAL_DATASET_LEN": len(val_ds),
+        "best_model": {
+            "best_model_checkpoint": trainer.state.best_model_checkpoint,
+            "best_model_metric": trainer.state.best_metric,
+        },
+    }
 
-with open(HYPERPARAMS["OUTPUT_DIR"]+"/essential_config.json", "w", encoding="utf-8") as f:
-    json.dump(essential_config, f, indent=4, default=str)
+    with open(
+        HYPERPARAMS["OUTPUT_DIR"] + "/essential_config.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(essential_config, f, indent=4, default=str)
+
+# print("BEST MODEL STATS")
+# print(trainer.state.best_model_checkpoint)
+# print(trainer.state.best_metric)
+
+# essential_config = {
+#     "HYPER-PARAMETERS": HYPERPARAMS,
+#     "TRAIN_DATASET_LEN": len(train_ds),
+#     "VAL_DATASET_LEN": len(val_ds),
+#     "best_model": {"best_model_checkpoint": trainer.state.best_model_checkpoint,
+#     "best_model_metric": trainer.state.best_metric}
+# }
+
+# with open(HYPERPARAMS["OUTPUT_DIR"]+"/essential_config.json", "w", encoding="utf-8") as f:
+#     json.dump(essential_config, f, indent=4, default=str)

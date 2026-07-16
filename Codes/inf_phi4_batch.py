@@ -11,16 +11,22 @@ import sys
 # PATHS
 # =========================
 BASE_MODEL = "unsloth/phi-4"
-INPUT_CSV = "Files/v3_gitapress_final.csv"
-OUTPUT_CSV = "Outputs/unsloth_phi4_UT_ZS.csv"
+INPUT_CSV = "Files/v3_gitapress_final_1shot_prompts.csv"
+OUTPUT_CSV = "Outputs/unsloth_phi4_UT_1S.csv"
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
 BATCH_SIZE = 12
-CONFIG_FILE = "Trained_Models/Phi4-14B-DEV/essential_config.json"
+CONFIG_FILE = "Trained_Models/Phi4-14B-DEV-1SHOT/essential_config.json"
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+print("Test File in use: ", INPUT_CSV)
 
-SET_LORA = False
+if 'UT' in OUTPUT_CSV:
+    SET_LORA = False
+elif 'FT' in OUTPUT_CSV:
+    SET_LORA = True
+else:
+    print("Mention FT: Finetuned or UT: Untrained in OUTPUT CSV")
+    sys.exit(0)
 
 if SET_LORA:
     with open(CONFIG_FILE, "r") as f:
@@ -44,6 +50,8 @@ if os.path.exists(OUTPUT_CSV):
 # =========================
 # LOAD MODEL
 # =========================
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
 
 if tokenizer.pad_token is None:
