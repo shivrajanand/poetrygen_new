@@ -18,13 +18,13 @@ torch.cuda.manual_seed_all(42)
 
 HYPERPARAMS = {
     "MODEL_NAME": "unsloth/phi-4",
-    "MAX_LEN": 1300, 
+    "MAX_LEN": 4096, #based on token length analysis
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE": 64,
-    "GRAD_ACC": 1,
+    "BATCH_SIZE":8,
+    "GRAD_ACC": 8,
     "EPOCHS": 5,
     "LR": 2e-4,
-    "LOG_STEPS": 50,
+    "LOG_STEPS": 200,
     "SAVE_STEPS": 200,
     "SAVE_LIMIT": 3,
     "EVAL_STEPS": 200,
@@ -33,13 +33,13 @@ HYPERPARAMS = {
 
     "LORA_R": 16,
     "LORA_ALPHA": 32,
-    "LORA_DROPOUT": 0.05,
+    "LORA_DROPOUT": 0,
     
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
     
-    "DATA_FILE_PATH": "Files/v3_gitapress_final_1shot_prompts.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-1SHOT",
+    "DATA_FILE_PATH": "Files/v3_gitapress_final_5shot_prompts.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-5SHOT",
 
 }
 

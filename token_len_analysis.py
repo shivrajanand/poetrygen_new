@@ -5,7 +5,7 @@ from transformers import AutoTokenizer
 # Hyperparameters
 # ======================================================
 MODEL_NAME = "unsloth/phi-4"
-CSV_FILE = "Files/v3_gitapress_final.csv"
+CSV_FILE = "Files/v3_gitapress_final_5shot_prompts.csv"
 TEXT_COLUMNS = ['prompt',"hi"]  #Uncomment this for training
 # TEXT_COLUMNS = ['sa'] #Uncomment this for infernece  
 SPLIT = "train"            
