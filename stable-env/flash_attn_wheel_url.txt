@@ -1,0 +1,18 @@
+Flash Attention Wheel Link
+
+https://github.com/lesj0610/flash-attention/releases/download/v2.8.3-cu12-torch2.11/flash_attn-2.8.3+cu12torch2.11cxx11abiTRUE-cp312-cp312-linux_x86_64.whl
+
+Python: 3.12.13
+Torch: 2.11.0+cu128
+CUDA Toolkit: 12.8
+Transformers: 5.14.1
+Unsloth: 2026.7.3
+Unsloth Zoo: 2026.7.3
+FlashAttention: 2.8.3 (community wheel)
+xFormers: 0.0.35
+
+Verified:
+✓ FA2=True with Qwen3
+✓ Gemma 4 loads successfully
+✓ Qwen3 loads successfully
+✓ LoRA environment verified

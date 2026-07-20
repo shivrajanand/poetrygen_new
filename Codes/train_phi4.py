@@ -1,3 +1,4 @@
+import unsloth
 from unsloth import FastLanguageModel
 import torch
 from datasets import load_dataset
@@ -18,28 +19,28 @@ torch.cuda.manual_seed_all(42)
 
 HYPERPARAMS = {
     "MODEL_NAME": "unsloth/phi-4",
-    "MAX_LEN": 4096, #based on token length analysis
+    "MAX_LEN": 2700, #based on token length analysis
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE":8,
+    "BATCH_SIZE":12,
     "GRAD_ACC": 8,
     "EPOCHS": 5,
-    "LR": 2e-4,
+    "LR": 4.7e-4,
     "LOG_STEPS": 200,
     "SAVE_STEPS": 200,
     "SAVE_LIMIT": 3,
     "EVAL_STEPS": 200,
-    "WEIGHT_DECAY": 0.01,
-    "WARMUP_RATIO": 0.03,
+    "WEIGHT_DECAY": 0.016,
+    "WARMUP_RATIO": 0.0,
 
-    "LORA_R": 16,
-    "LORA_ALPHA": 32,
+    "LORA_R": 32,
+    "LORA_ALPHA": 64,
     "LORA_DROPOUT": 0,
     
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
     
-    "DATA_FILE_PATH": "Files/v3_gitapress_final_5shot_prompts.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-5SHOT",
+    "DATA_FILE_PATH": "Files/v3_gitapress_final_3shot_prompts.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-3SHOT",
 
 }
 
@@ -58,7 +59,7 @@ model = FastLanguageModel.get_peft_model(
     lora_alpha=HYPERPARAMS["LORA_ALPHA"],
     lora_dropout=HYPERPARAMS["LORA_DROPOUT"],
     bias="none",
-    use_gradient_checkpointing="unsloth",
+    use_gradient_checkpointing=True,
     random_state=3407,
     use_rslora=False,
     loftq_config=None,

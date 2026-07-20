@@ -97,3 +97,4 @@ Generate the Sanskrit verse.
 | Qwen/Qwen3-14B  | Files/v3_gitapress_final.csv               |train| sa             |     23346 |    58 |       80 |  83.31 |    91 |   115 |   186 |   231 |
 | unsloth/phi-4   | Files/v3_gitapress_final.csv               |train| prompt, hi     |     23346 |   509 |      612 | 625.11 |   684 |   726 |   860 |  1305 |
 | unsloth/phi-4   | Files/v3_gitapress_final_5shot_prompts.csv |train| prompt, hi, sa |     23296 |  2008 |     2128 | 2200.89|  2225 |  2643 |  3710 |  4645 |
+| unsloth/phi-4   | Files/v3_gitapress_final_3shot_prompts.csv |train| prompt, hi, sa |     23316 |  1423 |     1543 | 1594.64|  1641 |  1970 |  2620 |  3292 |
