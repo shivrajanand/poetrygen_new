@@ -39,9 +39,9 @@ torch.cuda.manual_seed_all(42)
 # Fixed settings (systems/throughput choices -- not being searched)
 # ---------------------------------------------------------------------------
 MODEL_NAME = "unsloth/phi-4"
-MAX_LEN = 2700                                              # CHANGED for 3-shot
+MAX_LEN = 3750                                              # CHANGED for 3-shot
 LOAD_IN_4BIT = True
-DATA_FILE_PATH = "Files/v3_gitapress_final_3shot_prompts.csv"  # CHANGED for 3-shot
+DATA_FILE_PATH = "Files/v3_gitapress_final_5shot_prompts.csv"  # CHANGED for 3-shot
 
 # Same as the proven-working 5-shot run -- untouched.
 SEARCH_BATCH_SIZE = 8
@@ -55,10 +55,10 @@ SEARCH_EVAL_STEPS = 15         # eval every N steps -> enables pruning signal
 N_TRIALS = 20
 STUDY_TIMEOUT_HOURS = 9        # hard safety cap so the study stops before morning
 
-STUDY_DB = "sqlite:///hpo_study_3shot.db"   # CHANGED for 3-shot -- separate from the 5-shot study's db
-STUDY_NAME = "phi4_sanskrit_hpo_3shot"      # CHANGED for 3-shot -- separate study name
+STUDY_DB = "sqlite:///hpo_study_5shot.db"   # CHANGED for 3-shot -- separate from the 5-shot study's db
+STUDY_NAME = "phi4_sanskrit_hpo_5shot"      # CHANGED for 3-shot -- separate study name
 
-OUTPUT_DIR = "hpo_runs_3shot"               # CHANGED for 3-shot
+OUTPUT_DIR = "hpo_runs_5shot"               # CHANGED for 3-shot
 
 
 def build_formatter(tokenizer):
@@ -237,8 +237,8 @@ if __name__ == "__main__":
         for k, v in study.best_trial.params.items():
             print(f"  {k}: {v}")
 
-    study.trials_dataframe().to_csv("hpo_results-3shot.csv", index=False)
-    with open("hpo_best_params-3shot.json", "w") as f:
+    study.trials_dataframe().to_csv("hpo_results-5shot.csv", index=False)
+    with open("hpo_best_params-5shot.json", "w") as f:
         json.dump({
             "best_eval_loss": study.best_value if completed else None,
             "best_params": study.best_trial.params if completed else None,
@@ -246,4 +246,4 @@ if __name__ == "__main__":
             "n_trials_total": len(study.trials),
         }, f, indent=2)
 
-    print("\nFull results: hpo_results-3shot.csv, hpo_best_params-3shot.json")
+    print("\nFull results: hpo_results-5shot.csv, hpo_best_params-5shot.json")

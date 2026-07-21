@@ -4,3 +4,4 @@ run.bash
 /Trained_Models
 score_analysis.ipynb
 out-3s.txt
+*.sbatch
