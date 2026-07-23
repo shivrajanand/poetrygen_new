@@ -14,7 +14,8 @@ SPLIT = "train"
 # Load data
 # ======================================================
 df = pd.read_csv(CSV_FILE)
-
+df = df[df['meter_cd']=='Anuṣṭubh']
+print("Unique meters: ", df['meter_cd'].unique())
 if SPLIT is not None:
     df = df[df["split"] == SPLIT].copy()
 

@@ -91,10 +91,11 @@ Generate the Sanskrit verse.
 
 # Token count analysis on train split only
 
-| Model           | Dataset                                    |Split| Columns        |   Samples |   Min |   Median |   Mean |   90p |   95p |   99p |   Max |
-|:----------------|:----------------------------- -------------|:----|:---------------|----------:|------:|---------:|-------:|------:|------:|------:|------:|
-| microsoft/phi-4 | Files/v3_gitapress_final.csv               |train| sa             |     23346 |    63 |       86 |  90.46 |    98 |   125 |   202 |   248 |
-| Qwen/Qwen3-14B  | Files/v3_gitapress_final.csv               |train| sa             |     23346 |    58 |       80 |  83.31 |    91 |   115 |   186 |   231 |
-| unsloth/phi-4   | Files/v3_gitapress_final.csv               |train| prompt, hi     |     23346 |   509 |      612 | 625.11 |   684 |   726 |   860 |  1305 |
-| unsloth/phi-4   | Files/v3_gitapress_final_5shot_prompts.csv |train| prompt, hi, sa |     23296 |  2008 |     2128 | 2200.89|  2225 |  2643 |  3710 |  4645 |
-| unsloth/phi-4   | Files/v3_gitapress_final_3shot_prompts.csv |train| prompt, hi, sa |     23316 |  1423 |     1543 | 1594.64|  1641 |  1970 |  2620 |  3292 |
+| Model           | Dataset                                                    |Split| Columns        |   Samples |   Min |   Median |   Mean |   90p |   95p |   99p |   Max |
+|:----------------|:-----------------------------------------------------------|:----|:---------------|----------:|------:|---------:|-------:|------:|------:|------:|------:|
+| microsoft/phi-4 | Files/v3_gitapress_final.csv                               |train| sa             |     23346 |    63 |       86 |  90.46 |    98 |   125 |   202 |   248 |
+| Qwen/Qwen3-14B  | Files/v3_gitapress_final.csv                               |train| sa             |     23346 |    58 |       80 |  83.31 |    91 |   115 |   186 |   231 |
+| unsloth/phi-4   | Files/v3_gitapress_final.csv                               |train| prompt, hi     |     23346 |   509 |      612 | 625.11 |   684 |   726 |   860 |  1305 |
+| unsloth/phi-4   | Files/v3_gitapress_final_5shot_prompts.csv                 |train| prompt, hi, sa |     23296 |  2008 |     2128 | 2200.89|  2225 |  2643 |  3710 |  4645 |
+| unsloth/phi-4   | Files/v3_gitapress_final_3shot_prompts.csv                 |train| prompt, hi, sa |     23316 |  1423 |     1543 | 1594.64|  1641 |  1970 |  2620 |  3292 |
+| unsloth/phi-4   | Files/v3_gitapress_final_3shot_prompts.csv (Anustubh Only) |train| prompt, hi, sa |     21763 |  1423 |     1540 | 1547.44|  1599 |  1627 |  1703 |  2166 |
