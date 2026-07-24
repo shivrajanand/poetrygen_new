@@ -11,12 +11,12 @@ import sys
 # PATHS
 # =========================
 BASE_MODEL = "unsloth/phi-4"
-INPUT_CSV = "Files/v3_gitapress_final.csv"
-OUTPUT_CSV = "Outputs/unsloth_phi4_FT1S_Eval0S.csv"
+INPUT_CSV = "Files/v3_gitapress_final_3shot_prompts.csv"
+OUTPUT_CSV = "Outputs/unsloth_phi4_FT_3S.csv"
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
-BATCH_SIZE = 24
-CONFIG_FILE = "Trained_Models/Phi4-14B-DEV-1SHOT/essential_config.json"
+BATCH_SIZE = 12
+CONFIG_FILE = "Trained_Models/Phi4-14B-DEV-3SHOT/essential_config.json"
 
 print("Test File in use: ", INPUT_CSV)
 
@@ -151,6 +151,7 @@ else:
     df = df[df["split"] == "test"].reset_index(drop=True)
     df["model_out"] = ""
 
+df["model_out"] = df["model_out"].astype("object")
 size = len(df)
 
 # Find rows that still need inference

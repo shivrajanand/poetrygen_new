@@ -5,3 +5,4 @@ run.bash
 score_analysis.ipynb
 out*.txt
 *.sbatch
+hpo*

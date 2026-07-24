@@ -1,20 +1,3 @@
-"""
-Overnight hyperparameter search using Optuna, scored on validation loss.
-
-Each trial trains for a SHORT proxy run (not the full 5 epochs) and is
-scored on eval_loss. Bad trials are pruned early (MedianPruner) so you
-don't waste GPU time completing configs that are clearly worse than the
-median of trials so far. At the end, plug study.best_trial.params into
-your real training script for the full run.
-
-This is the 3-shot variant, based directly on the 5-shot script that
-already ran successfully -- only the dataset-specific values below changed
-(MAX_LEN, DATA_FILE_PATH, output filenames, study name/db). Batch and eval
-settings are left exactly as they were in the proven-working 5-shot run.
-
-Requires: pip install optuna --break-system-packages
-"""
-
 import unsloth
 from unsloth import FastLanguageModel
 import torch
@@ -39,26 +22,26 @@ torch.cuda.manual_seed_all(42)
 # Fixed settings (systems/throughput choices -- not being searched)
 # ---------------------------------------------------------------------------
 MODEL_NAME = "unsloth/phi-4"
-MAX_LEN = 3750                                              # CHANGED for 3-shot
+MAX_LEN = 2700                                              # CHANGED for 3-shot
 LOAD_IN_4BIT = True
-DATA_FILE_PATH = "Files/v3_gitapress_final_5shot_prompts.csv"  # CHANGED for 3-shot
+DATA_FILE_PATH = "Files/v3_gitapress_final_3shot_prompts.csv"  # CHANGED for 3-shot
 
 # Same as the proven-working 5-shot run -- untouched.
 SEARCH_BATCH_SIZE = 8
 SEARCH_GRAD_ACC = 4          # effective batch = 32 for the search phase
 GRAD_CHECKPOINTING = True
 
-SEARCH_TRAIN_SUBSET = 5000     # rows of train data used per trial
-SEARCH_VAL_SUBSET = 500        # rows of val data used per trial for eval
-SEARCH_MAX_STEPS = 60          # optimizer steps per trial (proxy run, not full training)
-SEARCH_EVAL_STEPS = 15         # eval every N steps -> enables pruning signal
+SEARCH_TRAIN_SUBSET = 8000     # rows of train data used per trial
+SEARCH_VAL_SUBSET = 800        # rows of val data used per trial for eval
+SEARCH_MAX_STEPS = 120          # optimizer steps per trial (proxy run, not full training)
+SEARCH_EVAL_STEPS = 20         # eval every N steps -> enables pruning signal
 N_TRIALS = 20
-STUDY_TIMEOUT_HOURS = 9        # hard safety cap so the study stops before morning
+# STUDY_TIMEOUT_HOURS = 9        # hard safety cap so the study stops before morning
 
-STUDY_DB = "sqlite:///hpo_study_5shot.db"   # CHANGED for 3-shot -- separate from the 5-shot study's db
-STUDY_NAME = "phi4_sanskrit_hpo_5shot"      # CHANGED for 3-shot -- separate study name
+STUDY_DB = "sqlite:///hpo_study_3shot.db"   # CHANGED for 3-shot -- separate from the 5-shot study's db
+STUDY_NAME = "phi4_sanskrit_hpo_3shot"      # CHANGED for 3-shot -- separate study name
 
-OUTPUT_DIR = "hpo_runs_5shot"               # CHANGED for 3-shot
+OUTPUT_DIR = "hpo_runs_3shot"               # CHANGED for 3-shot
 
 
 def build_formatter(tokenizer):
@@ -91,24 +74,27 @@ class OptunaPruningCallback(TrainerCallback):
         self.eval_count = 0
 
     def on_evaluate(self, args, state, control, metrics=None, **kwargs):
-        if not metrics or "eval_loss" not in metrics:
+        if metrics is None or "eval_loss" not in metrics:
             return control
-        self.eval_count += 1
-        self.trial.report(metrics["eval_loss"], step=self.eval_count)
+
+        self.trial.report(metrics["eval_loss"], state.global_step)
+
         if self.trial.should_prune():
-            control.should_training_stop = True
+            raise optuna.TrialPruned()
+
         return control
 
 
 def objective(trial, train_ds_raw, val_ds_raw):
-    lr = trial.suggest_float("lr", 5e-5, 5e-4, log=True)
-    lora_r = trial.suggest_categorical("lora_r", [8, 16, 32, 64])
-    lora_alpha_mult = trial.suggest_categorical("lora_alpha_mult", [1, 2])
-    lora_alpha = lora_r * lora_alpha_mult
-    lora_dropout = trial.suggest_categorical("lora_dropout", [0.0, 0.05, 0.1])
-    weight_decay = trial.suggest_float("weight_decay", 0.0, 0.1)
-    warmup_ratio = trial.suggest_float("warmup_ratio", 0.0, 0.1)
-
+    lr = trial.suggest_float("lr", 1e-4, 8e-4, log=True)
+    lora_r = trial.suggest_categorical("lora_r", [16,32,64])
+    lora_alpha = trial.suggest_categorical("lora_alpha",[16, 32, 64, 128])
+    lora_dropout = trial.suggest_categorical("lora_dropout", [0.0, 0.02, 0.05, 0.1])
+    weight_decay = trial.suggest_float("weight_decay", 0.0, 0.03)
+    warmup_ratio = trial.suggest_float("warmup_ratio", 0.02, 0.15)
+    max_grad_norm = trial.suggest_categorical("max_grad_norm", [0.3,0.5,1.0])
+    scheduler = trial.suggest_categorical("scheduler",["cosine","linear","cosine_with_restarts",])
+    packing = trial.suggest_categorical("packing",[True, False])
     label = f"trial{trial.number}_lr{lr:.2e}_r{lora_r}_a{lora_alpha}_do{lora_dropout}"
     print(f"\n{'='*80}\n{label}\n{'='*80}")
 
@@ -149,7 +135,7 @@ def objective(trial, train_ds_raw, val_ds_raw):
             eval_dataset=val_ds,
             dataset_text_field="text",
             max_seq_length=MAX_LEN,
-            packing=True,
+            packing=packing,
             dataset_num_proc=1,
             callbacks=[OptunaPruningCallback(trial)],
             args=SFTConfig(
@@ -158,7 +144,8 @@ def objective(trial, train_ds_raw, val_ds_raw):
                 gradient_accumulation_steps=SEARCH_GRAD_ACC,
                 max_steps=SEARCH_MAX_STEPS,
                 learning_rate=lr,
-                lr_scheduler_type="cosine",
+                lr_scheduler_type=scheduler,
+                max_grad_norm=max_grad_norm,
                 warmup_ratio=warmup_ratio,
                 weight_decay=weight_decay,
                 logging_steps=10,
@@ -200,7 +187,7 @@ if __name__ == "__main__":
     train_ds_raw, val_ds_raw = load_raw_data()
 
     sampler = TPESampler(seed=42)
-    pruner = MedianPruner(n_startup_trials=3, n_warmup_steps=1)
+    pruner = MedianPruner(n_startup_trials=5, n_warmup_steps=2)
     study = optuna.create_study(
         direction="minimize",
         sampler=sampler,
@@ -217,7 +204,7 @@ if __name__ == "__main__":
     study.optimize(
         lambda t: objective(t, train_ds_raw, val_ds_raw),
         n_trials=max(0, N_TRIALS - n_already_done),
-        timeout=STUDY_TIMEOUT_HOURS * 3600,
+        # timeout=STUDY_TIMEOUT_HOURS * 3600,
         gc_after_trial=True,
     )
 
@@ -237,8 +224,8 @@ if __name__ == "__main__":
         for k, v in study.best_trial.params.items():
             print(f"  {k}: {v}")
 
-    study.trials_dataframe().to_csv("hpo_results-5shot.csv", index=False)
-    with open("hpo_best_params-5shot.json", "w") as f:
+    study.trials_dataframe().to_csv("hpo_results-3shot.csv", index=False)
+    with open("hpo_best_params-3shot.json", "w") as f:
         json.dump({
             "best_eval_loss": study.best_value if completed else None,
             "best_params": study.best_trial.params if completed else None,
@@ -246,4 +233,4 @@ if __name__ == "__main__":
             "n_trials_total": len(study.trials),
         }, f, indent=2)
 
-    print("\nFull results: hpo_results-5shot.csv, hpo_best_params-5shot.json")
+    print("\nFull results: hpo_results-3shot.csv, hpo_best_params-3shot.json")
