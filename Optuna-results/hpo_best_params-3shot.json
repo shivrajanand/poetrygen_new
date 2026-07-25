@@ -1,13 +1,16 @@
 {
-  "best_eval_loss": 0.6658661365509033,
+  "best_eval_loss": 0.630494236946106,
   "best_params": {
-    "lr": 0.00047047364977780606,
-    "lora_r": 32,
-    "lora_alpha_mult": 2,
-    "lora_dropout": 0.0,
-    "weight_decay": 0.015716547102282034,
-    "warmup_ratio": 0.0004256381047195299
+    "lr": 0.0002178930765977573,
+    "lora_r": 16,
+    "lora_alpha": 128,
+    "lora_dropout": 0.1,
+    "weight_decay": 0.02497327922401265,
+    "warmup_ratio": 0.0476040843881759,
+    "max_grad_norm": 1.0,
+    "scheduler": "cosine",
+    "packing": true
   },
-  "n_trials_completed": 10,
-  "n_trials_total": 18
+  "n_trials_completed": 6,
+  "n_trials_total": 20
 }

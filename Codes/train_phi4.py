@@ -19,28 +19,29 @@ torch.cuda.manual_seed_all(42)
 
 HYPERPARAMS = {
     "MODEL_NAME": "unsloth/phi-4",
-    "MAX_LEN": 1750, #based on token length analysis
+    "MAX_LEN": 2700, #based on token length analysis
     "LOAD_IN_4BIT": True,
     "BATCH_SIZE":12,
     "GRAD_ACC": 8,
     "EPOCHS": 5,
-    "LR": 2e-4,
+    "LR": 2.18e-4,
     "LOG_STEPS": 50,
     "SAVE_STEPS": 200,
     "SAVE_LIMIT": 3,
-    "EVAL_STEPS": 200,
-    "WEIGHT_DECAY": 0.01,
-    "WARMUP_RATIO": 0.03,
+    "EVAL_STEPS": 100,
+    "WEIGHT_DECAY": 0.025,
+    "WARMUP_RATIO": 0.048,
+    "MAX_GRAD_NORM": 1.0,
 
     "LORA_R": 16,
-    "LORA_ALPHA": 32,
-    "LORA_DROPOUT": 0.05,
+    "LORA_ALPHA": 128,
+    "LORA_DROPOUT": 0.1,
     
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
     
-    "DATA_FILE_PATH": "/home/shivraj-pg/v3_poetrygen_new/Files/v3_gitapress_final.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-Anustubh",
+    "DATA_FILE_PATH": "Files/v3_gitapress_final_3shot_prompts.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-3SHOT",
 
 }
 
@@ -66,13 +67,6 @@ model = FastLanguageModel.get_peft_model(
 )
 
 ds = load_dataset('csv', data_files=HYPERPARAMS["DATA_FILE_PATH"])["train"]
-
-print("Filterin anustubh from dataset")
-print("Dataset size before filtering: ", len(ds))
-ds = ds.filter(lambda x: x["meter_cd"] == "Anuṣṭubh")
-print("Dataset size after filtering: ", len(ds))
-print("List of unique meters in dataset now: set(ds['meter_cd']): ", set(ds["meter_cd"]))
-
 
 train_ds = ds.filter(lambda x: x["split"] == "train")
 val_ds = ds.filter(lambda x: x["split"] == "val")
@@ -133,6 +127,7 @@ trainer = SFTTrainer(
         lr_scheduler_type="cosine",
         warmup_ratio=HYPERPARAMS["WARMUP_RATIO"],
         weight_decay=HYPERPARAMS["WEIGHT_DECAY"],
+        max_grad_norm=HYPERPARAMS["MAX_GRAD_NORM"],
 
         logging_steps=HYPERPARAMS["LOG_STEPS"],
         logging_strategy="steps",
