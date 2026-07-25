@@ -5,7 +5,7 @@ from transformers import AutoTokenizer
 # Hyperparameters
 # ======================================================
 MODEL_NAME = "unsloth/phi-4"
-CSV_FILE = "Files/v3_gitapress_final_3shot_prompts.csv"
+CSV_FILE = "Files/v3_gitapress_final_1shot_prompts.csv"
 TEXT_COLUMNS = ['prompt',"hi", "sa"]  #Uncomment this for training
 # TEXT_COLUMNS = ['sa'] #Uncomment this for infernece  
 SPLIT = "train"            
@@ -14,8 +14,7 @@ SPLIT = "train"
 # Load data
 # ======================================================
 df = pd.read_csv(CSV_FILE)
-df = df[df['meter_cd']=='Anuṣṭubh']
-print("Unique meters: ", df['meter_cd'].unique())
+
 if SPLIT is not None:
     df = df[df["split"] == SPLIT].copy()
 
