@@ -11,12 +11,12 @@ import sys
 # PATHS
 # =========================
 BASE_MODEL = "unsloth/phi-4"
-INPUT_CSV = "Files/v3_gitapress_final_3shot_prompts.csv"
-OUTPUT_CSV = "Outputs/unsloth_phi4_FT_3S.csv"
+INPUT_CSV = "Files/v3_gitapress_final.csv"
+OUTPUT_CSV = "Outputs/unsloth_phi4_FT_anustubh1S.csv"
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
 BATCH_SIZE = 12
-CONFIG_FILE = "Trained_Models/Phi4-14B-DEV-3SHOT/essential_config.json"
+CONFIG_FILE = "Trained_Models/Phi4-14B-DEV-Anustubh/essential_config.json"
 
 print("Test File in use: ", INPUT_CSV)
 
@@ -154,8 +154,17 @@ else:
 df["model_out"] = df["model_out"].astype("object")
 size = len(df)
 
+print("Filtering Anustubh... from", df.shape[0], "samples")
+df = df[df['meter_cd']=='Anuṣṭubh']
+print("After filtering we have ", df.shape[0], "samples")
+
 # Find rows that still need inference
-pending_indices = df.index[df["model_out"].isna()].tolist()
+pending_mask = (
+    df["model_out"].isna()
+    | (df["model_out"].astype(str).str.strip() == "")
+)
+
+pending_indices = df.index[pending_mask].tolist()
 
 print(f"Total Samples     = {size}")
 print(f"Remaining Samples = {len(pending_indices)}")
