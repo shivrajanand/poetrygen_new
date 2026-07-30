@@ -1,7 +1,7 @@
 (stableenv) shivraj-pg@Cyclops:~/v3_poetrygen_new$ python3 evaluation.py Outputs/unsloth_phi4_FT_anustubh1S.csv 
 ## FILE DETAILS
 ------------------------------
-- FILEPATH: Outputs/unsloth_phi4_FT_anustubh1S.csv
+- FILEPATH: Outputs/unsloth_phi4_FT_anustubh.csv
 - GROUND_TRUTH: meter_cd
 - PRED_COL: model_out
 - PRED_METER: out_meter
