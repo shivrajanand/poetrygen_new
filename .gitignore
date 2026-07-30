@@ -6,3 +6,5 @@ score_analysis.ipynb
 out*.txt
 *.sbatch
 hpo*
+vasant-study.txt
+vasantatilaka_hpo.db

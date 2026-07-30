@@ -5,14 +5,12 @@ from pathlib import Path
 sys.path.append(str(Path("chandas-detector").resolve()))
 import chandas_detector
 from chandas_detector import detect_meter, format_result
-from sentence_transformers import SentenceTransformer
+from sklearn.metrics import precision_recall_fscore_support
 
 FILEPATH = sys.argv[1]
-
-INPUT_COL = "hi"           # source text fed to the model
-GROUND_TRUTH = "meter_cd"  # ground-truth meter
-PRED_COL = "model_out"     # generated Sanskrit verse
-PRED_METER = "out_meter"   # meter detected from model_out
+GROUND_TRUTH = "meter_cd"
+PRED_COL = "model_out"
+PRED_METER = "out_meter"
 
 df = pd.read_csv(FILEPATH)
 
@@ -23,13 +21,16 @@ df = pd.read_csv(FILEPATH)
 print("## FILE DETAILS")
 print("------------------------------")
 print(f"- FILEPATH: {FILEPATH}")
-print(f"- INPUT_COL: {INPUT_COL}")
 print(f"- GROUND_TRUTH: {GROUND_TRUTH}")
 print(f"- PRED_COL: {PRED_COL}")
 print(f"- PRED_METER: {PRED_METER}")
 
 ########################################
-####### Check for alphanum problems
+####### Check for alphanum
+########################################
+
+########################################
+####### Check for alphanum
 ########################################
 df[PRED_METER] = None
 
@@ -38,7 +39,7 @@ mask_problem = df[PRED_COL].str.contains(r"[A-Za-z0-46-9]", na=False)
 df_with_alnum = df[mask_problem]
 
 if df_with_alnum.empty:
-    print("\nOutputs are clean")
+    print("Outputs are clean")
 else:
     problem_file = FILEPATH.replace(".csv", "_problem_cols.csv")
     df_with_alnum.to_csv(problem_file, index=False)
@@ -46,15 +47,15 @@ else:
     # Mark problematic rows instead of removing them
     df.loc[mask_problem, PRED_METER] = "problem"
 
-    print(f"\nProblematic rows saved to {problem_file}.")
+    print(f"Problematic rows saved to {problem_file}.")
     print("Letter '5' is ignored because models sometimes use it for avagraha (ऽ).")
     print(f"Marked {len(df_with_alnum)} rows as 'problem' in '{PRED_METER}'.")
-
+    
 ########################################
-####### Getting output meters
+####### Getting output meters 
 ########################################
 
-for idx in tqdm(df.index, total=len(df), desc="Detecting meters"):
+for idx in tqdm(df.index, total=len(df)):
     if df.at[idx, PRED_METER] == "problem":
         continue
 
@@ -66,7 +67,7 @@ for idx in tqdm(df.index, total=len(df), desc="Detecting meters"):
     )
 
 ########################################
-####### Metric 1: Overall Accuracy
+####### Scores 
 ########################################
 
 eval_df = df[df[PRED_METER] != "problem"].copy()
@@ -75,49 +76,42 @@ eval_df[PRED_METER] = eval_df[PRED_METER].fillna("UNKNOWN")
 eval_df["score"] = (eval_df[GROUND_TRUTH] == eval_df[PRED_METER]).astype(int)
 
 df["score"] = pd.NA
+
 df.loc[eval_df.index, "score"] = eval_df["score"]
+
+########################################
+####### Results Overall
+########################################
 
 overall_acc = eval_df["score"].mean()
 
-print("\n## Metric 1: Overall Accuracy (meter_cd vs out_meter)")
+print("\n## Overall Evaluation")
 print("------------------")
 print(f"- Total samples      : {len(eval_df)}")
 print(f"- Correct predictions: {eval_df['score'].sum()}")
 print(f"- Accuracy           : {overall_acc:.2%}")
-print(f"- Null meters        : {(eval_df[PRED_METER] == 'UNKNOWN').sum()}")
+print(f"- Null meters        : {eval_df[PRED_METER].isna().sum()}")
 print(f"- Problem rows       : {(df[PRED_METER] == 'problem').sum()}")
 
 ########################################
-####### Metric 2: Semantic Similarity
+####### Macro Analysis
 ########################################
 
-print("\n## Metric 2: Semantic Similarity (input vs model_out)")
+precision, recall, f1, _ = precision_recall_fscore_support(
+    eval_df[GROUND_TRUTH],
+    eval_df[PRED_METER],
+    average="macro",
+    zero_division=0,
+)
+
+print("\n## Macro Report")
 print("------------------")
-
-sim_df = df.dropna(subset=[INPUT_COL, PRED_COL]).copy()
-sim_df = sim_df[sim_df[PRED_METER] != "problem"]
-
-semantic_model = SentenceTransformer('sanganaka/bge-m3-sanskritFT')
-
-inputs = sim_df[INPUT_COL].astype(str).tolist()
-poetry_outputs = sim_df[PRED_COL].astype(str).tolist()
-
-in_embs = semantic_model.encode(inputs, convert_to_tensor=True)
-out_embs = semantic_model.encode(poetry_outputs, convert_to_tensor=True)
-
-sims = semantic_model.similarity_pairwise(in_embs, out_embs)
-sims = sims.cpu().numpy()
-
-df["semsim"] = pd.NA
-df.loc[sim_df.index, "semsim"] = sims
-
-print(f"- Total samples          : {len(sim_df)}")
-print(f"- Mean semantic similarity: {sims.mean():.4f}")
-print(f"- Std semantic similarity : {sims.std():.4f}")
-print(f"- Min / Max               : {sims.min():.4f} / {sims.max():.4f}")
+print(f"- Precision : {precision:.3f}")
+print(f"- Recall    : {recall:.3f}")
+print(f"- F1 Score  : {f1:.3f}")
 
 ########################################
-####### Metric 3: Meter-wise Accuracy
+####### Meter wise analysis
 ########################################
 
 meters = sorted(eval_df[GROUND_TRUTH].dropna().unique())
@@ -136,25 +130,37 @@ for meter in meters:
 
     null_preds = (
         (eval_df[GROUND_TRUTH] == meter) &
-        (eval_df[PRED_METER] == "UNKNOWN")
+        (
+            eval_df[PRED_METER].isna() |
+            (eval_df[PRED_METER].astype(str).str.strip() == "")
+        )
     ).sum()
+
+    y_true = (eval_df[GROUND_TRUTH] == meter).astype(int)
+    y_pred = (eval_df[PRED_METER] == meter).astype(int)
+
+    precision, recall, f1, _ = precision_recall_fscore_support(
+        y_true,
+        y_pred,
+        average="binary",
+        zero_division=0,
+    )
 
     results.append({
         "Meter": meter,
         "Total": total,
         "Correct": correct,
         "Accuracy (%)": round(accuracy, 2),
+        "Precision": round(precision, 3),
+        "Recall": round(recall, 3),
+        "F1": round(f1, 3),
         "Null": null_preds,
     })
 
 results_df = pd.DataFrame(results)
 
-print("\n## Metric 3: Meter-wise Accuracy\n")
+print("## Meter-wise Evaluation\n")
 print(results_df.to_markdown(index=False))
 
-########################################
-####### Save
-########################################
-
 df.to_csv(FILEPATH, index=False)
-print(f"\nAll score/semsim updates saved back to {FILEPATH}")
+print(f"All score updates saved back to {FILEPATH}")
