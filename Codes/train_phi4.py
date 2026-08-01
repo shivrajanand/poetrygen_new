@@ -19,29 +19,29 @@ torch.cuda.manual_seed_all(42)
 
 HYPERPARAMS = {
     "MODEL_NAME": "unsloth/phi-4",
-    "MAX_LEN": 2700, #based on token length analysis
+    "MAX_LEN": 1408, #based on token length analysis
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE":12,
-    "GRAD_ACC": 8,
-    "EPOCHS": 5,
-    "LR": 2.18e-4,
-    "LOG_STEPS": 50,
-    "SAVE_STEPS": 200,
-    "SAVE_LIMIT": 3,
-    "EVAL_STEPS": 100,
-    "WEIGHT_DECAY": 0.025,
-    "WARMUP_RATIO": 0.048,
+    "BATCH_SIZE":16,
+    "GRAD_ACC": 4,
+    "EPOCHS": 50,
+    "LR": 2.4e-4,
+    "LOG_STEPS": 5,
+    "SAVE_STEPS": 10,
+    "SAVE_LIMIT": 50,
+    "EVAL_STEPS": 50,
+    "WEIGHT_DECAY": 0.00465,
+    "WARMUP_RATIO": 0.05,
     "MAX_GRAD_NORM": 1.0,
 
-    "LORA_R": 16,
+    "LORA_R": 32,
     "LORA_ALPHA": 128,
     "LORA_DROPOUT": 0.1,
     
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
     
-    "DATA_FILE_PATH": "Files/v3_gitapress_final_3shot_prompts.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-3SHOT",
+    "DATA_FILE_PATH": "Files/v3_gitapress_final_vasantatilaka.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-Vasantatalika-overfit",
 
 }
 
@@ -115,7 +115,7 @@ trainer = SFTTrainer(
     max_seq_length=HYPERPARAMS["MAX_LEN"],
     packing=True,
     dataset_num_proc=1,
-    callbacks=[EarlyStoppingCallback(early_stopping_patience=HYPERPARAMS["ES_PATIENCE"], early_stopping_threshold = HYPERPARAMS["ES_THRESHOLD"])],
+    # callbacks=[EarlyStoppingCallback(early_stopping_patience=HYPERPARAMS["ES_PATIENCE"], early_stopping_threshold = HYPERPARAMS["ES_THRESHOLD"])],
     args=SFTConfig(
         output_dir=HYPERPARAMS["OUTPUT_DIR"],
 
@@ -144,7 +144,7 @@ trainer = SFTTrainer(
         fp16=False,
         bf16=True,
 
-        load_best_model_at_end=True,
+        load_best_model_at_end=False,
         metric_for_best_model="eval_loss",
         greater_is_better=False,
         
@@ -162,16 +162,19 @@ trainer = train_on_responses_only(
 
 trainer.train()
 
-print("BEST MODEL STATS")
-print(trainer.state.best_model_checkpoint)
-print(trainer.state.best_metric)
+trainer.save_model(HYPERPARAMS["OUTPUT_DIR"] + "/final_model")
+tokenizer.save_pretrained(HYPERPARAMS["OUTPUT_DIR"] + "/final_model")
+
+# print("BEST MODEL STATS")
+# print(trainer.state.best_model_checkpoint)
+# print(trainer.state.best_metric)
 
 essential_config = {
     "HYPER-PARAMETERS": HYPERPARAMS,
     "TRAIN_DATASET_LEN": len(train_ds),
     "VAL_DATASET_LEN": len(val_ds),
-    "best_model": {"best_model_checkpoint": trainer.state.best_model_checkpoint,
-    "best_model_metric": trainer.state.best_metric}
+    # "best_model": {"best_model_checkpoint": trainer.state.best_model_checkpoint,
+    # "best_model_metric": trainer.state.best_metric}
 }
 
 with open(HYPERPARAMS["OUTPUT_DIR"]+"/essential_config.json", "w", encoding="utf-8") as f:

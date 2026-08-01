@@ -11,12 +11,16 @@ import sys
 # PATHS
 # =========================
 BASE_MODEL = "unsloth/phi-4"
-INPUT_CSV = "Files/v3_gitapress_final.csv"
-OUTPUT_CSV = "Outputs/unsloth_phi4_FT_anustubh1S.csv"
+INPUT_CSV = "Files/v3_gitapress_final_vasantatilaka.csv"
+
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
 BATCH_SIZE = 12
-CONFIG_FILE = "Trained_Models/Phi4-14B-DEV-Anustubh/essential_config.json"
+CONFIG_FILE = sys.argv[1] #Trained_Models/Phi4-14B-DEV-Vasantatalika-overfit/checkpoint-10
+OUTPUT_CSV = "Outputs/Vasantatalika-Overfit/unsloth_phi4_FT_vasant-c"+CONFIG_FILE.split('-')[-1]+".csv"
+
+SINGLE_METER_EXP = True
+FILTER_METER = "Vasantatilakā"
 
 print("Test File in use: ", INPUT_CSV)
 
@@ -29,9 +33,10 @@ else:
     sys.exit(0)
 
 if SET_LORA:
-    with open(CONFIG_FILE, "r") as f:
-        config = json.load(f)
-    LORA_PATH = config["best_model"]["best_model_checkpoint"]
+    # with open(CONFIG_FILE, "r") as f:
+    #     config = json.load(f)
+    # LORA_PATH = config["best_model"]["best_model_checkpoint"]
+    LORA_PATH = CONFIG_FILE
     
 # =========================
 # Existing file warning
@@ -154,9 +159,10 @@ else:
 df["model_out"] = df["model_out"].astype("object")
 size = len(df)
 
-print("Filtering Anustubh... from", df.shape[0], "samples")
-df = df[df['meter_cd']=='Anuṣṭubh']
-print("After filtering we have ", df.shape[0], "samples")
+if SINGLE_METER_EXP:
+    print(f"Filtering {FILTER_METER}... from", df.shape[0], "samples")
+    df = df[df['meter_cd']==FILTER_METER]
+    print("After filtering we have ", df.shape[0], "samples")
 
 # Find rows that still need inference
 pending_mask = (

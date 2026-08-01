@@ -1,0 +1,13 @@
+{
+  "best_eval_loss": 1.32822585105896,
+  "best_params": {
+    "lr": 0.00024082072654535438,
+    "lora_r": 32,
+    "lora_alpha": 128,
+    "lora_dropout": 0.1,
+    "weight_decay": 0.0046450412719997725,
+    "batch_size": 16
+  },
+  "n_trials_completed": 5,
+  "n_trials_total": 15
+}

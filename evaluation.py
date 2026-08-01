@@ -41,6 +41,7 @@ if df_with_alnum.empty:
     print("\nOutputs are clean")
 else:
     problem_file = FILEPATH.replace(".csv", "_problem_cols.csv")
+    problem_file = FILEPATH.replace("Vasantatalika-Overfit", "Vasantatalika-Overfit/Problems")
     df_with_alnum.to_csv(problem_file, index=False)
 
     # Mark problematic rows instead of removing them
@@ -158,3 +159,62 @@ print(results_df.to_markdown(index=False))
 
 df.to_csv(FILEPATH, index=False)
 print(f"\nAll score/semsim updates saved back to {FILEPATH}")
+
+# ########################################
+# ####### Creating master csv
+# ########################################
+
+# master_csv = "master-score.csv"
+
+# ########################################
+# ####### Update master csv
+# ########################################
+
+# from pathlib import Path
+# import os
+
+# summary = {
+#     "experiment": Path(FILEPATH).parent.name,
+#     "Checkpoint": Path(FILEPATH).stem,
+#     "overall_acc": round(overall_acc * 100, 2),
+#     "sem-sim": round(float(sims.mean()), 4),
+#     "total": len(eval_df),
+#     "problem-rows": int((df[PRED_METER] == "problem").sum()),
+#     "correct": int(eval_df["score"].sum()),
+#     "null": int((eval_df[PRED_METER] == "UNKNOWN").sum()),
+# }
+
+# summary_df = pd.DataFrame([summary])
+
+# if os.path.exists(master_csv):
+#     master = pd.read_csv(master_csv)
+
+#     # Remove existing entry for same checkpoint (if rerunning)
+#     master = master[
+#         ~(
+#             (master["experiment"] == summary["experiment"]) &
+#             (master["Checkpoint"] == summary["Checkpoint"])
+#         )
+#     ]
+
+#     master = pd.concat([master, summary_df], ignore_index=True)
+
+# else:
+#     master = summary_df
+
+# # Sort checkpoints numerically within each experiment
+# def checkpoint_number(x):
+#     try:
+#         return int(str(x).split("-")[-1].split("c")[-1])
+#     except:
+#         return 999999
+
+# master = master.sort_values(
+#     by=["experiment", "Checkpoint"],
+#     key=lambda s: s.map(checkpoint_number) if s.name == "Checkpoint" else s
+# ).reset_index(drop=True)
+
+# master.to_csv(master_csv, index=False)
+
+# print(f"Updated master csv: {master_csv}")
+

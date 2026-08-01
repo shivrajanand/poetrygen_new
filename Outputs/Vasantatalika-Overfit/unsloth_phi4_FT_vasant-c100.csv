@@ -1,0 +1,1915 @@
+sa,hi,skr_out,syllable_count,skr_meter,meter_cd,comments,prompt,split,model_out,out_meter,score,semsim
+धावन्नशेषभुवनेषु भिया स पश्यन् विश्वत्र चक्रमपि ते गतवान् विरिञ्चम् कः कालचक्रमतिलङ्घयतीत्यपास्तः शर्वं ययौ स च भवन्तमवन्दतैव ॥,"मुनि दुर्वासा भयभीत होकर समस्त भुवनों में भागते फिरे, परंतु उन्हें सर्वत्र आपका चक्र पीछे लगा हुआ दिखायी पड़ा तब वे रक्षार्थ ब्रह्मा के पास गये वहाँ 'भला, इस कालचक्र का अतिक्रमण कौन कर सकता है ?'यों कहकर निराश लौटाये जानेपर वे भगवान् शंकर की शरण में गये; किंतु शिवजी ने भी आपकी वन्दना ही की ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,भूतलेषु भयतटालमध्यगतं त्वां चक्रं विलोक्य सरवतां गतवन्मुनिर्ब्रह्मन् को वा तरितुमहिना त्वदीयं चक्रम् इत्युद्विज्य निरहते गतवन्नरशंस स्तं शंकरोऽपि वनदर्शनमाददे भवन्तम् ॥,,0,0.5299572944641113
+जिह्वैकतोऽमुमपकर्षति कर्हि तर्षा शिश्नोऽन्यतस्त्वगुदरं श्रवणं कुतश्चित् घ्राणोऽन्यतश्चपलदृक् क्व च कर्मशक्ति र्बह्व्यः सपत्न्य इव गेहपतिं लुनन्ति ॥,"जैसे बहुतसी सौतें अपने एक पति को अपनीअपनी ओर खींचती हैं वैसे ही जीव को जीभ एक ओरस्वादिष्ट पदर्थों की ओर खींचती है तो प्यास दूसरी ओरजल की ओर; जननेन्द्रिय एक ओरस्त्रीसम्भोग की ओर ले जाना चाहती है तो त्वचा, पेट और कान दूसरी ओरकोमल स्पर्श, भोजन और मधुर शब्द की ओर खींचने लगते हैं नाक कहीं सुन्दर गन्ध सूँघने के लिये ले जाना चाहती है तो चञ्चल नेत्र कहीं दूसरी ओर सुन्दर रूप देखने के लिये इस प्रकार कर्मेन्द्रियाँ और ज्ञानेन्द्रियाँ दोनों ही इसे सताती रहती हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,जिह्वैकतोऽमुमपकर्षति कर्हि तर्षा शिश्नोऽन्यतस्त्वगुदरं श्रवणं कुतश्चित् घ्राणोऽन्यतश्चपलदृक् क्व च कर्मशक्ति र्बह्व्यः सपत्न्य इव गेहपतिं लुनन्ति ॥,Vasantatilakā,1,0.4343293011188507
+नौमीड्य तेऽभ्रवपुषे तडिदम्बरायगुञ्जावतंस परिपिच्छल सन्मुखाय वन्यस्रजे कवल वेत्र विषाणवेणुलक्ष्मश्रिये मृदुपदे पशुपाङ्गजाय ॥,"हे स्तवनीय ! आपका घनश्याम शरीर है, बिजलीके सदृश पीतवस्त्र है,गुञ्जाओंके शिरोभूषण और मोरपंखसे आपका मुख सुशोभित रहता है,आप वनमालाधारी हैं, कलेवा, लकुट, नरसिंहा और बाँसुरीके चिह्नोंसेसुशोभित हैं ऐसे कोमलचरणवाले गोपालनन्दन आपको नमस्कारकरता हूँ  ",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,घनश्यामदेह परिभवन्तमेजत् पीताम्बरं श्रीविजयाङ्कितगात्रमीशम् श्रीगुञ्जाश्रियं श्रीमुरलीकलेवराजं वन्मालाधरं नमति कोमलपादपूर्णः ॥,,0,0.4834228754043579
+संतापदुःखजनको न विधिः कदाचित् संतापयोगजनितं न मनः कदाचित् ॥ यस्मादहंंकृतिरियं न च मे कदाचि ज्ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,संताप और दुःख को पैदा करनेवाली विधि मुझमें नहीं है संताप और योग से पैदा हुआ यन भी कभी नहीं है क्योंकि मेरे कभी अहंकार नहीं है में ज्ञान और अमृत रूप हूं समान रस हूं आकाशके समान हूं ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,संतापदुःखजनको न विधिः कदाचित् संतापयोगजनितं न च यन् कदाचित् ॥ यस्मादहंकृतिरियं न च कदाचित् ज्ञानामृतं समरसं गगनोपमोऽहम्॥,,0,0.772652268409729
+हे चन्द्रचूड मदनान्तक शूलपाणे स्थाणो गिरीश गिरिजेश महेश शम्भो भूतेश भीतभयसूदन मामनाथं संसारदुःखगहनाज्जगदीश रक्ष॥,"हे चन्द्रचूड! , हे मदनान्तक! , हे शूलपाणे! हे स्थाणो! , हे गिरीश तथा गिरिजापते, हे महेश, हे शम्भो, हे भूतेश, जरा, मृत्यु आदिसे भयभीतकी रक्षा करनेवाले, हे जगदीश्वर शिव! संसारके गहन दुःखोंसे मेरी रक्षा कीजिये॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,हे चन्द्रचूड मदनान्तक शूलपाणे स्थाणो गिरीश गिरिजापते महेश शम्भो भूतेश जरामृत्युभयाकुलाय जगत्पते शरणं तनोषि कृष्ण दुःखे भवलोभगहनाज्जगादि रक्ष॥,,0,0.8478524684906006
+रक्षस्स्वतृप्तिरुडशान्तिविशेषशोण मक्षक्षय क्षणविधानुमितात्मदाक्ष्यम् भास्वत्प्रभातरविभानुभरावभासं लङ्काभयङ्करममुं भगवन्तमीडे ॥,"राक्षसों में तृप्त न होनेके कारण, क्रोध एवं अशान्तिसे जो विशेष रक्तवर्ण हो गये हैं, अक्षकुमारके संहारकालके कार्योंसे जिनकी दक्षताका अनुमान किया जा चुका है तथा जो प्रभात प्रभामय सूर्यके किरणोंके समान कान्तिमान् हैं, लङ्काको भय देनेवाले उन भगवान् हनूमान्‌की मैं स्तुति करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,रक्ताङ्गमाङ्गदधिरेण च दक्षतामान्‌ सूर्यप्रभामयधवलेन च देदिपन्तम्‌ लङ्काभयाय भवतं हनुमन्तमीडे ॥,,0,0.4257581830024719
+देव प्रसीद परपूरुष तापवल्ली निर्लूनदात्र समनेत्र कलाविलासिन् खेदानपाकुरु कृपागुरुभिः कटाक्षै रित्यादि तेन मुदितेन चिरं नुतोऽभूः ॥,"देव ! प्रसन्न होइये परम पुरुष ! आप तापवल्ली का मूलोच्छेदन करने के लिये अतिशय तीक्ष्ण शस्त्ररूप हैं, सभी प्राणियों को समानदृष्टि से देखनेवाले तथा अपनी अंशभूता मायाद्वारा क्रीड़ा करनेवाले हैं अपने कृपापरिपूर्ण कटाक्षोंद्वारा मेरे कष्टों को दूर कर दीजिये' इस प्रकार वसुदेवजी हर्षोल्लसित होकर चिरकाल तक आपके स्तवन में लगे रहे ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,त्वं देव परमपुरुष प्रसन्नमाद्य त्वं देव परमपुरुष प्रसन्नमाद्य त्वं देव परमपुरुष प्रसन्नमाद्य त्वं देव परमपुरुष प्रसन्नमाद्य लोलेक्षणेन निरुन्धि कष्टदुःखम् ॥,,0,0.49262553453445435
+जानन्नुपायमथ देहमजो विभज्य स्त्रीपुंसभावमभजन्मनुतद्वधूभ्याम् ताभ्यां च मानुषकुलानि विवर्धयंस्त्वं गोविन्द मारुतपुरेश निरुन्धि रोगान् ॥,तदनन्तर प्रजावृद्धि के उपाय को जानकर ब्रह्मा अपने शरीर को दो भागों में विभक्त कर के एक भाग से मनु तथा दूसरे से उनकी पत्नी शतरूपा के रूपमें स्त्रीपुरुषभाव को प्राप्त हो गये गुरुवायुपुराधीश गोविन्द ! यों उन मनुशतरूपाद्वारा मनुष्यकुल की वृद्धि करते हुए आप मेरे रोगों का नाश कीजिये ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,प्रजावृद्धिकरमनुश्च विधाय देहं त्वन्मनुः शतरूपया त्वमजायथाः श्रीः तत्तद्विधा भवतु ते निरुजो विनाशो गोविन्द गुरुवायुपुराधिप ॥,,0,0.5601718425750732
+यत्पादपङ्कजपरागसुरागयोगि वृन्दैर्जितं भवभयं जितकालचक्रः यन्नामकीर्तनपरा जितदुःखशोका देवास्तमेव शरणं सततं प्रपद्ये,"जिनके चरणकमलपरागके रसिक, काल चक्रको जीतनेवाले योगिजनोंने संसार भयको भी जीत लिया है तथा जिनके नाम कीर्तनमें लगे रहकर देवगण दुःख और शोकको जीत लेते हैं, उन आपकी मैं निरन्तर शरण ग्रहण करता हूँ",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,यस्य पादपङ्कजपरागरसिकैस्ते कालचक्रविनिर्जितयोगिजनैस्ते जितं भयं भवदुर्तराणि देवैः श्रुत्या निरन्तरमाश्रये निरन्तरं त्वाम् ॥,,0,0.652143120765686
+हा हा विभो जलमहं न्यपिबं पुरस्ता दद्यापि मज्जति मही किमहं करोमि इत्थं त्वदङ्घ्रियुगलं शरणं यतोऽस्य नासापुटात् समभवश्शिशुकोलरूपी ॥,"'विभो ! महान् आश्चर्य एवं दुःख है, सृष्टि के आदि में मैंने सारा जल पी लिया था; परंतु यदि आज भी पृथ्वी डूब रही है तो मैं क्या करूँ ?' यों कहते हुए आपके चरणयुगल के शरणागत ब्रह्मा के नासापुट से वराह के शिशुरूप में आप प्रकट हो गये ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,किं ब्रह्मन् बभुवित आश्चर्यमहो दुःखं प्रारब्धमादौ पयसोऽथ किमिदं वै प्रभो यदि द्वारि भवती नैव जागर्याम् ॥,,0,0.5732676982879639
+प्राक्शूरसेनविषये किल चित्रकेतुः पुत्राग्रही नृपतिरङ्गिरसः प्रभावात् लब्ध्वैकपुत्रमथ तत्र हते सपत्नी सङ्घैरमुह्यदवशस्तव माययासौ ॥,"प्राचीनकाल में शूरसेनराज्य में चित्रकेतु नामक राजा हुए उन्होंने महर्षि अङ्गिरा से पुत्र के लिये आग्रह किया तब ऋषि के प्रभाव से उन्हें एक पुत्र प्राप्त हुआ, जिसे महारानी की सौतों ने मिलकर मार डाला तब राजा चित्रकेतु आपकी माया से विवश होकर मोह के वशीभूत हो गये ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,शूरसेनराज्य इति प्रचित्रकेतु राजा मज्जन्तमाङ्गिरसतोषिततां तनूजम् सोऽपि भूय एव भवद्मया विवश्य भूपस्त्वया कृतकृत्य इवापतत्मोहः ॥,,0,0.4025120735168457
+धर्मस्य दक्षदुहितर्यजनिष्ट मूर्त्यां नारायणो नरऋषिप्रवरः प्रशान्तः नैष्कर्म्यलक्षणमुवाच चचार कर्म योऽद्यापि चास्त ऋषिवर्यनिषेविताङ्घ्रिः ॥,"दक्ष प्रजापति की एक कन्या का नाम था मूर्ति वह धर्म की पत्नी थी उसके गर्भ से भगवान् ने ऋषिश्रेष्ठ शान्तात्मा 'नर' और 'नारायण' के रूप में अवतार लिया उन्होंने आत्मतत्त्व का साक्षात्कार करानेवाले उस भगवदाराधनरूप कर्म का उपदेश किया, जो वास्तव में कर्मबन्धन से छुड़ानेवाला और नैष्कर्म्य स्थिति को प्राप्त करानेवाला है उन्होंने स्वयं भी वैसे ही कर्म का अनुष्ठान किया बड़ेबड़े ऋषिमुनि उनके चरणकमलों की सेवा करते रहते हैं वे आज भी बदरिकाश्रम में उसी कर्म का आचरण करते हुए विराजमान हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,नारायणं नरमिनम्रमखिलं श्रेष्ठं धर्मप्रणीतवरतत्त्वविदं शान्तं स्वीयं यथा कर्म विदग्धमुपदेष्टा तत्त्वेऽवतस्त इह बद्रिकशैलाश्रमे नरः श्रुतिकरैर्भजताम् ॥,,0,0.3779680132865906
+हे नीलकण्ठ वृषभध्वज पञ्चवक्त्र लोकेश शेषवलयं प्रमथेश शर्व हे धूर्जटे पशुपते गिरिजापते मां संसारदुःखगहनाज्जगदीश रक्ष॥,"हे नीलकण्ठ, हे वृषकेतु, हे पञ्चमुख, लोकेश, शेषका कङ्कण धारण करनेवाले!, हे प्रमथगणोंके स्वामी, हे शर्व, हे धूर्जटे, हे पशुपते, हे गिरिजापते, हे जगदीश्वर शिव! संसारके गहन दुःखोंसे मेरी रक्षा कीजिये॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,हे नीलकण्ठ वृषकेतु पञ्चमुख लोकेश शेषकङ्कण शर्व प्रमथेश धूर्जटे पशुपते गिरिजेश जगत्पते रक्ष त्वमाशु दुःखगहनाज्जगतः॥,,0,0.8951141834259033
+हे धूर्जटे गिरिश हे गिरिजार्धदेह हे सर्वभूतजनक प्रमथेश देव हे सर्वदेवपरिपूजितपादपद्म संसारदुःखगहनाज्जगदीश रक्ष॥,"हे धूर्जटि, कैलाश पर्वतपर शयन करनेवाले, हे अर्धनारीश्वर तथा हे समस्त चराचरके उत्पादक, हे प्रमथगणोंके स्वामी, देव, समस्त देवताओंसे वन्दित चरणकमलवाले हे जगदीश्वर! आप इस संसारके गहन दुःखोंसे मेरी रक्षा कीजिये॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,धूर्जटे कैलाशशयनाय तेऽर्धनारीश्वर सर्वचराचरमूलकाय ते प्रमथेश देव वन्दिताय ते जगत्पते रक्ष मां भवदुःखगहनात्॥,,0,0.8077987432479858
+पुत्रार्तिदर्शनवशाददितिर्विषण्णा तं काश्यपं निजपतिं शरणं प्रपन्ना त्वत्पूजनं तदुदितं हि पयोव्रताख्यं सा द्वादशाहमचरत्त्वयि भक्तिपूर्णा ॥,अपने पुत्र इन्द्र को विपत्तिग्रस्त देखकर माता अदिति खेदखिन्न हो अपने पति महर्षि कश्यप की शरण में गयीं उन्होंने अदिति को पयोव्रत नामक आपका पूजन बतलाया तब अदिति ने आपमें पूरे भक्तियोग से दत्तचित्त होकर बारह दिन तक उस व्रत का अनुष्ठान किया ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,दृष्ट्वा तमेव पुत्रं विपदि ग्रस्तमाशु गत्वा शरणं पतिं महर्षिकाश्यपम् तं पयोव्रतमाह यत्पूजनं त्वां तत्राऽऽविशत्यदितिः भक्तियोगपूर्वकं त्वाम् ॥,,0,0.6996891498565674
+वर्षं हिरण्मयसमाह्वयमौत्तराह मासीनमद्रिधृतिकर्मठकामठाङ्गम् संसेवते पितृगणप्रवरोर्यमा यं तं त्वां भजामि भगवन् परचिन्मयात्मन् ॥,"उत्तर दिशा में हिरण्मय नामक वर्ष है उसमें अमृतमन्थन के समय मन्दराचल को धारण करने में निपुण आपकी कच्छपमूर्ति आसीन है, जिसकी पितृगणों में श्रेष्ठ ये अर्यमा नित्य सेवा करते हैं विशुद्धज्ञानस्वरूप भगवन् ! ऐसे आपका मैं भजन करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,उत्तरेऽथ हिरण्मयेऽथ वर्षे मन्दरं धरणिक्षमेऽसि कच्छपीभूत्या नित्यमर्यमण्युत्तमैः पितृभिः सेव्यमान भगवन् त्वां भजे हि विशुद्धज्ञानमयम् ॥,,0,0.7592257261276245
+त्वन्मन्त्रजाप्यहमनन्तगुणाप्रमेय सीतापते शिवविरिञ्चिसमाश्रिताङ्घ्र संसारसिन्धुतरणामलपोतपाद रामाभिराम सततं तव दासदासः ॥,"सुतीक्ष्ण बोले हे अनन्तगुण अप्रमेय सीतापते ! मैं आपका ही मन्त्र जपता हूँ हे अभिराम राम ! शिव और ब्रह्मा आपके चरणोंके आश्रित हैं, आपके चरण संसार सागर से पार करनेके लिये सुदृढ़ पोत हैं हे नाथ! मैं सर्वदा आपके दासोंका दास हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,त्वत्स्तोत्रमेव जपते अभिराम राम स्त्वं शर्वविरिञ्चयुगं भवलोकयात्रम् त्वन्मेषिकमेव भवाब्धिपोतं नाथ स्त्वद्भृत्यभृत्यपरिपारकमाम्यहं स्त्वत्स्तोत्रमेव जपते अभिराम राम ॥,,0,0.589684247970581
+एवं चतुर्दशजगन्मयतां गतस्य पातालमीश तव पादतलं वदन्ति पादोर्ध्वदेशमपि देव रसातलं ते गुल्फद्वयं खलु महातलमद्भुतात्मन् ॥,"अद्भुत स्वरूपवाले देवाधिदेव ईश्वर ! उपर्युक्त प्रकार से चौदह भुवनों के रूप में प्रकट हुए आपके पादतल को पाताल, पाद के ऊर्ध्वभाग को रसातल और दोनों टखनों को महातल कहा गया है ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,पातालमाहुरिदं भुवनेश्वराय पादावधिं रसमेखलमुत्तराय ॥ मूले तले च महातलमाहुरस्य भूमेर्भुवनेषु किलोत्तरेषु देव ॥,,0,0.5115619897842407
+शुद्धं विशुद्धमविचारमनन्तरूपं निर्लेपलेपमविचारमनन्तरूपम् ॥ निष्खण्डखण्डमविचारमनन्तरूपम् ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"मैं शुद्ध, विशुद्ध, अविचार्य और अनन्तरूप हूँ, में निर्लेप लेप अधिकतर अनन्त रूप हूँ में निखण्ड खण्ड अविचार्य और अनन्तरूप हूँ, में ज्ञानामृत समरस और गगनोपम हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,शुद्धं विशुद्धमविचार्यमनन्तरूपं लेपातिलेपरहितं त्वमनन्तरूपम् खण्डातिखण्डरहितं त्वमविचार्य मनन्तरूपं ज्ञानामृतं समरसं गगनोपमोऽसि ॥,,0,0.9180634021759033
+रागादिदोषरहितं स्वजनानुरागं वैराग्यशान्तिनिलयं गिरिजासहायम्‌ माधुर्यधैर्यसुभगं गरलाभिरामं वाराणसीपुरपतिं भज विश्चनाथम्‌॥,"जो रागादि दोषोंसे रहित हैं, अपने भक्तोंपर कृपा रखते हैं, वैराग्य और शान्तिके स्थान हैं, पार्वतीजी सदा जिनके साथ रहती हैं, जो धीरता और मधुर स्वभावसे सुन्दर जान पड़ते हैं तथा जो कण्ठमें गरलके चिह्नसे सुशोभित हैं, उन काशीपति विश्वनाथको भज॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,रागादिदोषरहितं भवतु भक्तवर्गे कृपालु वैराग्यशान्तिगृहमाश्रिताय॥ स्वाभिः सदा पार्वतीपरिचारिताय धीरं मधुरं रमणीयगरलाङ्कयाय॥,,0,0.6441848278045654
+इत्थं नृतिर्यगृषिदेवझषावतारै र्लोकान् विभावयसि हंसि जगत्प्रतीपान् धर्मं महापुरुष पासि युगानुवृत्तं छन्नः कलौ यदभवस्त्रियुगोऽथ स त्वम् ॥,"हे परमपुरुष ! इस प्रकार आप स्तो मनुष्य, तिर्यक्, ऋषि, देवता और मत्स्यादि अवतार लेकर सम्पूर्ण लोकोंका पालन और जगद्विद्रोहियोंका संहार करते हैं उन अवतारोंद्वारा आप प्रत्येक युगके धर्मों की रक्षा करते हैं, किन्तु कलियुगमें गुप्तरूपसे ही रहते हैं; इसीलिये आप 'त्रियुग' नामसे भी प्रसिद्ध हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,स्त्वं देव मनुजतिर्यगृषिसुराभिराशास्त्वामवतीर्ण जगन्निविडविद्रिधोऽधि धर्मान् प्रत्युगस्य परिपालयसि कलौ त्वमर्ण्यः ॥,,0,0.5585524439811707
+दर्पोन्नमन्निशिचरेश्वरमूर्धचञ्च त्कोटीरचुम्बि निजविम्बमुदीक्ष्य हृष्टम् पश्यन्तमात्मभुजयन्त्रणपिष्यमाण तत्कायशोणितनिपातमपेक्षि वक्षः ॥,"जो अभिमानसे ऊपर उठे हुए रावणके मस्तकोंपर देदीप्यमान किरीटोंमें अपने प्रतिबिम्बको देखकर उसमें अपने भुजयन्त्रद्वारा पीसे जानेवाले रावणके शरीरके रक्तपातकी अपेक्षा रखनेवाली अपनी छातीकी ओर निहारते हुए प्रसन्न हो रहे थे, उन्हें मैं प्रणाम करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,प्राभूतपद्मयुगलावलम्बिताय पश्यन्तमात्मविगलन्तमुज्ज्वलेषु क्षिप्रं प्रसन्नमुपनीय दक्षिणेयं छात्रां रणेऽर्द्यमिव रक्तपातकामां स्तब्ध्वामि वन्मुखधराय रावणाय ॥,,0,0.3953407108783722
+पूजावसानसमये दशवक्त्रगीतं यः शम्भुपूजनपरं पठति प्रदोषे तस्य स्थिरां रथगजेन्द्रतुरङ्गयुक्तां लक्ष्मीं सदैव सुमुखीं प्रददाति शम्भुः॥,"सायंकालमें पूजा समाप्त होनेपर रावणके गाये हुए इस शम्भुपूजनसम्बन्धी स्तोत्रका जो पाठ करता है, भगवान्‌ शङ्कर उस मनुष्यको रथ, हाथी, घोड़ोंसे युक्त सदा स्थिर रहनेवाली अनुकूल सम्पत्ति देते हैं॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,सायं पूजनसमाप्तौ यः शम्भुस्तोत्रमिदं गीतं रावणेन पठत्यनुदिनं श्रुत्वा ददात्यनुकूलमाशिषमीशवान्‌ सम्पत्तिं रथस्य घोटकहस्तियुक्ताम्‌॥,,0,0.6951727867126465
+गच्छन् द्विमूर्तिरुभयोर्युगपन्निकेत मेकेन भूरिविभवैर्विहितोपचारः अन्येन तद्दिनभृतैश्च फलौदनाद्यै स्तुल्यं प्रसेदिथ ददाथ च मुक्तिमाभ्याम् ॥,वहाँ दो रूप धारण करके आप एक ही समय दोनों के घर पधारे एकबहुलाश्व ने राजसी सामग्रियों से आपका पूजन किया था और दूसरेश्रुतदेव ने उस दिन प्राप्त हुए फलओदन आदि पूजनसामग्री के द्वारा ही आपकी अर्चना की थी परंतु आपने उन दोनोंपर समानरूप से ही अपना प्रसाद प्रकट किया और उन्हें एकसी ही मुक्ति प्रदान की ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,एकबहुलयाश्वनाभिराजसामग्रियाभि रर्चितोऽसि तदा त्वमन्यतेन शूद्र फलोदनयादिभिः समानमेव तु त्वं विधाय विभो फलं त्विनौ निनेथ ॥,,0,0.448851615190506
+वेदान् पुराणनिवहानपि सर्वविद्याः कुर्वन् निजाननगणाच्चतुराननोऽसौ पुत्रेषु तेषु विनिधाय स सर्गवृद्धि मप्राप्नुवंस्तव पदाम्बुजमाश्रितोऽभूत् ॥,"उन चतुर्मुख ब्रह्मा ने अपने चारों मुखों से वेदों, पुराणसमूहों तथा समस्त विद्याओं को प्रकटकर अपने मरीचि आदि पुत्रों में स्थापित कर दिया फिर भी जब उन्हें प्रजा की वृद्धि होती नहीं दीख पड़ी, तब उन्होंने आपके चरणकमलोंका आश्रय लिया ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,विंद्धद् चतुर्मुख विरिञ्च ऋग्यजुस्साम इत्यादि चत्सर्भिरुदाहृतवान् सकलाशिषः स्वाः त्वामभ्यरौढ़ यदृषिण्न तु दृष्टपूर्व प्रजावृद्धिरभूत् स भूरिविद्यदानः ॥,,0,0.45747631788253784
+तावद्विदूरमुपकर्णितघोरघोष व्याजृम्भिपांसुपटलीपरिपूरिताशः वात्यावपुः स किल दैत्यवरस्तृणाव र्ताख्यो जहार जनमानसहारिणं त्वाम् ॥,तब तक दूरसे ही सुनायी पड़नेवाले भयंकर शब्द तथा अधिक मात्रा में बढ़ी हुई धूलिवर्षा से जिसने दसों दिशाओं को परिपूर्ण कर दिया था वह महादैत्य तृणावर्त बवंडर के रूप में आकर भक्तजनों के मन का अपहरण करनेवाले आपको चुरा ले चला ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,शब्देन दूरत भयङ्करतरेन धूलेर्भरेन च दिग्गजनापि परिपूर्णः सद्यो भवन्तमजयस्तृणवन्महोभ्या भूत्वा भजन्ति जनान्मनसीन्दहन्नः ॥,,0,0.6042207479476929
+जाता तदा पशुपसद्मनि योगनिद्रा निद्राविमुद्रितमथाकृत पौरलोकम् त्वत्प्रेरणात् किमिव चित्रमचेतनैर्यद् द्वारैः स्वयं व्यघटि संघटितैः सुगाढम् ॥,"आपके प्रस्थान करते समय भगवती योगनिद्रा ने नन्दगोप के घर में जन्म लिया उसने आपकी प्रेरणा से पुरवासियों को निद्रित करके निश्चेष्ट कर दिया फिर तो जो सुदृढ़ रूप से बंद किये गये थे वे अचेतन दरवाजे स्वयं खुल गये, यह कैसी आश्चर्य की बात है ? ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,त्वन्मूलकेन निद्रया निरुद्धदेव घोषे नन्दगृहे जनि किं च नाम भूयः प्रेरितेन निश्चलतां निरीक्ष्य ध्वारान् किमप्यचितन्मुखदर्शनं बह्व्यः ॥,,0,0.4997303783893585
+मौनव्रतश्रुततपोऽध्ययनस्वधर्म व्याख्यारहोजपसमाधय आपवर्ग्याः प्रायः परं पुरुष ते त्वजितेन्द्रियाणां वार्ता भवन्त्युत न वात्र तु दाम्भिकानाम् ॥,"हे परमपुरुष ! मौनव्रत, शास्त्रश्रवण, तप, वेदाध्ययन, स्वधर्मपालन, शास्त्रोंकी व्याख्या करना, एकान्तसेवन, जप और समाधि ये जो मोक्षके दस साधन हैं वे भी प्रायः अजितेन्द्रिय पुरुषोंकी जीविकाके साधन बन जाते हैं; तथा दाम्भिकोंके लिये तो वे कभी जीविकाके साधन रहते भी हैं और कभी नहीं भी रहते ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,मौनं श्रवणमहिमा तपश्च वेद धर्मश्च विवृतिरणीयसेवनं जपः समाधिर्ये दशक ते मुक्तिसाधनानि भूत्वाप्यजितेन्द्रियजनामधिवृत्तिहेतु र्भूयस्तु दाम्भिकजने कदाचिदप्यभूत्वा ॥,,0,0.7604315280914307
+॥ श्रीमन्नृसिंह विभवेगरुडध्वजाय तापत्रयोपश मनाय भवौषधाय ॥ कृष्णाय वृ· श्चिकजलाग्निभुजङ्गरोगक्लेशव्ययाय हरये गुरवे नमस्ते ॥,"पिप्पलायन ने कहा श्री नृसिंह, समर्थ, गरुड़ध्वज तथा तीनों तापों को ( दैहिक, दैविक, भौतिक तापों को करने वाले, संसार की औषधि, तथा विच्छू' जल, दूर सर्प रोग के दुखों को दूर करने वाले, जगतके गुरु कृष्ण जी को मैं प्रणाम करता हूँ",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,प्रणमामि नृसिंह समर्थ गरुडध्वज त्रैतापसाय औषधये वृश्चिकाम्बु भुज्जते भुवनगुरुं कृष्णम् ॥,,0,0.6967172622680664
+रामायणं जनमनोहरमादिकाव्यं ब्रह्मादिभिः सुरवरैरपि संस्तुतं च श्रद्धान्वितः पठति यः शृणुयात्तु नित्यं विष्णोः प्रयाति सदनं स विशुद्धदेहः ॥,"ब्रह्मा आदि सुरश्रेष्ठोंसे प्रशंसित और मनुष्योंके मनको हरनेवाले इस आदिकाव्य रामायणको जो पुरुष नित्यप्रति श्रद्धापूर्वक पढ़ता या सुनता है, वह विशुद्ध शरीर धारणकर भगवान् विष्णुके धामको प्राप्त होता है ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,यः श्रद्धया पठति नित्यमिदं रघुपत्या योऽशृणोत्स्तु नरवरैर्विनिवेदितं वै त्वद्धाम पद्मपयसाप्रपविश्य देहं याति भ्रमन्मनसिजं भवते विशुद्धः ॥,,0,0.5888693332672119
+आहुश्च ते नलिननाभ पदारविन्दंयोगेश्वरैर्हृदि विचिन्त्यमगाधबोधैः संसारकूपपतितोत्तरणावलम्बंगेहंजुषामपि मनस्युदियात्सदा नः ॥,"[ गोपियोंने कहापूर्ण ज्ञानी योगेश्वरोंके द्वारा हृदयमें चिन्तन करनेयोग्य आपका चरणारविन्द,जो संसारकूपमें गिरे हुए जीवोंके उद्धारका सहारा है, घरपर रहती हुईभी हमलोगोंके हृदयमें सदा प्रकट हो ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,गोपा बभूवुरतिभर्यजनीयपादप्दम्भ्यां योगेश्वरैर्विचिन्तनीयमानसं यत् संसारसानुभविजृम्भितजन्मनां त्वन्निःश्रेयसाय घरेषु सदा विभातु ॥,,0,0.6475666761398315
+पूजावसानसमये दशवक्त्रगीतं यः शम्भुपूजनपरं पठति प्रदोषे तस्य स्थिरां रथगजेन्द्रतुरङ्गयुक्तां लक्ष्मीं सदैव सुमुखीं प्रददाति शम्भुः ॥,"सायङ्कालमें पूजा समाप्त होनेपर रावणके गाये हुए इस शम्भुपूजनसम्बन्धी स्तोत्रका जो पाठ करता है, भगवान् शङ्कर उस मनुष्यको रथ, हाथी, घोड़ोंसे युक्त सदा स्थिर रहनेवाली अनुकूल सम्पत्ति देते हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,सायं समाप्तदिवसप्रणयामिमान् पठत्स्त्वमिन्द्रजितं शम्भुवन्महोत्रकम् रथेषु दानवगीतमेतदन्विदा भवत्सम्पत्तिमाशु भवेत् सदा दिशन्नरेण ॥,,0,0.45568549633026123
+वंशी विभूषितकरान्नवनीरदाभात्पीताम्बरादरुण विम्बफलाधरोष्ठात्पूर्णेन्दुसुन्दरमुखादरविन्दनेत्रात्कृष्णात्परं किमपि तत्त्वमहं न जाने ॥,"जिनके करकमल वंशीसेविभूषित हैं, जिनकी नवीन मेघकीसी आभा है, जिनके पीत वस्त्र हैं,अरुण विम्बफलके समान अधरोष्ठ है; पूर्णचन्द्रके सदृश सुन्दर मुख औरकमलकेसे नयन हैं ऐसे भगवान् श्रीकृष्णको छोड़कर अन्य किसी भीतत्त्वको मैं नहीं जानता ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,वंशीविभूषितकरावलम्बिताभस्त्वाम्भोदधारमधरारुणविम्बफलकम् पीताम्बरं च नयलोचनमञ्जुलांश्च त्यक्त्वा न वेत्थ भगवन्तमशेषमेतत् ॥,,0,0.455005407333374
+प्रायेण देव मुनयः स्वविमुक्तिकामा मौनं चरन्ति विजने न परार्थनिष्ठाः नैतान् विहाय कृपणान् विमुमुक्ष एको नान्यं त्वदस्य शरणं भ्रमतोऽनुपश्ये ॥,"देव ! मुनिजन प्रायः अपनी ही मुक्तिकी इच्छासे एकान्तमें रहकर मौनव्रत धारण कर लेते हैं, वे दूसरेके हितमें तत्पर नहीं होते किन्तु मुझे इन गरीबोंको छोड़कर अकेले ही मुक्त होनेकी इच्छा नहीं है और संसारमें भटकनेवाले इन लोगोंके लिये आपके सिवा और कोई मुझे उद्धार करनेवाला भी दिखायी नहीं देता ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,एकान्तमात्ययितवतां निजमुक्तिकामानाम् अन्यस्य हिते न तु धारितमौनवृत्तिः स्वैरेव मुक्तुमिच्छति ने गगनेश ते ब्रह्मन् यस्त्वं निरीक्षितस्त्वमसौ विभोऽनुद्धर्ता ॥,,0,0.6012377738952637
+किं नाम रोदिषि सखे न च तेऽस्ति कामः किं नाम रोदिषि सखे न च ते प्रलोभः किं नाम रोदिषि सखे न च ते विमोहो ज्ञानामृतं समरसं गगनोपमोऽहम्॥,"हे सखे! तुम किसलिये रुदन करते हो, तुम्हारे अन्तःकरणमें कामना नहीं है हे सखे! तुम किसलिये रुदन करते हो, तुम्हारे अन्तःकरणमें लोभ नहीं है हे सखे! तुम किसलिये रुदन करते हो, तुम्हारे अन्तःकरणमें मोह नहीं है मैं ज्ञानरूपी अमृत हूँ, समरस हूँ तथा आकाशके समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,किं नाम रोदिषि सखे न च ते विषयास्ते किं नाम रोदिषि सखे न च ते रतिर्वै किं नाम रोदिषि सखे न च ते मोह इत्यमृतं ज्ञानं समरसं गगनोपमोऽहम्॥,,0,0.7749336957931519
+भूयो भवन्निलयमेत्य मुनिं नमन्तं प्रोचे भवानहमृषे ननु भक्तदासः ज्ञानं तपश्च विनयान्वितमेव मान्यं याह्यम्बरीषपदमेव भजेति भूमन् ॥,"भूमन् ! फिर, दुर्वासा वैकुण्ठ में पहुंचकर आपके चरणों में जा गिरे उन्हें प्रणिपात करते देखकर आपने उनसे यों कहा 'ऋषे ! मैं तो भक्तों का ही दास हूँ ज्ञान और तप विनययुक्त होने पर ही आदरणीय होते हैं; अतः आप जाइये, अम्बरीष की ही शरण ग्रहण कीजिये' ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,त्वत्पादपद्मयुगलं दुर्वाससा त्वं भूमन् प्रणम्य भवता त्यजन्नवादीः भक्तैर्विना न भवतो द्विज दास्यमादर्यं ज्ञानतपोविनययुक्त एव तेनाम्बरीषशरणं व्रज धन्य धन्य ॥,,0,0.5410900712013245
+अज्ञानपङ्कपरिमग्नमपेतसारं दुःखालयं मरणजन्मजरावसक्तम् संसारबन्धनमनित्यमवेक्ष्य धन्या ज्ञानासिना तदवशीर्य विनिश्चयन्ति ॥,"जो पङ्कमें सने हुए, अज्ञान, निःसार, दुःखरूप, जन्मजरामरणादिसमन्वित, संसारबन्धनको अनित्य देखकर उसको ज्ञानरूपी खड्गसे काटकर आत्मतत्त्वका निश्चय करते हैं, वे पुरुष धन्य हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,पङ्कसन्नज्ञाननिधनं दुःखधात्मकं जन्मजरामरणलब्धबन्धनं च दृष्ट्वा त्यजन्तः खड्गमुखेण धन्या विचिन्वते त्वदर्थम् ॥,,0,0.7205792665481567
+दारिद्र्यदुःखदहनं कमनं सुराणां दीनार्तिदावदहनं दमनं रिपूणाम्‌ दानं श्रियां प्रणमनं भुवनाधिपानां मानं सतां वृषभवाहनमानमामः॥,"दारिद्र्य एवं दुःखका विनाश करनेवाले, देवताओंमें सुन्दर, दीनोंकी पीडाको विनष्ट करनेके लिये दावानलस्वरूप, शत्रुओंका विनाश करनेवाले, समस्त ऐश्वर्य प्रदान करनेवाले, भुवनाधिपोंके प्रणम्य और सत्पुरुषोंके मान्य वृषभवाहन भगवान्‌ शङ्करको हम भलीभाँति प्रणाम करते हैं॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,दारिद्र्यदुःखविनाशनमङ्गलं देव दीनब्धिविनिष्कृतदावनलं शत्रु ऐश्वर्यदं सकलं भुवनाधिपप्रणम्य सत्पुरुषार्यमणं वृषभवाहनं वै॥,,0,0.8117303252220154
+तत्तस्थुषश्च जगतश्च भवानधीशो यन्माययोत्थगुणविक्रिययोपनीतान् अर्थाञ्जुषन्नपि हृषीकपतेन लिप्तो येऽन्ये स्वतः परिहृतादपि बिभ्यति स्म ॥,इसलिये हृषीकेश ! आप समस्त चराचर जगत् के अधीश्वर हैं यही कारण है कि माया की गुणविषमता के कारण बननेवाले विभिन्न पदार्थों का उपभोग करते हुए भी आप उनमें लिप्त नहीं होते यह केवल आपकी ही बात है आपके अतिरिक्त दूसरे तो स्वयं उनका त्याग करके भी उन विषयों से डरते रहते हैं ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,त्वं हृषीकेश जगतामधिश्वरोऽसि योऽन्यस्य यावति मिथः समुदेति भावे तत्राविगतोऽपि न भुक्तमुपैषि यत्स्त्वम् अन्ये विहृत्य भयमास्ते ततस्त्वमेव ॥,,0,0.6337635517120361
+सम्मोहनाय मिलिता मदनादयस्ते त्वद्दासिकापरिमलैः किल मोहमापुः दत्तां त्वया च जगृहुस्त्रपयैव सर्व स्वर्वासिगर्वशमनीं पुनरुर्वशीं ताम् ॥,"मदन आदि संगठित होकर आपको मोह में डालने के लिये आये थे, परंतु आपकी दासियों के अङ्गों की सुगन्ध से वे स्वयं ही मोह को प्राप्त हो गये तदनन्तर जो समस्त स्वर्गवासियों के गर्व का शमन करने वाली थी उस उर्वशी को आपने उन्हें प्रदान कर दिया और उन्होंने लजाते हुए ही उसे ग्रहण कर लिया ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,मदनादयोऽथ भवन्तमागतास्ते मोहयन्तु कामपि भूषणाङ्गगन्धैः सोऽप्युर्वशीं भवतितीर्णगर्वदेवीं त्वं प्रदत्तवान्न बिभ्रति लज्जमानान् ॥,,0,0.5103573203086853
+यन्मूनि मे श्रुतिशिरस्सु च भाति यस्मि नस्मन्मनोरथपथः सकलः समेति स्तोष्यामि नः कुलधनं कुलदैवतं तत्पादारविन्दमरविन्द विलोचनस्य,"कमलनयन भगवान् विष्णुके जो चरणारविन्द मेरेमस्तकपर तथा वेदोंके शिरपर सुशोभित होते हैं और जिनमें मेरे मनोरथोंकेसभी मार्ग मिलते हैं तथा जो मेरे कुलधन और कुलदेवता हैं, उनकी मैंवन्दना करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,विष्णोः पदारविन्दमम्बुजलोचनस्यश्रीः श्रीः श्रीः श्रयते मस्तके विशिरस्यपीश यन्मन्देव यत्र मनोरथदैवतं धनं च ॥,,0,0.5861897468566895
+कल्पान्त एतदखिलं जठरेण गृह्णन् शेते पुमान् स्वदृगनन्तसखस्तदङ्के यन्नाभिसिन्धुरुहकाञ्चनलोकपद्म गर्भे द्युमान् भगवते प्रणतोऽस्मि तस्मै ॥,"हे नाथ ! कल्पके अन्तमें जो स्वयंप्रकाश परमपुरुष भगवान् इस सम्पूर्ण जगत्को अपने उदरमें लीन करके शेषनागका सहारा ले उनकी गोद में शयन करते हैं तथा जिनके नाभिसिन्धुसे प्रकट हुए सकल लोकोंक उत्पत्तिस्थान सुवर्णमय कमलसे परम तेजोमय ब्रह्माजी उत्पन्न हुए हैं, उन्हीं आप परमेश्वरको मैं प्रणाम करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,तं नाथ लीलया सुप्तमच्युतं त्वां नागेक्षणे कल्पसमाप्तिविलोकम् यस्योदराद्भवनं जगत्सकलं यत्र नाभिसिन्धो विविधात्मकमूर्ध्वबीजम् तस्माद्भवतः प्रणमामि परेश्वरं त्वाम् ॥,,0,0.41843730211257935
+कैलासशैलविनिवास वृषाकपे हे मृत्युञ्जय त्रिनयन त्रिजगन्निवास नारायणप्रिय मदापह शक्तिनाथ संसारदुःखगहनाज्जगदीश रक्ष॥,"हे कैलासशैलपर निवास करनेवाले, हे वृषाकपे, हे मृत्युञ्जय, हे त्रिनयन, हे तीनों लोकोंमें निवास करनेवाले, हे नारायणप्रिय, हे अहङ्कारको नष्ट करनेवाले, हे शक्तिनाथ, हे जगदीश्वर शिव! संसारके गहन दुःखोंसे मेरी रक्षा कीजिये॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,हे कैलासनिकेतन वृषाकपे शम्भो मृत्युञ्जय त्रिनयन त्रिलोकनाथ नारायणप्रिय अहङ्कृतिपाशधूम्र शक्तिनाथ जगत्पते परिपाहि दुःखैः॥,,0,0.8863850831985474
+अभ्यागताभिरभितो व्रजसुन्दरीभि र्मुग्धस्मितार्द्रवदनः करुणावलोकी निस्सीमकान्तिजलधिस्त्वमवेक्ष्यमाणो विश्वैकहृद्य हर मे पवनेश रोगान् ॥,चारों ओर से आयी हुई व्रजसुन्दरियों ने देखाआपका मुखारविन्द मुग्ध मुस्कान से आर्द्र है आप करुणामयी दृष्टि से सबको देख रहे हैं तथा असीम कान्ति के महासागर प्रतीत हो रहे हैं विश्व के एकमात्र हृदयहारी रूपवाले पवनेश ! मेरे रोगों को हर लीजिये ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,आद्रेण मुग्धविजृम्भितवक्त्रविभ्रममिदं भवन्तम् दृष्ट्वा परिगतगोपवधूभिराजन्तम् दृग्गोवृषभ निरीक्षमाणमाशु त्वं निर्धूय रोगमहाम्बुधे विशोष विश्वहृद्य ॥,,0,0.5108025670051575
+त्वत्प्रेरितस्तदनु नन्दतनूजया ते व्यत्यासमारचयितुं स हि शूरसूनुः त्वां हस्तयोरधित चित्तविधार्यमार्यै रम्भोरुहस्थकलहंसकिशोररम्यम् ॥,तत्पश्चात् नन्दतनया के साथ अपना व्यत्यास करने के लिये आपद्वारा प्रेरित किये जानेपर शूरकुमार वसुदेवजी ने मुनियोंद्वारा चित्त से धारण करने योग्य आपको दोनों हाथों से उठाया उस समय कमलपर बैठे हुए कलहंसकिशोर के समान आपकी अद्भुत शोभा हो रही थी ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,शूरेण देवकियया समनावृतेन द्रष्ट्रा प्रणुन्न भवतां दधता तदानीम् उभाभ्यामपि करयोरुततर्षमाण स्त्वं भूषणं कमलशाय इवाभवन्नः ॥,,0,0.42321670055389404
+शक्रादयः सुरगणा निहतेऽतिवीर्ये तस्मिन्दुरात्मनि सुरारिबले च देव्या तां तुष्टुवुः प्रणतिनम्रशिरोधरांसा वाग्भिः प्रहर्षपुलकोद्गमचारुदेहाः ॥,अत्यन्त पराक्रमी दुरात्मा महिषासुर तथा उसकी दैत्यसेनाके देवी के हाथसे मारे जानेपर इन्द्र आदि देवता प्रणामके लिये गर्दन तथा कंधे झुकाकर उन भगवती दुर्गाका उत्तम वचनोंद्वारा स्तवन करने लगे उस समय उनके सुन्दर अङ्गोंमें अत्यन्त हर्ष के कारण रोमाञ्च हो आया था ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,प्रणम्य गर्दनकंधरा भवतीं देव्या शूरेऽतिदुर्जसुरेऽसुरसैन्यकेऽस्मै इन्द्रादयो भगवतीं वचसाभिषेवन् त्वन्मार्गगावलयरोमराजिताङ्गाः ॥,,0,0.4488595724105835
+रक्षश्चयैकचितकक्षकपूश्चितौ यः सीताशुचो निजविलोकनतो मृतायाः दाहं व्यधादिव तदन्त्यविधेयभूतं लाङ्गूलदत्तदहनेन मुदे स नोऽस्तु ॥,"जिन्होंने सीताजीकी पीड़ाको, जो उनके दर्शनमात्रसे मर चुकी थी, एकमात्र राक्षससमूहरूप काठकबाड़ोंसे बनी हुई लङ्कारूपिणी चितापर सुलाकर, अपनी पूँछकी लगायी हुई अग्निसे उसका मरणान्त कालोचित दाहसंस्कार किया, वे हनूमान्जी हमारी प्रसन्नताके कारण हों ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,जायाऽऽशुमूर्च्छनमरुष्यदर्शनाभ्यामेकाहिसङ्घधुरिणीं च लङ्कचित्तां पूँछप्रणीततपनान्तकृत्यं सम्प्रेतदाहमभिवीक्ष्यतां करोतु ॥,,0,0.3568016588687897
+बाल्यस्पृशापि वपुषा दधुषा विभूती रुद्यत्किरीटकटकाङ्गदहारभासा शङ्खारिवारिजगदापरिभासितेन मेघासितेन परिलेसिथ सूतिगेहे ॥,"उस समय बाल्यभाव का स्पर्श करते हुए भी जिसने ईश्वरत्वद्योतक विभूतियाँ धारण कर रक्खी थीं, जिससे प्रकाशमान किरीट, कटक, बाजूबंद और हार की प्रभा छिटक रही थी, जो अपनी चारों भुजाओं में शङ्ख, चक्र, कमल और गदा धारण करने से उद्दीप्त हो रहा था तथा जिसकी कान्ति सजल जलधर के समान श्याम थी, अपने उस श्रीविग्रह से आप सूतिकागृह में शोभा पाने लगे ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,भूषाढ्यमप्यवनिषु तनुं तदाऽऽदौ भास्वन्तमाभरणगणानुभावमाभ्याम् आभ्यामपि श्रियमिव द्युतिदीप्तमेकं त्वं दर्शितो भवसि सूतिगृहे विग्रहेण ॥,,0,0.28625571727752686
+निष्कर्मकर्मदहनो ज्वलनो भवामि निर्दुःखदुःखदहनो ज्वलनो भवामि निर्देहदेहदहनो ज्वलनो भवामि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"मैं कर्मरहित हूँ और कर्मोंको जलानेहेतु अग्निरूप हूँ; मैं दु:खरहित हूँ और दुःखोंको जलानेके लिये अग्निरूप हूँ; मैं देहरहित हूँ और देहाभिमानको जलानेके लिये अग्निरूप हूँ मैं ज्ञानरूपी अमृत हूँ, समरस हूँ और आकाशके समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,निष्कर्मकर्मदहनो हि हुताशनोऽहं निर्दुःखदुःखदहनो हि हुताशनोऽहम् ॥ निर्देहदेहदहनो हि हुताशनोऽहं ज्ञानामृतं समरसं गगनोपमोऽहम्॥,Vasantatilakā,1,0.8530596494674683
+कृत्स्नस्य योऽस्य जगतः सचराचरस्य कर्ता कृतस्य च तथा सुखदुःखहेतुः संहारहेतुरपि यः पुनरन्तकाले तं शङ्करं शरणदं शरणं व्रजामि॥,"अन्धकने कहाजो चराचर प्राणियोंसहित इस सम्पूर्ण जगत्को उत्पन्न करनेवाले हैं, उत्पन्न हुए जगत्के सुखदुःखमें एकमात्र कारण हैं तथा अन्तकालमें जो पुनः इस विश्वके संहारमें भी कारण बनते हैं, उन शरणदाता भगवान्‌ श्रीशङ्करकी मैं शरण लेता हूँ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,यस्माज्जगत्सकलमेतदनन्धक तत्तस्मिन्‌ विश्वस्य सृष्टौ हि फले च दुःखसुखेषु अन्ते च विश्वस्य संहतौ हि कारणं भवत्यम्‌ तं शङ्करं शरणदं शरणं व्रजामि॥,,0,0.6355612277984619
+दीर्घो लघुः पुनरितीह न मे विभागो विस्तारसङ्कटमितीह न मे विभागः कोणं हि वर्तुलमितीह न मे विभागो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"यह दीर्घ है और यह लघु है इस प्रकारका भेद इसी लोकमें है, मुझमें नहीं है, विस्तार और संकोच ऐसा विभाग भी इस लोकमें है, मुझमें नहीं है और कोण तथा गोलाकार ऐसा विभाग भी इसी संसारमें है, मुझमें नहीं है; मैं तो ज्ञानरूपी अमृत हूँ, समरस हूँ और आकाशके समान हूँ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,दीर्घं लघुं इति भिन्नमिह लोके नाहं विस्तार संकोच इति भिन्नमिह लोके नाहं कोण गृह इति भिन्नमिह लोके ज्ञानामृतं समरसं गगनोपमोऽहम्॥,,0,0.7715115547180176
+तस्यात्मजास्त्वयुतमीश पुनः सहस्रं श्रीनारदस्य वचसा तव मार्गमापुः नैकत्र वासमृषये स मुमोच शापं भक्तोत्तमस्त्वृषिरनुग्रहमेव मेने ॥,ईश ! उन दक्ष हर्यश्वसंज्ञक दस हजार तथा शबलाश्व नामक एक हजार पुत्र उत्पन्न हुए वे सबकेसब श्रीनारदजी के निवृत्तिमार्गोपदेश से आपके मार्गमोक्ष को प्राप्त हो गये तब दक्ष ने देवर्षि नारद को शाप दिया कि तुम एक स्थान पर स्थिर नहीं रह सकते भक्तश्रेष्ठ देवर्षि ने उसे अपने लिये अनुग्रह ही माना ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,दक्षस्तु दस्यु हर्यश्व शबलाश्व नामानः सुतान् भवतः प्रणतप्रियेण नारदेन विनिवृत्तमगाद याते शापं ददौ न रतिं चकरोत् भवत्त्वाम् ॥,,0,0.5322076082229614
+निष्कामकाममिह नाम कथं वदामि निःसङ्गसङ्गमिह नाम कथं वदामि निःसारसाररहितं च कथं वदामि ज्ञानामृतं समरसं गगनोपमोऽहम्॥,"निष्काम होकर मैं स्वयंको सकाम कैसे कहूँ, निःसंग होकर संगवाला कैसे कहूँ और नि:सार होकर सारवान् कैसे कहूँ? मैं तो ज्ञानरूपी अमृत हूँ, समरस हूँ और आकाशके समान हूँ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,निष्कामकाममिहनाम कथं वदामि निःसंगसंगमिहनाम कथं वदामि निःसारसारमिहनाम कथं वदामि ज्ञानामृतं समरसं गगनोपमोऽहम्॥,Vasantatilakā,1,0.8136675357818604
+संध्यादिकालरहितं न च मे वियोगो ह्यन्तःप्रबोधरहितं बधिरो न मूकः ॥ एवं विकल्परहितं न च भावशुद्धं ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"में सन्ध्यादि कालों से रहित हूँ, मेरा बियोग नहीं है भीतर मेरे ज्ञान है, न बहिरा हूँ, न गूँगा हूँ, इस प्रकार विकल्प से रहित हूँ, भावना से शुद्ध नहीं हूँ, में ज्ञान और अमृत स्वरूप हूँ, समान रस हूँ, आकाश के समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,सन्ध्यादिकालरहितं न बहिरन्तरं वै ज्ञानान्वितं न गूढमिति विकल्परहितं वै भावेन शुद्धरहितं ज्ञानामृतं समरसं गगनोपमोऽहम्॥,,0,0.8257063031196594
+जीवं हि कञ्चिदभिमानवशात्स्वकीयं मत्वा तनूज इति रागभरं वहन्त्यः आत्मानमेव तु भवन्तमवाप्य सूनुं प्रीतिं ययुर्न कियतीं वनिताश्च गावः ॥,"भला, जब किसी भी जीव को ममत्वारोप के कारण 'मेरा पुत्र है' यों अपना मानकर उनकी माताएँ स्नेहविह्वल हो जाती हैं, तब सर्वात्मस्वरूप आपको ही पुत्ररूप में पाकर गोपियों तथा गौओं को कितनी प्रसन्नता नहीं हुई ? अर्थात् वे परम आनन्दित हुईं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,यास्ते निजात्मनि कृते ममतामुदन्ते स्नेहात्कुला भवति जन्ननुजोऽस्ति कोऽपि ता गोपगोर्मुखयोग्यते तनूजे विभो किमप्युत तावति प्रसन्नचेताः ॥,,0,0.5191829204559326
+अङ्के पितुः सुरुचिपुत्रकमुत्तमं तं दृष्ट्वा ध्रुवः किल सुनीतिसुतोऽधिरोक्ष्यन् आचिक्षिपे किल शिशुः सुतरां सुरुच्या दुस्संत्यजा खलु भवद्विमुखैरसूया ॥,"किसी समय सुनीति के पुत्र ध्रुव ने सुरुचि के पुत्र उत्तम को पिता की गोद‍ में लालित होते देखकर स्वयं भी गोद में चढ़ने की इच्छा की, परंतु सुरुचि ने उस शिशु को कटुवचनोंद्वारा भलीभाँति फटकारा सच है, भगवद्विमुख लोगोंद्वारा ईर्ष्या एवं दोषदृष्टि का त्याग करना अत्यन्त कठिन है ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,दृष्ट्वाथ धर्मवतीमुत्तममाददन्तं गोदे पितुः सुरुचिजन्म इच्छतां तम् त्वां कट्वाक्षलोभलवदोषदृशो विमुञ्च्याचेष्टा भवत्यतिदुश्चरलोकवर्गैः ॥,,0,0.448688268661499
+संसारसंततिरजो न च मे विकारः संताप संततितमो न च मे विकारः ॥ सत्त्वं स्वधर्मजनकं न च मे विकारः ज्ञानामृतं समरसं गगनोपपोऽहम् ॥,"संसार के बिस्तार की रज मेरे बीच में नहीं है न उसका बिकार है न मेरे दुःख का तमोगुण है न उसका बिकार है अपने धर्म को पैदा करने बाला तमोगुण भी नहीं है न बिकार है, में ज्ञान और अमृतरूप हूँ समान रस हूँ आकाश के समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,संसारधूमरज नानमिदं न चाम्बरं न चास्ते तमो न च बीजमिदं न चाम्बरं न चास्ते धर्मजन्मनं तम ईदृगपि न चाम्बरं ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0,0.7027157545089722
+किं नाम रोदिषि सखे न च ते स्वरूपं किं नाम रोदिषि सखे न च ते विरूपम् किं नाम रोदिषि सखे न च ते वयांसि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"हे सखे! तुम किसलिये रुदन करते हो, तुम्हारा स्वरूप नहीं है हे सखे! तुम किसलिये रुदन करते हो, तुम्हारा रूप नष्ट होनेवाला नहीं है हे सखे! तुम किसलिये रुदन करते हो, आयु आदि भी तुम्हारे नहीं हैं मैं ज्ञानरूपी अमृत हूँ, समरस हूँ और आकाशके समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,किं नाम रोदिषि सखे न च ते वपुः किं नाम रोदिषि सखे न च ते वपुः स्यात् किं नाम रोदिषि सखे न च ते वयांसि ज्ञानामृतं समरसं गगनोपमोऽहम्॥,,0,0.7598535418510437
+निर्मोहमोहपदवीति न मे विकल्पो निःशोकशोकपदवीति न मे विकल्पः ॥ निर्लोभलोभपदवीति न मे विकल्पो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"बैर और प्रति मुझमें नहीं है और भेद नहीं है सुख और दुःख नहीं हैं उदारता और लोभ ये मुझ में नहीं है भेद नहीं है में ज्ञान और अमृत रूप हूँ, समान हूँ, अकाश के समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,निष्वैरभिद्रहितं न च मे विभाति निःसारसारविगतं न च मे विभाति ॥ निर्भेदभिद्रहितं न च मे विभाति ज्ञानामृतं समरसं गगनोपमोऽहम्॥,,0,0.6112836599349976
+यः श्लोकपञ्चकमिदं प्रयतः पठेद्धि नित्यं प्रभातसमये पुरुषः प्रबुद्धः श्रीरामकिङ्करजनेषु स एव मुख्यो भूत्वा प्रयाति हरिलोकमनन्यलभ्यम् ॥,"जो पुरुष प्रातःकाल नींदसे जगकर जितेन्द्रियभावसे इन पाँचों श्लोकोंका नित्य पाठ करता है, वह श्रीरामजीके सेवकोंमें मुख्य होकर श्रीहरिके लोकको, जो दूसरोंके लिये दुर्लभ है, प्राप्त होता है ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,प्रातर्जगन्निविशतामधियामुख्यं श्रीरामसेवकतमं श्रियमाप्यते यः श्लोकपञ्चकमिदं जितेन्द्रियभाव नित्यं पठत्यनुदिनं हरिलोकमाप्यते यः ॥,,0,0.6949628591537476
+माया विलासहसितं श्वसितं समीरो जिह्वा जलं वचनमीश शकुन्तपङ्क्तिः सिद्धादयस्स्वरगणा मुखरन्ध्रमग्नि र्देवा भुजाः स्तनयुगं तव धर्मदेवः ॥,"ईश ! आपकी लीला पूर्ण हँसी माया, श्वास वायुदेवता, जिह्वा जल, वचन पक्षिसमूह, षड्ज आदि स्वरसमुदाय सिद्धगण, मुखछिद्र अग्नि, भुजाएँ देवगण तथा स्तनयुगल धर्मदेव हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,माया विससर्ज गदतां तव हासमाशु वायुर्विशदं जलमशेषमञ्जसा जिह्वा श्रुत्यन्तरालगतमात्मवचो गणोऽथ स्वराः समुदायमयमेव च षड्जमूर्च्छनाद्याः सिद्धगणाः शिव ते मुखछिद्रमग्निर्भुजास्तु देवगणाः पयसां तु धर्मदेवता द्वे ॥,,0,0.8429584503173828
+सोऽयं रथेन सुकृती भवतो निवासं गच्छन् मनोरथगणांस्त्वयि धार्यमाणान् आस्वादयन् मुहुरपायभयेन दैवं सम्प्रार्थयन् पथि न किंचिदपि व्यजानात् ॥,"पुण्यात्मा अक्रूर रथ के द्वारा जब आपके निवासस्थान नन्दगाँव को जा रहे थे, उस समय उनके हृदय में आपको लेकर अनेक प्रकार के मनोरथ प्रकट हो रहे थे उन मनोरथों का बारंबार आस्वादन करते हुए अक्रूर, कोई विघ्न न आ जायइस भय से, देव की प्रार्थना करते जाते थे इस प्रकार उन्होंने उस मार्ग में कहाँ क्या हो रहा है, यह कुछ भी नहीं जाना ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,मन्ये बहुविधभवत्प्रणयाशिषोऽस्मिं मन्ये बहुविधभवत्प्रणयाशिषोऽस्मिन् मन्ये बहुविधभवत्प्रणयाशिषोऽस्मिं स्तेनाक्रूरगतिना मानयितव्यमित्य॥,,0,0.04901905357837677
+निर्नेति नेति विमलो हि कथं वदामि निःशेषशेषविमलो हि कथं वदामि ॥ निर्लिङ्गलिंगविमलो हि कथं वदामि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"अस्ति और नास्ति इनसे निश्चय शुद्ध है उसका वर्णन कैसे करूँ, अशेष और शेष इनसे शुद्ध हैं उसका वर्णन कैसे करूँ, चिह्न और अचिह्न इनसे वह निश्चय शुद्ध है उसका वर्णन कैसे करूँ, में ज्ञान और अमृत रूप हूँ, समानरस हूँ आकाश के समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,अस्ति नास्ति यत्र निश्चितं हि शुद्धं तन् मा वदामि शेषश्च यत्र शुद्धम् अशेषम् चिह्नमचिह्नमचिन्त्यमेतद् ज्ञानामृतं समानरसं गगनोपमोऽहम्॥,,0,0.6467030048370361
+अक्रूर एष भवदङ्घ्रि परश्चिराय त्वद्दर्शनाक्षममनाः क्षितिपालभीत्या तस्याज्ञयैव पुनरीक्षितुमुद्यतस्त्वा मानन्दभारमतिभूरितरं बभार ॥,ये अक्रूर चिरकाल से आपके चरणचिन्तन में लगे थे; परंतु राजा कंस के डर से उनका मन आपका दर्शन करने में अपने को असमर्थ पाता था फिर उसी कंस की आज्ञा से वे आपका दर्शन करने के लिये उद्यत हुए उस समय उनके चित्त में आनन्द का भारी भार भर गया ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,चिरं भवत्पदयुगे रतमेतदक्रूर मनः कंसपरिभयेन निराकरोत् स्वयम् त्वां दर्शयितुं कंसआज्ञया प्रवृत्ते परिप्रज्ञतां गताद्रते निजे विवेद भारमानन्दभारः ॥,,0,0.6201842427253723
+स द्वादशीव्रतमथो भवदर्चनार्थं वर्षं दधौ मधुवने यमुनोपकण्ठे पत्न्या समं सुमनसा महतीं वितन्वन् पूजां द्विजेषु विसृजन् पशुपष्टिकोटिम् ॥,महाराज अम्बरीष ने आपकी अर्चना करने के लिये एक वर्ष तक द्वादशीव्रत करने का संकल्प किया फिर तो वे यमुना के तटपर स्थित मधुवन में जाकर अपनी भक्तिमती पत्नी के साथ आपकी महती पूजा में लग गये उस समय उन्होंने ब्राह्मणों को साठ करोड़ गौएँ दान कीं ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,द्वादश्युपोषणमथैकवर्षमाप्ते यातो भवत्पूजनदेव मधुवनेऽसौ भार्त्रीभवत्प्रणतया समनुप्रवृत्तो दत्त्वाष्टषष्टिकोटिगवां न्ययुङ्क्त भूम्न्न् ॥,,0,0.5277966856956482
+योगिन्यतीव कुशला खलु चित्रलेखा तस्याः सखी विलिखती तरुणानशेषान् तत्रानिरुद्धमुषया विदितं निशाया मानेष्ट योगबलतो भवतो निकेतात् ॥,"उषाकी एक सखी थी, जिसका नाम चित्रलेखा था वह योगिनी और चित्रकर्म में अत्यन्त निपुण थी उसने समस्त तरुण राजकुमारों का चित्र बनाना आरम्भ किया उन बनाये हुए चित्रों में उषा ने अनिरुद्ध को पहचाना, तब उसके मनोनीत पुरुष अनिरुद्ध को वह अपने योगबल से रात्रि के समय आपके महल से उठा लायी ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,उषायाः सखी च वयस्तरुणान् बहून् प्रारब्धवत्युतावकलाश्च चित्रकर्म तत्रानिरुद्धमङ्गनया विचिन्वतीया त्वां रात्रियोगबलतो निहताशु भूयः ॥,,0,0.5520504713058472
