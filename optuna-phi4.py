@@ -4,7 +4,7 @@ import torch
 import gc
 import json
 import random
-
+import os
 import optuna
 from optuna.pruners import MedianPruner
 from optuna.samplers import TPESampler
@@ -18,29 +18,36 @@ random.seed(42)
 torch.manual_seed(42)
 torch.cuda.manual_seed_all(42)
 
+os.environ["HF_HOME"] = "/dgx2/pawangcs/HF_CACHE"
+os.environ["HF_HUB_CACHE"] = "/dgx2/pawangcs/HF_CACHE"
 # ---------------------------------------------------------------------------
 # Fixed settings (systems/throughput choices -- not being searched)
 # ---------------------------------------------------------------------------
 MODEL_NAME = "unsloth/phi-4"
-MAX_LEN = 1600                                              # CHANGED for 1-shot
+MAX_LEN = 4700                                              # CHANGED for 1-shot
 LOAD_IN_4BIT = True
-DATA_FILE_PATH = "Files/v3_gitapress_final_1shot_prompts.csv"  # CHANGED for 1-shot
+DATA_FILE_PATH = "/dgx2/pawangcs/Dataset/v3_gitapress_final_5shot_prompts.csv"  # CHANGED for 1-shot
 
 # Same as the proven-working 5-shot run -- untouched.
-GRAD_CHECKPOINTING = True
+GRAD_CHECKPOINTING = "unsloth"
 
 SEARCH_TRAIN_SUBSET = 8000     # rows of train data used per trial
 SEARCH_VAL_SUBSET = 800        # rows of val data used per trial for eval
 SEARCH_MAX_STEPS = 120          # optimizer steps per trial (proxy run, not full training)
 SEARCH_EVAL_STEPS = 20         # eval every N steps -> enables pruning signal
-N_TRIALS = 40
+N_TRIALS = 25
 # STUDY_TIMEOUT_HOURS = 9        # hard safety cap so the study stops before morning
+per_device_train_batch_size = 16
+gradient_accumulation_steps = 4
+STUDY_DB = "sqlite:////dgx2/pawangcs/optuna/hpo_study_5shot.db"   # CHANGED for 1-shot -- separate from the 5-shot study's db
+STUDY_NAME = "phi4_5shot"      # CHANGED for 1-shot -- separate study name
+OUTPUT_DIR = "hpo_runs_5shot"           
 
-STUDY_DB = "sqlite:///hpo_study_1shot.db"   # CHANGED for 1-shot -- separate from the 5-shot study's db
-STUDY_NAME = "phi4_sanskrit_hpo_1shot"      # CHANGED for 1-shot -- separate study name
+BASE_OUTPUT_DIR = f"/dgx2/pawangcs/optuna/{OUTPUT_DIR}"
+os.makedirs(BASE_OUTPUT_DIR, exist_ok=True)
 
-OUTPUT_DIR = "hpo_runs_1shot"               # CHANGED for 1-shot
-
+RESULTS_CSV = os.path.join(BASE_OUTPUT_DIR, "hpo_results_5shot.csv")
+RESULTS_JSON = os.path.join(BASE_OUTPUT_DIR, "hpo_best_params_5shot.json")
 
 def build_formatter(tokenizer):
     def fn(batch):
@@ -86,25 +93,24 @@ class OptunaPruningCallback(TrainerCallback):
 def objective(trial, train_ds_raw, val_ds_raw):
     lr = trial.suggest_float("lr", 1e-4, 8e-4, log=True)
     lora_r = trial.suggest_categorical("lora_r", [16,32,64])
-    lora_alpha = trial.suggest_categorical("lora_alpha",[16, 32, 64, 128])
+    lora_alpha = trial.suggest_categorical("lora_alpha",[32, 64, 128])
     lora_dropout = trial.suggest_categorical("lora_dropout", [0.0, 0.02, 0.05, 0.1])
     weight_decay = trial.suggest_float("weight_decay", 0.0, 0.03)
     warmup_ratio = trial.suggest_float("warmup_ratio", 0.02, 0.15)
     max_grad_norm = trial.suggest_categorical("max_grad_norm", [0.3,0.5,1.0])
     scheduler = trial.suggest_categorical("scheduler",["cosine","linear","cosine_with_restarts",])
     packing = trial.suggest_categorical("packing",[True, False])
+        
+        
     label = (
             f"trial{trial.number}"
-            f"_bs{per_device_bs}"
-            f"_ga{grad_acc}"
             f"_lr{lr:.2e}"
             f"_r{lora_r}"
             f"_a{lora_alpha}"
             f"_do{lora_dropout}"
         )
     
-    per_device_bs = trial.suggest_categorical("batch_size",[2, 4, 8, 12, 16, 20])
-    grad_acc = trial.suggest_categorical("grad_acc",[1, 2, 4, 8])
+    
     
     print(f"\n{'='*80}\n{label}\n{'='*80}")
 
@@ -149,9 +155,9 @@ def objective(trial, train_ds_raw, val_ds_raw):
             dataset_num_proc=1,
             callbacks=[OptunaPruningCallback(trial)],
             args=SFTConfig(
-                output_dir=f"/tmp/{OUTPUT_DIR}/{label}",
-                per_device_train_batch_size=per_device_bs,
-                gradient_accumulation_steps=grad_acc,
+                output_dir=f"{BASE_OUTPUT_DIR}/{label}",
+                per_device_train_batch_size=per_device_train_batch_size,
+                gradient_accumulation_steps=gradient_accumulation_steps,
                 max_steps=SEARCH_MAX_STEPS,
                 learning_rate=lr,
                 lr_scheduler_type=scheduler,
@@ -234,8 +240,8 @@ if __name__ == "__main__":
         for k, v in study.best_trial.params.items():
             print(f"  {k}: {v}")
 
-    study.trials_dataframe().to_csv("hpo_results-1shot.csv", index=False)
-    with open("hpo_best_params-1shot.json", "w") as f:
+    study.trials_dataframe().to_csv(RESULTS_CSV, index=False)
+    with open(RESULTS_JSON, "w") as f:
         json.dump({
             "best_eval_loss": study.best_value if completed else None,
             "best_params": study.best_trial.params if completed else None,
@@ -243,4 +249,4 @@ if __name__ == "__main__":
             "n_trials_total": len(study.trials),
         }, f, indent=2)
 
-    print("\nFull results: hpo_results-1shot.csv, hpo_best_params-1shot.json")
+    print(f"\nFull results: {RESULTS_CSV}, {RESULTS_JSON}")
