@@ -3,7 +3,7 @@
 run.bash
 /Trained_Models
 score_analysis.ipynb
-out*.txt
+*out*.txt
 *.sbatch
 hpo*
 vasant-study.txt

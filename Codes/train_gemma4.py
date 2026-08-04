@@ -25,8 +25,8 @@ HYPERPARAMS = {
     "MODEL_NAME": "unsloth/gemma-4-31B-it",
     "MAX_LEN": 768,
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE": 4,
-    "GRAD_ACC": 16,
+    "BATCH_SIZE": 8,
+    "GRAD_ACC": 12,
     "EPOCHS": 5,
     "LR": 2e-4,
     "LOG_STEPS": 50,
@@ -119,11 +119,13 @@ def convert_to_text(sample):
 train_dataset = train_ds.map(
     convert_to_text,
     remove_columns=train_ds.column_names,
+    num_proc=os.cpu_count(),
 )
 
 val_dataset = val_ds.map(
     convert_to_text,
     remove_columns=val_ds.column_names,
+    num_proc=os.cpu_count(),
 )
 
 print("--------------------------------------------------------------------------------------")
