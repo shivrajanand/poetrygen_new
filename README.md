@@ -8,7 +8,10 @@
 | `v3_gitapress_skr_equal_verifier`  | **29183** | Subset of above file, after adjusting the meter names, where both skrutable and our verifier gives the same meters.| 
 | `v3_gitapress_final`               | **29183** | v3_gitapress_skr_equal_verifier with prompts and splits |
 | `v3_gitapress_final_1shot_prompts` | **29173** | v3_gitapress_final with prompts and splits, 10 samples taken from train set for 1shot, one for each meter and updated to prompts. So this file has 1-shot prompts |
+| `v3_gitapress_final_3shot_prompts` | **29153** | v3_gitapress_final with prompts and splits, 30 samples taken from train set for 3shot, one for each meter and updated to prompts. So this file has 1-shot prompts |
 | `v3_gitapress_final_5shot_prompts` | **29133** | v3_gitapress_final with prompts and splits, 50 samples taken from train set for 5shot, one for each meter and updated to prompts. So this file has 1-shot prompts |
+| `v3_gitapress_final_vasantatilaka` | **661**   | v3_gitapress_final with 0 shot prompts and splits, with only vasantatilaka meter |
+| `v3_gitapress_final_anustubh` | **27208**   | v3_gitapress_final with 0 shot prompts and splits, with only anustubh meter |
 
 # Column descriptions 
 
@@ -91,11 +94,12 @@ Generate the Sanskrit verse.
 
 # Token count analysis on train split only
 
-| Model           | Dataset                                       |Split| Columns        |   Samples |   Min |   Median |   Mean |   90p |   95p |   99p |   Max |
-|:----------------|:----------------------------------------------|:----|:---------------|----------:|------:|---------:|-------:|------:|------:|------:|------:|
-| microsoft/phi-4 | Files/v3_gitapress_final.csv                  |train| sa             |     23346 |    63 |       86 |  90.46 |    98 |   125 |   202 |   248 |
-| Qwen/Qwen3-14B  | Files/v3_gitapress_final.csv                  |train| sa             |     23346 |    58 |       80 |  83.31 |    91 |   115 |   186 |   231 |
-| unsloth/phi-4   | Files/v3_gitapress_final.csv                  |train| prompt, hi     |     23346 |   509 |      612 | 625.11 |   684 |   726 |   860 |  1305 |
-| unsloth/phi-4   | Files/v3_gitapress_final_1shot_prompts.csv    |train| prompt, hi, sa |     23336 |   912 |     1032 | 1056.44|  1121 |  1232 |  1545 |  2031 |
-| unsloth/phi-4   | Files/v3_gitapress_final_3shot_prompts.csv    |train| prompt, hi, sa |     23316 |  1423 |     1543 | 1594.64|  1641 |  1970 |  2620 |  3292 |
-| unsloth/phi-4   | Files/v3_gitapress_final_5shot_prompts.csv    |train| prompt, hi, sa |     23296 |  2008 |     2128 | 2200.89|  2225 |  2643 |  3710 |  4645 |
+|Model                 | Dataset                                   |Split|Columns       |Samples| Min|Median|   Mean  | 90p| 95p | 99p | Max|
+|:----------------     |:------------------------------------------|:----|:-------------|------:|---:|-----:| ------: |---:|----:|----:|---:|
+|unsloth/phi-4         | Files/v3_gitapress_final.csv              |train|prompt, hi, sa|  23346|589 |  709 | 725.92  |791 | 847 |1067 |1529|
+|unsloth/phi-4         | Files/v3_gitapress_final_1shot_prompts.csv|train|prompt, hi, sa|  23336| 912|  1032| 1056.44 |1121|1232 |1545 |2031|
+|unsloth/phi-4         | Files/v3_gitapress_final_3shot_prompts.csv|train|prompt, hi, sa|  23316|1423|  1543| 1594.64 |1641|1970 |2620 |3292|
+|unsloth/phi-4         | Files/v3_gitapress_final_5shot_prompts.csv|train|prompt, hi, sa|  23296|2008|  2128| 2200.89 |2225|2643 |3710 |4645|
+|unsloth/gemma-4-E4B-it| Files/v3_gitapress_final.csv              |train|prompt, hi, sa|  23346| 446|   488| 491.63  | 507| 519 | 586 | 730|
+|unsloth/gemma-4-E4B-it| Files/v3_gitapress_final.csv              |train| sa           |  23346| 20 |   33 |  34.82  | 39 |  49 |  78 |102 |
+|unsloth/gemma-4-31B-it| Files/v3_gitapress_final.csv              |train|prompt, hi, sa|  23346| 446|  488 | 491.63  |507 | 519 | 586 |730 |

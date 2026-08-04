@@ -1,0 +1,3 @@
+### To deal with class imbalance try 
+1. Focal Loss
+2. weighted random sample

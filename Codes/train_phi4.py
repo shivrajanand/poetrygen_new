@@ -165,16 +165,16 @@ trainer.train()
 trainer.save_model(HYPERPARAMS["OUTPUT_DIR"] + "/final_model")
 tokenizer.save_pretrained(HYPERPARAMS["OUTPUT_DIR"] + "/final_model")
 
-# print("BEST MODEL STATS")
-# print(trainer.state.best_model_checkpoint)
-# print(trainer.state.best_metric)
+print("BEST MODEL STATS")
+print(trainer.state.best_model_checkpoint)
+print(trainer.state.best_metric)
 
 essential_config = {
     "HYPER-PARAMETERS": HYPERPARAMS,
     "TRAIN_DATASET_LEN": len(train_ds),
     "VAL_DATASET_LEN": len(val_ds),
-    # "best_model": {"best_model_checkpoint": trainer.state.best_model_checkpoint,
-    # "best_model_metric": trainer.state.best_metric}
+    "best_model": {"best_model_checkpoint": trainer.state.best_model_checkpoint,
+    "best_model_metric": trainer.state.best_metric}
 }
 
 with open(HYPERPARAMS["OUTPUT_DIR"]+"/essential_config.json", "w", encoding="utf-8") as f:
