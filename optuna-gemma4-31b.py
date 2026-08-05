@@ -335,9 +335,14 @@ if __name__ == "__main__":
         load_if_exists=True,
     )
 
+    remaining_trials = max(0, CONSTANTS["N_TRIALS"] - len(study.trials))
+
+    print(f"Existing trials: {len(study.trials)}")
+    print(f"Running {remaining_trials} more trials")
+
     study.optimize(
         make_objective(train_dataset, val_dataset),
-        n_trials=CONSTANTS["N_TRIALS"],
+        n_trials=remaining_trials,
         gc_after_trial=True,
     )
 

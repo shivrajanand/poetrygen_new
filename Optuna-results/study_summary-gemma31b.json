@@ -1,0 +1,36 @@
+{
+    "best_value": 3.123349189758301,
+    "best_params": {
+        "LR": 0.00010385023756257525,
+        "LORA_R": 16,
+        "LORA_DROPOUT": 0.031171107608941095,
+        "use_rslora": true
+    },
+    "best_derived_lora_alpha": 32,
+    "n_trials": 18,
+    "n_pruned": 9,
+    "n_complete": 5,
+    "note": "eval_loss values come from short SEARCH_MAX_STEPS proxy runs on a small subset -- use this to RANK LoRA configs, then run train_final.py (reads best_params from this file) to do the real, full-dataset / full-epoch training with those winning LoRA params.",
+    "constants": {
+        "MODEL_NAME": "unsloth/gemma-4-31B-it",
+        "MAX_LEN": 768,
+        "LOAD_IN_4BIT": true,
+        "TARGET_MODULES": "all-linear",
+        "OPTIM": "adamw_8bit",
+        "BATCH_SIZE": 8,
+        "GRAD_ACC": 12,
+        "WEIGHT_DECAY": 0.01,
+        "WARMUP_RATIO": 0.03,
+        "MAX_GRAD_NORM": 1.0,
+        "LOG_STEPS": 10,
+        "DATA_FILE_PATH": "Files/v3_gitapress_final.csv",
+        "STUDY_OUTPUT_DIR": "Trained_Models/Gemma4-31B-optuna",
+        "N_TRIALS": 15,
+        "STUDY_NAME": "gemma4_lora_search",
+        "STORAGE": "sqlite:///Trained_Models/Gemma4-31B-optuna/optuna_study.db",
+        "HPO_TRAIN_SUBSET": 800,
+        "HPO_VAL_SUBSET": 150,
+        "SEARCH_MAX_STEPS": 60,
+        "SEARCH_EVAL_STEPS": 15
+    }
+}

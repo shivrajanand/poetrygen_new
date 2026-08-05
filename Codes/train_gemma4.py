@@ -22,30 +22,34 @@ torch.cuda.manual_seed_all(42)
 
 
 HYPERPARAMS = {
-    "MODEL_NAME": "unsloth/gemma-4-31B-it",
-    "MAX_LEN": 768,
-    "LOAD_IN_4BIT": True,
-    "BATCH_SIZE": 8,
-    "GRAD_ACC": 12,
-    "EPOCHS": 5,
-    "LR": 2e-4,
-    "LOG_STEPS": 50,
-    "SAVE_STEPS": 50,
-    "SAVE_LIMIT": 3,
-    "EVAL_STEPS": 50,
-    "WEIGHT_DECAY": 0.01,
-    "WARMUP_RATIO": 0.03,
-    "MAX_GRAD_NORM": 1.0,
+"MODEL_NAME": "unsloth/gemma-4-31B-it",
+"MAX_LEN": 768,
+"LOAD_IN_4BIT": True,
 
-    "LORA_R": 16,
-    "LORA_ALPHA": 32,
-    "LORA_DROPOUT": 0.05,
+"BATCH_SIZE": 8,
+"GRAD_ACC": 12,
+"EPOCHS": 5,
 
-    "ES_THRESHOLD": 0.001,
-    "ES_PATIENCE": 8,
+"LR": 1.0385e-4,            
 
-    "DATA_FILE_PATH": "Files/v3_gitapress_final.csv",
-    "OUTPUT_DIR": "Trained_Models/Gemma4-31B-0shot",
+"LOG_STEPS": 50,
+"SAVE_STEPS": 100,
+"SAVE_LIMIT": 3,
+"EVAL_STEPS": 100,
+
+"WEIGHT_DECAY": 0.01,
+"WARMUP_RATIO": 0.03,
+"MAX_GRAD_NORM": 1.0,
+
+"LORA_R": 16,
+"LORA_ALPHA": 32,
+"LORA_DROPOUT": 0.0312,
+
+"ES_THRESHOLD": 0.001,
+"ES_PATIENCE": 8,
+
+"DATA_FILE_PATH": "Files/v3_gitapress_final.csv",
+"OUTPUT_DIR": "Trained_Models/Gemma4-31B-0shot",
 }
 
 os.makedirs(HYPERPARAMS["OUTPUT_DIR"], exist_ok=True)
@@ -69,7 +73,7 @@ model = FastModel.get_peft_model(
     bias="none",
     use_gradient_checkpointing="unsloth",
     random_state=3407,
-    use_rslora=False,
+    use_rslora=True,
     loftq_config=None,
 
     finetune_vision_layers=False,      # text-only task
@@ -203,7 +207,7 @@ trainer = train_on_responses_only(
 )
 
 trainer_stats = trainer.train()
-
+trainer.save_state()
 
 # ---------------------------------------------------------------------------
 # 6. Save
