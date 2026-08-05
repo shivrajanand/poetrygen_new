@@ -1,0 +1,30 @@
+sa,hi,skr_out,syllable_count,skr_meter,meter_cd,comments,prompt,split,model_out,out_meter,score,semsim,pred_syllable_count,half_acc,full_acc
+संतापदुःखजनको न विधिः कदाचित् संतापयोगजनितं न मनः कदाचित् ॥ यस्मादहंंकृतिरियं न च मे कदाचि ज्ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,संताप और दुःख को पैदा करनेवाली विधि मुझमें नहीं है संताप और योग से पैदा हुआ यन भी कभी नहीं है क्योंकि मेरे कभी अहंकार नहीं है में ज्ञान और अमृत रूप हूं समान रस हूं आकाशके समान हूं ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
+
+Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
+
+Rules of Chandas:
+Syllable Rules:
+LAGHU vowels: अ, इ, उ, ऋ, ऌ
+GURU vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+HRASVA vowels: अ, इ, उ, ऋ, ऌ
+DEERGHA vowels: आ, ई, ऊ, ॠ, ॡ, ए, ऐ, ओ, औ
+Syllable is marked laghu, guru and hrasva, deergha based on the vowel it contains.
+Syllable containing anusvāra(""ं"") or visarga(""ः"") is always marked as guru.
+Syllable that is followed by a conjunct consonant (saṁyuktākṣara)
+is always marked guru.
+
+Verse Rules:
+The verse contains 56 syllables (akṣaras) and 4 pādas (lines) in total, with each pāda containing 14 syllables.
+The pattern of syllables in every pāda must be: तगण (GGL), भगण (GLL), जगण (LGL), जगण (LGL), followed by two Guru (GG) syllables.
+The complete pattern for each pāda is: GGL GLL LGL LGL GG.
+L means Laghu, G means Guru.
+
+Language:
+The generated verse must be in sanskrit in Devanagri script.
+The Input given is in the hindi.
+Do NOT include English words, transliteration, labels, or explanations.
+
+Output Format:
+(Output exactly 4 lines, one pada per line. Nothing else.)
+",test,संतापदुःखजनको न विधिः कदाचि न संतापयोगजनको न च यन् कदाचित् ॥ निर्हंकृतिः समरसं ज्ञान�amृतं गगनोपमोऽहम् ॥,,,,,,

@@ -3,41 +3,41 @@
 - FILEPATH: Outputs/unsloth_phi4_FT1S_Eval0S.csv
 - INPUT_COL: hi
 - GROUND_TRUTH: meter_cd
+- GROUND_TRUTH_SYLLABLES: syllable_count
 - PRED_COL: model_out
 - PRED_METER: out_meter
+- PRED_SYLLABLES: pred_syllable_count
 
 Outputs are clean
-Detecting meters: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2919/2919 [00:00<00:00, 3616.19it/s]
+Detecting meters: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2919/2919 [00:09<00:00, 311.67it/s]
+Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 391/391 [00:00<00:00, 4729.79it/s]
 
-## Metric 1: Overall Accuracy (meter_cd vs out_meter)
-------------------
+## Overall Evaluation
+
+| Metric | Value |
+|--------|------:|
+| Half Accuracy | 37.86% |
+| Full Accuracy | 25.49% |
+| Mean Semantic Similarity | 0.6704 |
+
+(supporting detail)
 - Total samples      : 2919
-- Correct predictions: 744
-- Accuracy           : 25.49%
-- Null meters        : 2150
 - Problem rows       : 0
+- Null meters        : 2150
 
-## Metric 2: Semantic Similarity (input vs model_out)
-------------------
-Loading weights: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 391/391 [00:00<00:00, 7786.15it/s]
-- Total samples          : 2919
-- Mean semantic similarity: 0.6704
-- Std semantic similarity : 0.1366
-- Min / Max               : -0.0961 / 0.9539
+## Meter-wise Evaluation
 
-## Metric 3: Meter-wise Accuracy
-
-| Meter            |   Total |   Correct |   Accuracy (%) |   Null |
-|:-----------------|--------:|----------:|---------------:|-------:|
-| Anuṣṭubh         |    2721 |       744 |          27.34 |   1977 |
-| Indravajrā       |      22 |         0 |           0    |     18 |
-| Mālinī           |       9 |         0 |           0    |      9 |
-| Sragdharā        |      21 |         0 |           0    |     20 |
-| Upendravajrā     |      12 |         0 |           0    |     12 |
-| Vasantatilakā    |      66 |         0 |           0    |     58 |
-| Vaṃśastha        |      18 |         0 |           0    |     14 |
-| Śikhariṇī        |      16 |         0 |           0    |     15 |
-| Śālinī           |       7 |         0 |           0    |      5 |
-| Śārdūlavikrīḍita |      27 |         0 |           0    |     22 |
+| Meter | Samples | Half Accuracy | Full Accuracy | Mean Semantic Similarity |
+|-------|--------:|--------------:|--------------:|-------------------------:|
+| Anuṣṭubh | 2721 | 40.46% | 27.34% | 0.6785 |
+| Indravajrā | 22 | 0.00% | 0.00% | 0.6161 |
+| Mālinī | 9 | 0.00% | 0.00% | 0.6203 |
+| Sragdharā | 21 | 0.00% | 0.00% | 0.4229 |
+| Upendravajrā | 12 | 0.00% | 0.00% | 0.6298 |
+| Vasantatilakā | 66 | 4.55% | 0.00% | 0.5889 |
+| Vaṃśastha | 18 | 5.56% | 0.00% | 0.5686 |
+| Śikhariṇī | 16 | 0.00% | 0.00% | 0.5408 |
+| Śālinī | 7 | 0.00% | 0.00% | 0.6552 |
+| Śārdūlavikrīḍita | 27 | 0.00% | 0.00% | 0.4764 |
 
 All score/semsim updates saved back to Outputs/unsloth_phi4_FT1S_Eval0S.csv

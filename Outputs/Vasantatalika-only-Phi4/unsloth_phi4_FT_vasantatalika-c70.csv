@@ -1,4 +1,4 @@
-sa,hi,skr_out,syllable_count,skr_meter,meter_cd,comments,prompt,split,model_out,out_meter,score,semsim
+sa,hi,skr_out,syllable_count,skr_meter,meter_cd,comments,prompt,split,model_out,out_meter,score,semsim,pred_syllable_count,half_acc,full_acc
 धावन्नशेषभुवनेषु भिया स पश्यन् विश्वत्र चक्रमपि ते गतवान् विरिञ्चम् कः कालचक्रमतिलङ्घयतीत्यपास्तः शर्वं ययौ स च भवन्तमवन्दतैव ॥,"मुनि दुर्वासा भयभीत होकर समस्त भुवनों में भागते फिरे, परंतु उन्हें सर्वत्र आपका चक्र पीछे लगा हुआ दिखायी पड़ा तब वे रक्षार्थ ब्रह्मा के पास गये वहाँ 'भला, इस कालचक्र का अतिक्रमण कौन कर सकता है ?'यों कहकर निराश लौटाये जानेपर वे भगवान् शंकर की शरण में गये; किंतु शिवजी ने भी आपकी वन्दना ही की ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -27,7 +27,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,भ्यञ्जन्मुनिर्भयतरः स खलु त्वदीयं चक्रं सरूढमखिलं भुवनेषु दृष्ट्वा त्वत्तः परं रक्षतु वै खलु ब्रह्मणोऽथ नान्यः किमुत्तरितुमर्हति कालचक्रम् इत्येवमाशु निरुतः शरणं गतोऽन्यं त्वत्तः परं शरणमाप विवृत्य वन्द्यम् ॥,,0,0.6402053833007812
+",test,भ्यञ्जन्मुनिर्भयतरः स खलु त्वदीयं चक्रं सरूढमखिलं भुवनेषु दृष्ट्वा त्वत्तः परं रक्षतु वै खलु ब्रह्मणोऽथ नान्यः किमुत्तरितुमर्हति कालचक्रम् इत्येवमाशु निरुतः शरणं गतोऽन्यं त्वत्तः परं शरणमाप विवृत्य वन्द्यम् ॥,,0.0,0.640205442905426,84,0,0
 जिह्वैकतोऽमुमपकर्षति कर्हि तर्षा शिश्नोऽन्यतस्त्वगुदरं श्रवणं कुतश्चित् घ्राणोऽन्यतश्चपलदृक् क्व च कर्मशक्ति र्बह्व्यः सपत्न्य इव गेहपतिं लुनन्ति ॥,"जैसे बहुतसी सौतें अपने एक पति को अपनीअपनी ओर खींचती हैं वैसे ही जीव को जीभ एक ओरस्वादिष्ट पदर्थों की ओर खींचती है तो प्यास दूसरी ओरजल की ओर; जननेन्द्रिय एक ओरस्त्रीसम्भोग की ओर ले जाना चाहती है तो त्वचा, पेट और कान दूसरी ओरकोमल स्पर्श, भोजन और मधुर शब्द की ओर खींचने लगते हैं नाक कहीं सुन्दर गन्ध सूँघने के लिये ले जाना चाहती है तो चञ्चल नेत्र कहीं दूसरी ओर सुन्दर रूप देखने के लिये इस प्रकार कर्मेन्द्रियाँ और ज्ञानेन्द्रियाँ दोनों ही इसे सताती रहती हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -56,7 +56,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,जिह्वैकतो खलु विवक्तुमर्थमन्यत्रप्येकतोऽर्थमन्यतरतश्च कर्तुम् शिश्नोऽन्यतोऽर्थमन्यतरतश्च कर्तुंत्वग्वक्त्रश्रवणानि च यान्ति विक्रियन्ते घ्राणोऽन्यतोऽर्थमन्यतरतश्च कर्तुम् ॥,,0,0.35086995363235474
+",test,जिह्वैकतो खलु विवक्तुमर्थमन्यत्रप्येकतोऽर्थमन्यतरतश्च कर्तुम् शिश्नोऽन्यतोऽर्थमन्यतरतश्च कर्तुंत्वग्वक्त्रश्रवणानि च यान्ति विक्रियन्ते घ्राणोऽन्यतोऽर्थमन्यतरतश्च कर्तुम् ॥,,0.0,0.3508698046207428,66,0,0
 नौमीड्य तेऽभ्रवपुषे तडिदम्बरायगुञ्जावतंस परिपिच्छल सन्मुखाय वन्यस्रजे कवल वेत्र विषाणवेणुलक्ष्मश्रिये मृदुपदे पशुपाङ्गजाय ॥,"हे स्तवनीय ! आपका घनश्याम शरीर है, बिजलीके सदृश पीतवस्त्र है,गुञ्जाओंके शिरोभूषण और मोरपंखसे आपका मुख सुशोभित रहता है,आप वनमालाधारी हैं, कलेवा, लकुट, नरसिंहा और बाँसुरीके चिह्नोंसेसुशोभित हैं ऐसे कोमलचरणवाले गोपालनन्दन आपको नमस्कारकरता हूँ  ",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -85,7 +85,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,घनश्यामगात्रमयि पीतवसने त्वयि गुञ्जाश्रीः पद्मजद्युतिविभूषितमुखे त्वयि वन्मालाकलेवरलकुटनरसिंहवाद्यचिह्नशोभने त्वयि गोपनन्दन नमः शिवाय ॥,,0,0.7109053730964661
+",test,घनश्यामगात्रमयि पीतवसने त्वयि गुञ्जाश्रीः पद्मजद्युतिविभूषितमुखे त्वयि वन्मालाकलेवरलकुटनरसिंहवाद्यचिह्नशोभने त्वयि गोपनन्दन नमः शिवाय ॥,,0.0,0.7109054327011108,64,0,0
 संतापदुःखजनको न विधिः कदाचित् संतापयोगजनितं न मनः कदाचित् ॥ यस्मादहंंकृतिरियं न च मे कदाचि ज्ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,संताप और दुःख को पैदा करनेवाली विधि मुझमें नहीं है संताप और योग से पैदा हुआ यन भी कभी नहीं है क्योंकि मेरे कभी अहंकार नहीं है में ज्ञान और अमृत रूप हूं समान रस हूं आकाशके समान हूं ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -114,7 +114,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,संतापदुःखजनको न विधिः कदाचित् संतापयोगजनितो न च यो यदाशिः ॥ निर्हंकृतिः कदमुदीरितमात्मविद् ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0,0.7611304521560669
+",test,संतापदुःखजनको न विधिः कदाचित् संतापयोगजनितो न च यो यदाशिः ॥ निर्हंकृतिः कदमुदीरितमात्मविद् ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0.0,0.7611306309700012,55,0,0
 हे चन्द्रचूड मदनान्तक शूलपाणे स्थाणो गिरीश गिरिजेश महेश शम्भो भूतेश भीतभयसूदन मामनाथं संसारदुःखगहनाज्जगदीश रक्ष॥,"हे चन्द्रचूड! , हे मदनान्तक! , हे शूलपाणे! हे स्थाणो! , हे गिरीश तथा गिरिजापते, हे महेश, हे शम्भो, हे भूतेश, जरा, मृत्यु आदिसे भयभीतकी रक्षा करनेवाले, हे जगदीश्वर शिव! संसारके गहन दुःखोंसे मेरी रक्षा कीजिये॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -143,7 +143,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,चन्द्रचूड मदनान्तक शूलपाणे स्थाणु गिरीश गिरीश्वर महेश शम्भो भूतेश जरामृत्युभयात्तदञ्जन जगद्विश्वेश दुःखगहनाज्जगदीश रक्ष माम् ॥,,0,0.8936280012130737
+",test,चन्द्रचूड मदनान्तक शूलपाणे स्थाणु गिरीश गिरीश्वर महेश शम्भो भूतेश जरामृत्युभयात्तदञ्जन जगद्विश्वेश दुःखगहनाज्जगदीश रक्ष माम् ॥,,0.0,0.8936281204223633,57,0,0
 रक्षस्स्वतृप्तिरुडशान्तिविशेषशोण मक्षक्षय क्षणविधानुमितात्मदाक्ष्यम् भास्वत्प्रभातरविभानुभरावभासं लङ्काभयङ्करममुं भगवन्तमीडे ॥,"राक्षसों में तृप्त न होनेके कारण, क्रोध एवं अशान्तिसे जो विशेष रक्तवर्ण हो गये हैं, अक्षकुमारके संहारकालके कार्योंसे जिनकी दक्षताका अनुमान किया जा चुका है तथा जो प्रभात प्रभामय सूर्यके किरणोंके समान कान्तिमान् हैं, लङ्काको भय देनेवाले उन भगवान् हनूमान्‌की मैं स्तुति करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -172,7 +172,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,रक्तान्तराशिषि तृप्तिविगमाद्विशेषान्‌ क्रोधाश्चतुर्दशकार्यदक्षतामनुमानान्‌ प्रभातप्रभामयकिरणोपमकान्ति म्‌ लङ्काभयाय हनूमतं भगवन्तमीडे ॥,,0,0.5994584560394287
+",test,रक्तान्तराशिषि तृप्तिविगमाद्विशेषान्‌ क्रोधाश्चतुर्दशकार्यदक्षतामनुमानान्‌ प्रभातप्रभामयकिरणोपमकान्ति म्‌ लङ्काभयाय हनूमतं भगवन्तमीडे ॥,,0.0,0.5994583368301392,58,0,0
 देव प्रसीद परपूरुष तापवल्ली निर्लूनदात्र समनेत्र कलाविलासिन् खेदानपाकुरु कृपागुरुभिः कटाक्षै रित्यादि तेन मुदितेन चिरं नुतोऽभूः ॥,"देव ! प्रसन्न होइये परम पुरुष ! आप तापवल्ली का मूलोच्छेदन करने के लिये अतिशय तीक्ष्ण शस्त्ररूप हैं, सभी प्राणियों को समानदृष्टि से देखनेवाले तथा अपनी अंशभूता मायाद्वारा क्रीड़ा करनेवाले हैं अपने कृपापरिपूर्ण कटाक्षोंद्वारा मेरे कष्टों को दूर कर दीजिये' इस प्रकार वसुदेवजी हर्षोल्लसित होकर चिरकाल तक आपके स्तवन में लगे रहे ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -201,7 +201,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,त्वं देव प्रसीद परम पुरुषोऽसि त्वं तापास्य शस्त्रमतितीक्ष्णमसि त्वमेव सद्यः सर्वजन्य विभासि मायया त्वमेव कष्टाप्युद्दहाशु विनयस्तवनेऽभूवन् ॥,,0,0.45929569005966187
+",test,त्वं देव प्रसीद परम पुरुषोऽसि त्वं तापास्य शस्त्रमतितीक्ष्णमसि त्वमेव सद्यः सर्वजन्य विभासि मायया त्वमेव कष्टाप्युद्दहाशु विनयस्तवनेऽभूवन् ॥,,0.0,0.45929571986198425,57,0,0
 जानन्नुपायमथ देहमजो विभज्य स्त्रीपुंसभावमभजन्मनुतद्वधूभ्याम् ताभ्यां च मानुषकुलानि विवर्धयंस्त्वं गोविन्द मारुतपुरेश निरुन्धि रोगान् ॥,तदनन्तर प्रजावृद्धि के उपाय को जानकर ब्रह्मा अपने शरीर को दो भागों में विभक्त कर के एक भाग से मनु तथा दूसरे से उनकी पत्नी शतरूपा के रूपमें स्त्रीपुरुषभाव को प्राप्त हो गये गुरुवायुपुराधीश गोविन्द ! यों उन मनुशतरूपाद्वारा मनुष्यकुल की वृद्धि करते हुए आप मेरे रोगों का नाश कीजिये ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -230,7 +230,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,व्यावृध्दिकायविदितेन मधोन्यतेन भागेन मनुरजनि त्वमया तथाऽन्यः यावत्सुतर्द्विजनुषां विवुधो व्यवृध्दे तावद्विधाय गुरुवायुपुराधिपो मे व्याधीन् विधूय विधिरस्य भवाय कुर्वन् ॥,,0,0.4416382312774658
+",test,व्यावृध्दिकायविदितेन मधोन्यतेन भागेन मनुरजनि त्वमया तथाऽन्यः यावत्सुतर्द्विजनुषां विवुधो व्यवृध्दे तावद्विधाय गुरुवायुपुराधिपो मे व्याधीन् विधूय विधिरस्य भवाय कुर्वन् ॥,,0.0,0.4416382312774658,70,0,0
 यत्पादपङ्कजपरागसुरागयोगि वृन्दैर्जितं भवभयं जितकालचक्रः यन्नामकीर्तनपरा जितदुःखशोका देवास्तमेव शरणं सततं प्रपद्ये,"जिनके चरणकमलपरागके रसिक, काल चक्रको जीतनेवाले योगिजनोंने संसार भयको भी जीत लिया है तथा जिनके नाम कीर्तनमें लगे रहकर देवगण दुःख और शोकको जीत लेते हैं, उन आपकी मैं निरन्तर शरण ग्रहण करता हूँ",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -259,7 +259,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,यैर्यैरङ्घ्रिपङ्कजपरागरसिकैः कालचक्रमजित्य जगद्भयमपि जित्य यैः योगिभिर्निरन्तरमाप्तुमिदं शरण्यम् यैर्नाम कीर्तनपरैर्दुःखशोकमजित्य देवैर्निरन्तरमिदं शरणं व्रजामि ॥,,0,0.7932238578796387
+",test,यैर्यैरङ्घ्रिपङ्कजपरागरसिकैः कालचक्रमजित्य जगद्भयमपि जित्य यैः योगिभिर्निरन्तरमाप्तुमिदं शरण्यम् यैर्नाम कीर्तनपरैर्दुःखशोकमजित्य देवैर्निरन्तरमिदं शरणं व्रजामि ॥,,0.0,0.7932237386703491,72,0,0
 हा हा विभो जलमहं न्यपिबं पुरस्ता दद्यापि मज्जति मही किमहं करोमि इत्थं त्वदङ्घ्रियुगलं शरणं यतोऽस्य नासापुटात् समभवश्शिशुकोलरूपी ॥,"'विभो ! महान् आश्चर्य एवं दुःख है, सृष्टि के आदि में मैंने सारा जल पी लिया था; परंतु यदि आज भी पृथ्वी डूब रही है तो मैं क्या करूँ ?' यों कहते हुए आपके चरणयुगल के शरणागत ब्रह्मा के नासापुट से वराह के शिशुरूप में आप प्रकट हो गये ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -288,7 +288,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,विश्वादिभूतजलभक्षणमहाश्चर्यं दुःखं विभो मयि तथापि कृते तदानीम् यद्यैव भूर्भवति भूमिसलिले त्वदीये चरणयुग्मशरणे त्वदवाङ्मुखे वभूव ॥,,0,0.646142840385437
+",test,विश्वादिभूतजलभक्षणमहाश्चर्यं दुःखं विभो मयि तथापि कृते तदानीम् यद्यैव भूर्भवति भूमिसलिले त्वदीये चरणयुग्मशरणे त्वदवाङ्मुखे वभूव ॥,,0.0,0.6461429595947266,59,0,0
 प्राक्शूरसेनविषये किल चित्रकेतुः पुत्राग्रही नृपतिरङ्गिरसः प्रभावात् लब्ध्वैकपुत्रमथ तत्र हते सपत्नी सङ्घैरमुह्यदवशस्तव माययासौ ॥,"प्राचीनकाल में शूरसेनराज्य में चित्रकेतु नामक राजा हुए उन्होंने महर्षि अङ्गिरा से पुत्र के लिये आग्रह किया तब ऋषि के प्रभाव से उन्हें एक पुत्र प्राप्त हुआ, जिसे महारानी की सौतों ने मिलकर मार डाला तब राजा चित्रकेतु आपकी माया से विवश होकर मोह के वशीभूत हो गये ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -317,7 +317,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,शूरसेनरिपुवर्गे चित्रकेतुरिति ख्यातो रघुः स महर्षिगृहीतपुत्रकामः तन्वीसौतिमिर्भवदैव विधूतहारो मायाविवशो रघुदेव इतो मुमोह ॥,,0,0.4911454916000366
+",test,शूरसेनरिपुवर्गे चित्रकेतुरिति ख्यातो रघुः स महर्षिगृहीतपुत्रकामः तन्वीसौतिमिर्भवदैव विधूतहारो मायाविवशो रघुदेव इतो मुमोह ॥,,0.0,0.4911453127861023,57,0,0
 धर्मस्य दक्षदुहितर्यजनिष्ट मूर्त्यां नारायणो नरऋषिप्रवरः प्रशान्तः नैष्कर्म्यलक्षणमुवाच चचार कर्म योऽद्यापि चास्त ऋषिवर्यनिषेविताङ्घ्रिः ॥,"दक्ष प्रजापति की एक कन्या का नाम था मूर्ति वह धर्म की पत्नी थी उसके गर्भ से भगवान् ने ऋषिश्रेष्ठ शान्तात्मा 'नर' और 'नारायण' के रूप में अवतार लिया उन्होंने आत्मतत्त्व का साक्षात्कार करानेवाले उस भगवदाराधनरूप कर्म का उपदेश किया, जो वास्तव में कर्मबन्धन से छुड़ानेवाला और नैष्कर्म्य स्थिति को प्राप्त करानेवाला है उन्होंने स्वयं भी वैसे ही कर्म का अनुष्ठान किया बड़ेबड़े ऋषिमुनि उनके चरणकमलों की सेवा करते रहते हैं वे आज भी बदरिकाश्रम में उसी कर्म का आचरण करते हुए विराजमान हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -346,7 +346,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,मूर्तिर्दक्षप्रजापतिसुता धर्मदाना नरः शान्त ऋषिवरः स नारायणः स्वयं च तद्वदाराधनकर्म विधाय तैस्ते बद्रिकाश्रमवरेणुषु योऽचरत् स्थिताय ॥,,0,0.5239923000335693
+",test,मूर्तिर्दक्षप्रजापतिसुता धर्मदाना नरः शान्त ऋषिवरः स नारायणः स्वयं च तद्वदाराधनकर्म विधाय तैस्ते बद्रिकाश्रमवरेणुषु योऽचरत् स्थिताय ॥,,0.0,0.5239923000335693,58,0,0
 हे नीलकण्ठ वृषभध्वज पञ्चवक्त्र लोकेश शेषवलयं प्रमथेश शर्व हे धूर्जटे पशुपते गिरिजापते मां संसारदुःखगहनाज्जगदीश रक्ष॥,"हे नीलकण्ठ, हे वृषकेतु, हे पञ्चमुख, लोकेश, शेषका कङ्कण धारण करनेवाले!, हे प्रमथगणोंके स्वामी, हे शर्व, हे धूर्जटे, हे पशुपते, हे गिरिजापते, हे जगदीश्वर शिव! संसारके गहन दुःखोंसे मेरी रक्षा कीजिये॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -375,7 +375,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,हे नीलकण्ठ वृषकेतु पञ्चमुख लोकेश काङ्कणधारिनितथा प्रमथगणेश शर्व धूर्जटे पशुपते गिरिजापते शं दुःखगहनाज्जगदीश विभो हि॥,,0,0.8660751581192017
+",test,हे नीलकण्ठ वृषकेतु पञ्चमुख लोकेश काङ्कणधारिनितथा प्रमथगणेश शर्व धूर्जटे पशुपते गिरिजापते शं दुःखगहनाज्जगदीश विभो हि॥,,0.0,0.8660751581192017,57,0,0
 हे धूर्जटे गिरिश हे गिरिजार्धदेह हे सर्वभूतजनक प्रमथेश देव हे सर्वदेवपरिपूजितपादपद्म संसारदुःखगहनाज्जगदीश रक्ष॥,"हे धूर्जटि, कैलाश पर्वतपर शयन करनेवाले, हे अर्धनारीश्वर तथा हे समस्त चराचरके उत्पादक, हे प्रमथगणोंके स्वामी, देव, समस्त देवताओंसे वन्दित चरणकमलवाले हे जगदीश्वर! आप इस संसारके गहन दुःखोंसे मेरी रक्षा कीजिये॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -404,7 +404,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,शयन्कैलाशशिखरेऽर्धनारिश्वर सर्वचराचरविरिञ्च नमस्ते प्रमथनाथ नमस्ते दिविष्ठ नमस्ते सुरनम्य जगन्निवास रक्ष मां जगदुद्द खदुःखगहनाज्जगदीश्वर॥,,0,0.7824643850326538
+",test,शयन्कैलाशशिखरेऽर्धनारिश्वर सर्वचराचरविरिञ्च नमस्ते प्रमथनाथ नमस्ते दिविष्ठ नमस्ते सुरनम्य जगन्निवास रक्ष मां जगदुद्द खदुःखगहनाज्जगदीश्वर॥,,0.0,0.7824645042419434,66,0,0
 पुत्रार्तिदर्शनवशाददितिर्विषण्णा तं काश्यपं निजपतिं शरणं प्रपन्ना त्वत्पूजनं तदुदितं हि पयोव्रताख्यं सा द्वादशाहमचरत्त्वयि भक्तिपूर्णा ॥,अपने पुत्र इन्द्र को विपत्तिग्रस्त देखकर माता अदिति खेदखिन्न हो अपने पति महर्षि कश्यप की शरण में गयीं उन्होंने अदिति को पयोव्रत नामक आपका पूजन बतलाया तब अदिति ने आपमें पूरे भक्तियोग से दत्तचित्त होकर बारह दिन तक उस व्रत का अनुष्ठान किया ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -433,7 +433,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,दृष्ट्वैन्द्रमस्य विपदग्रस्तमाशु खेदाकुला माता कश्यपं शरणं गता सा ते पयोव्रतमिति बोध्यमाना तत्तावदौघेण भक्त्या त्वयि दत्तचित्ता ॥,,0,0.6907068490982056
+",test,दृष्ट्वैन्द्रमस्य विपदग्रस्तमाशु खेदाकुला माता कश्यपं शरणं गता सा ते पयोव्रतमिति बोध्यमाना तत्तावदौघेण भक्त्या त्वयि दत्तचित्ता ॥,,0.0,0.690706729888916,52,0,0
 वर्षं हिरण्मयसमाह्वयमौत्तराह मासीनमद्रिधृतिकर्मठकामठाङ्गम् संसेवते पितृगणप्रवरोर्यमा यं तं त्वां भजामि भगवन् परचिन्मयात्मन् ॥,"उत्तर दिशा में हिरण्मय नामक वर्ष है उसमें अमृतमन्थन के समय मन्दराचल को धारण करने में निपुण आपकी कच्छपमूर्ति आसीन है, जिसकी पितृगणों में श्रेष्ठ ये अर्यमा नित्य सेवा करते हैं विशुद्धज्ञानस्वरूप भगवन् ! ऐसे आपका मैं भजन करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -462,7 +462,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,उत्तरे वर्षहिरण्मये तवास्ते मन्दराधारधुरोद्यतकच्छपासनम् यस्य पित्रियुगलश्रेष्ठ इहार्यमा नित्यं सेवते त्वां विशुद्धज्ञानमयम् भगवन् भजे ॥,,0,0.8281342387199402
+",test,उत्तरे वर्षहिरण्मये तवास्ते मन्दराधारधुरोद्यतकच्छपासनम् यस्य पित्रियुगलश्रेष्ठ इहार्यमा नित्यं सेवते त्वां विशुद्धज्ञानमयम् भगवन् भजे ॥,,0.0,0.8281341791152954,57,0,0
 त्वन्मन्त्रजाप्यहमनन्तगुणाप्रमेय सीतापते शिवविरिञ्चिसमाश्रिताङ्घ्र संसारसिन्धुतरणामलपोतपाद रामाभिराम सततं तव दासदासः ॥,"सुतीक्ष्ण बोले हे अनन्तगुण अप्रमेय सीतापते ! मैं आपका ही मन्त्र जपता हूँ हे अभिराम राम ! शिव और ब्रह्मा आपके चरणोंके आश्रित हैं, आपके चरण संसार सागर से पार करनेके लिये सुदृढ़ पोत हैं हे नाथ! मैं सर्वदा आपके दासोंका दास हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -491,7 +491,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,त्वामेव जपे हे अनन्तगुणेय सीतापते राम त्वां शिवो विरिञ्चोऽभिराम तवैव चरणौ संसारसागराज्जितारणाय नौरिव सुदृढा भवन्तु नाथ त्वद्दासदासोऽहमस्मि सदा जपे त्वाम् ॥,,0,0.8896274566650391
+",test,त्वामेव जपे हे अनन्तगुणेय सीतापते राम त्वां शिवो विरिञ्चोऽभिराम तवैव चरणौ संसारसागराज्जितारणाय नौरिव सुदृढा भवन्तु नाथ त्वद्दासदासोऽहमस्मि सदा जपे त्वाम् ॥,,0.0,0.8896275758743286,68,0,0
 एवं चतुर्दशजगन्मयतां गतस्य पातालमीश तव पादतलं वदन्ति पादोर्ध्वदेशमपि देव रसातलं ते गुल्फद्वयं खलु महातलमद्भुतात्मन् ॥,"अद्भुत स्वरूपवाले देवाधिदेव ईश्वर ! उपर्युक्त प्रकार से चौदह भुवनों के रूप में प्रकट हुए आपके पादतल को पाताल, पाद के ऊर्ध्वभाग को रसातल और दोनों टखनों को महातल कहा गया है ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -520,7 +520,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,भूर्भुवः सुवरिति चतुर्दशधा त्वमीश द्विष्ट आद्यन्तगतिविभो विभावितस्वरूपः नाभिर्मध्यमुखमुरुळ्ळलिकावधिष्ठां भूत्लं पादतलमुदरं तलं च ते द्वौ ॥,,0,0.5953084826469421
+",test,भूर्भुवः सुवरिति चतुर्दशधा त्वमीश द्विष्ट आद्यन्तगतिविभो विभावितस्वरूपः नाभिर्मध्यमुखमुरुळ्ळलिकावधिष्ठां भूत्लं पादतलमुदरं तलं च ते द्वौ ॥,,0.0,0.5953086018562317,59,0,0
 शुद्धं विशुद्धमविचारमनन्तरूपं निर्लेपलेपमविचारमनन्तरूपम् ॥ निष्खण्डखण्डमविचारमनन्तरूपम् ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"मैं शुद्ध, विशुद्ध, अविचार्य और अनन्तरूप हूँ, में निर्लेप लेप अधिकतर अनन्त रूप हूँ में निखण्ड खण्ड अविचार्य और अनन्तरूप हूँ, में ज्ञानामृत समरस और गगनोपम हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -549,7 +549,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,शुद्धो विशुद्ध विचार्य रूपमनन्तरूपो लेपो निर्लेप अधिकतर्यनन्तरूपः ॥ खण्डो निखण्ड विचार्य रूपमनन्तरूपो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0,0.923984169960022
+",test,शुद्धो विशुद्ध विचार्य रूपमनन्तरूपो लेपो निर्लेप अधिकतर्यनन्तरूपः ॥ खण्डो निखण्ड विचार्य रूपमनन्तरूपो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0.0,0.9239841103553772,58,0,0
 रागादिदोषरहितं स्वजनानुरागं वैराग्यशान्तिनिलयं गिरिजासहायम्‌ माधुर्यधैर्यसुभगं गरलाभिरामं वाराणसीपुरपतिं भज विश्चनाथम्‌॥,"जो रागादि दोषोंसे रहित हैं, अपने भक्तोंपर कृपा रखते हैं, वैराग्य और शान्तिके स्थान हैं, पार्वतीजी सदा जिनके साथ रहती हैं, जो धीरता और मधुर स्वभावसे सुन्दर जान पड़ते हैं तथा जो कण्ठमें गरलके चिह्नसे सुशोभित हैं, उन काशीपति विश्वनाथको भज॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -578,7 +578,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,रागादिदोषरहितान् भज भक्तवार्यान् वैराग्यशान्तिविगतान् परिचर्यमानान् पार्वत्युपेत्य सदा धीरमधुररूपान् गाण्डीवघर्णविभूषितकण्ठभागान्॥,,0,0.6494669914245605
+",test,रागादिदोषरहितान् भज भक्तवार्यान् वैराग्यशान्तिविगतान् परिचर्यमानान् पार्वत्युपेत्य सदा धीरमधुररूपान् गाण्डीवघर्णविभूषितकण्ठभागान्॥,,0.0,0.6494671106338501,55,0,0
 इत्थं नृतिर्यगृषिदेवझषावतारै र्लोकान् विभावयसि हंसि जगत्प्रतीपान् धर्मं महापुरुष पासि युगानुवृत्तं छन्नः कलौ यदभवस्त्रियुगोऽथ स त्वम् ॥,"हे परमपुरुष ! इस प्रकार आप स्तो मनुष्य, तिर्यक्, ऋषि, देवता और मत्स्यादि अवतार लेकर सम्पूर्ण लोकोंका पालन और जगद्विद्रोहियोंका संहार करते हैं उन अवतारोंद्वारा आप प्रत्येक युगके धर्मों की रक्षा करते हैं, किन्तु कलियुगमें गुप्तरूपसे ही रहते हैं; इसीलिये आप 'त्रियुग' नामसे भी प्रसिद्ध हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -607,7 +607,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,स्तब्ध्या त्वमेवमनुष्यविभव्यविभ्व त्रिष्य देवमत्स्यविभूतिभिरात्मयोने ःथ्या लोकत्रयमभिप्रविभावयन्न्धर्मान् प्रत्येकमर्क्षसि कलौ त्वमवोक्ष्य एव ॥,,0,0.5481434464454651
+",test,स्तब्ध्या त्वमेवमनुष्यविभव्यविभ्व त्रिष्य देवमत्स्यविभूतिभिरात्मयोने ःथ्या लोकत्रयमभिप्रविभावयन्न्धर्मान् प्रत्येकमर्क्षसि कलौ त्वमवोक्ष्य एव ॥,,0.0,0.5481435060501099,55,0,0
 दर्पोन्नमन्निशिचरेश्वरमूर्धचञ्च त्कोटीरचुम्बि निजविम्बमुदीक्ष्य हृष्टम् पश्यन्तमात्मभुजयन्त्रणपिष्यमाण तत्कायशोणितनिपातमपेक्षि वक्षः ॥,"जो अभिमानसे ऊपर उठे हुए रावणके मस्तकोंपर देदीप्यमान किरीटोंमें अपने प्रतिबिम्बको देखकर उसमें अपने भुजयन्त्रद्वारा पीसे जानेवाले रावणके शरीरके रक्तपातकी अपेक्षा रखनेवाली अपनी छातीकी ओर निहारते हुए प्रसन्न हो रहे थे, उन्हें मैं प्रणाम करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -636,7 +636,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,ऊर्ध्वप्रभावगतिरावणमस्तकेषु दीप्तैः किरीटगतप्रतिबिम्बदृग्वदन्त्या भुज्यमानवदनाज्जनुषा स्ववक्त्रं निहारतोऽभिविशङ्खत ईशमीडे ॥,,0,0.3980022668838501
+",test,ऊर्ध्वप्रभावगतिरावणमस्तकेषु दीप्तैः किरीटगतप्रतिबिम्बदृग्वदन्त्या भुज्यमानवदनाज्जनुषा स्ववक्त्रं निहारतोऽभिविशङ्खत ईशमीडे ॥,,0.0,0.398002028465271,55,0,0
 पूजावसानसमये दशवक्त्रगीतं यः शम्भुपूजनपरं पठति प्रदोषे तस्य स्थिरां रथगजेन्द्रतुरङ्गयुक्तां लक्ष्मीं सदैव सुमुखीं प्रददाति शम्भुः॥,"सायंकालमें पूजा समाप्त होनेपर रावणके गाये हुए इस शम्भुपूजनसम्बन्धी स्तोत्रका जो पाठ करता है, भगवान्‌ शङ्कर उस मनुष्यको रथ, हाथी, घोड़ोंसे युक्त सदा स्थिर रहनेवाली अनुकूल सम्पत्ति देते हैं॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -665,7 +665,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,यः शम्भुपूजनसम्बन्धि स्तोत्रमेतद्‌ रावणगीतमथ सायमवेय युक्तः रथाश्ववातयुतसम्पत्तिमनुक्ष्णमेव स्थिरां भगवति ददाति शङ्करः स्वयम्‌॥,,0,0.7364618182182312
+",test,यः शम्भुपूजनसम्बन्धि स्तोत्रमेतद्‌ रावणगीतमथ सायमवेय युक्तः रथाश्ववातयुतसम्पत्तिमनुक्ष्णमेव स्थिरां भगवति ददाति शङ्करः स्वयम्‌॥,,0.0,0.7364619374275208,56,1,0
 गच्छन् द्विमूर्तिरुभयोर्युगपन्निकेत मेकेन भूरिविभवैर्विहितोपचारः अन्येन तद्दिनभृतैश्च फलौदनाद्यै स्तुल्यं प्रसेदिथ ददाथ च मुक्तिमाभ्याम् ॥,वहाँ दो रूप धारण करके आप एक ही समय दोनों के घर पधारे एकबहुलाश्व ने राजसी सामग्रियों से आपका पूजन किया था और दूसरेश्रुतदेव ने उस दिन प्राप्त हुए फलओदन आदि पूजनसामग्री के द्वारा ही आपकी अर्चना की थी परंतु आपने उन दोनोंपर समानरूप से ही अपना प्रसाद प्रकट किया और उन्हें एकसी ही मुक्ति प्रदान की ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -694,7 +694,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,द्वैरूप्यधारि तदखो गृहद्वये त्वं एकोऽपि देवि विधितो वसुध्रुवेण द्वितीय उद्भवफलोदनमात्रभूत्या तुल्यं तु तावुभयतोऽपि दत्तदानः समाविशत्स मुक्तिमेकसमानरूपः ॥,,0,0.6165087223052979
+",test,द्वैरूप्यधारि तदखो गृहद्वये त्वं एकोऽपि देवि विधितो वसुध्रुवेण द्वितीय उद्भवफलोदनमात्रभूत्या तुल्यं तु तावुभयतोऽपि दत्तदानः समाविशत्स मुक्तिमेकसमानरूपः ॥,,0.0,0.6165086627006531,67,0,0
 वेदान् पुराणनिवहानपि सर्वविद्याः कुर्वन् निजाननगणाच्चतुराननोऽसौ पुत्रेषु तेषु विनिधाय स सर्गवृद्धि मप्राप्नुवंस्तव पदाम्बुजमाश्रितोऽभूत् ॥,"उन चतुर्मुख ब्रह्मा ने अपने चारों मुखों से वेदों, पुराणसमूहों तथा समस्त विद्याओं को प्रकटकर अपने मरीचि आदि पुत्रों में स्थापित कर दिया फिर भी जब उन्हें प्रजा की वृद्धि होती नहीं दीख पड़ी, तब उन्होंने आपके चरणकमलोंका आश्रय लिया ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -723,7 +723,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,यो वेदचत्वयपुराणसमूहविद्या विश्वास्य सर्वमुखतोऽभिववृधे स्थाप्य तत्र मरीचिसुतेषु तथापि पुत्ने त्वत्तो चरणपदमाश्रयतां तदानीम् ॥,,0,0.62522953748703
+",test,यो वेदचत्वयपुराणसमूहविद्या विश्वास्य सर्वमुखतोऽभिववृधे स्थाप्य तत्र मरीचिसुतेषु तथापि पुत्ने त्वत्तो चरणपदमाश्रयतां तदानीम् ॥,,0.0,0.6252294778823853,55,0,0
 तावद्विदूरमुपकर्णितघोरघोष व्याजृम्भिपांसुपटलीपरिपूरिताशः वात्यावपुः स किल दैत्यवरस्तृणाव र्ताख्यो जहार जनमानसहारिणं त्वाम् ॥,तब तक दूरसे ही सुनायी पड़नेवाले भयंकर शब्द तथा अधिक मात्रा में बढ़ी हुई धूलिवर्षा से जिसने दसों दिशाओं को परिपूर्ण कर दिया था वह महादैत्य तृणावर्त बवंडर के रूप में आकर भक्तजनों के मन का अपहरण करनेवाले आपको चुरा ले चला ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -752,7 +752,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,शब्देन भीमतया दूरत एव शृण्या धूलिव्रषाभिरधिकैर्दशदिग्भिराभिः पूर्णाभिरापतति तृणावर्तवाते भक्तेष्टचेतसि विधौ रुचिरं चुरत्स्व ॥,,0,0.7317079305648804
+",test,शब्देन भीमतया दूरत एव शृण्या धूलिव्रषाभिरधिकैर्दशदिग्भिराभिः पूर्णाभिरापतति तृणावर्तवाते भक्तेष्टचेतसि विधौ रुचिरं चुरत्स्व ॥,,0.0,0.7317079305648804,55,0,0
 जाता तदा पशुपसद्मनि योगनिद्रा निद्राविमुद्रितमथाकृत पौरलोकम् त्वत्प्रेरणात् किमिव चित्रमचेतनैर्यद् द्वारैः स्वयं व्यघटि संघटितैः सुगाढम् ॥,"आपके प्रस्थान करते समय भगवती योगनिद्रा ने नन्दगोप के घर में जन्म लिया उसने आपकी प्रेरणा से पुरवासियों को निद्रित करके निश्चेष्ट कर दिया फिर तो जो सुदृढ़ रूप से बंद किये गये थे वे अचेतन दरवाजे स्वयं खुल गये, यह कैसी आश्चर्य की बात है ? ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -781,7 +781,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,त्वद्विस्थितौ भगवती योगनिद्रा नन्दालये जनि कृताश्चलचेतना ज्नौ भूषान् पुरस्य सुदृढं वञ्चिताश्च द्वारानि संयति खलु स्वयमौषुवन्नि ॥,,0,0.6611915826797485
+",test,त्वद्विस्थितौ भगवती योगनिद्रा नन्दालये जनि कृताश्चलचेतना ज्नौ भूषान् पुरस्य सुदृढं वञ्चिताश्च द्वारानि संयति खलु स्वयमौषुवन्नि ॥,,0.0,0.6611913442611694,52,0,0
 मौनव्रतश्रुततपोऽध्ययनस्वधर्म व्याख्यारहोजपसमाधय आपवर्ग्याः प्रायः परं पुरुष ते त्वजितेन्द्रियाणां वार्ता भवन्त्युत न वात्र तु दाम्भिकानाम् ॥,"हे परमपुरुष ! मौनव्रत, शास्त्रश्रवण, तप, वेदाध्ययन, स्वधर्मपालन, शास्त्रोंकी व्याख्या करना, एकान्तसेवन, जप और समाधि ये जो मोक्षके दस साधन हैं वे भी प्रायः अजितेन्द्रिय पुरुषोंकी जीविकाके साधन बन जाते हैं; तथा दाम्भिकोंके लिये तो वे कभी जीविकाके साधन रहते भी हैं और कभी नहीं भी रहते ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -810,7 +810,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,मौनं श्रवणं तप विद्याध्ययनं स्वधर्मव्याख्यानमेकतटसेवनजपस्मृति ये मोक्षसाधनाणि दश कर्मजितानि तानि दाम्भिक्येऽवतेरन् प्रयोगवशाद्विभो न वा ॥,,0,0.7162550687789917
+",test,मौनं श्रवणं तप विद्याध्ययनं स्वधर्मव्याख्यानमेकतटसेवनजपस्मृति ये मोक्षसाधनाणि दश कर्मजितानि तानि दाम्भिक्येऽवतेरन् प्रयोगवशाद्विभो न वा ॥,,0.0,0.7162550687789917,60,0,0
 ॥ श्रीमन्नृसिंह विभवेगरुडध्वजाय तापत्रयोपश मनाय भवौषधाय ॥ कृष्णाय वृ· श्चिकजलाग्निभुजङ्गरोगक्लेशव्ययाय हरये गुरवे नमस्ते ॥,"पिप्पलायन ने कहा श्री नृसिंह, समर्थ, गरुड़ध्वज तथा तीनों तापों को ( दैहिक, दैविक, भौतिक तापों को करने वाले, संसार की औषधि, तथा विच्छू' जल, दूर सर्प रोग के दुखों को दूर करने वाले, जगतके गुरु कृष्ण जी को मैं प्रणाम करता हूँ",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -839,7 +839,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,नृसिंह समर्थ गरुडध्वज तापत्रयार्चितं समरावयव भवौषधं वृश्चिकाम्बु भुजङ्ग रोगदुखापहं जगत्क्षितिस्वामिनं कृष्णमीशमभिप्रणमामि ॥,,0,0.6778238415718079
+",test,नृसिंह समर्थ गरुडध्वज तापत्रयार्चितं समरावयव भवौषधं वृश्चिकाम्बु भुजङ्ग रोगदुखापहं जगत्क्षितिस्वामिनं कृष्णमीशमभिप्रणमामि ॥,,0.0,0.6778238415718079,57,0,0
 रामायणं जनमनोहरमादिकाव्यं ब्रह्मादिभिः सुरवरैरपि संस्तुतं च श्रद्धान्वितः पठति यः शृणुयात्तु नित्यं विष्णोः प्रयाति सदनं स विशुद्धदेहः ॥,"ब्रह्मा आदि सुरश्रेष्ठोंसे प्रशंसित और मनुष्योंके मनको हरनेवाले इस आदिकाव्य रामायणको जो पुरुष नित्यप्रति श्रद्धापूर्वक पढ़ता या सुनता है, वह विशुद्ध शरीर धारणकर भगवान् विष्णुके धामको प्राप्त होता है ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -868,7 +868,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,यः श्रद्धया पठति सुनुते विभोऽस्य रामायणस्य आदिकवितस्य सुरश्रेष्ठैः प्रशंसितस्य मनुजेश्वरहारि विश्वासमित्यनुदिनं विष्णुधाम याति ॥,,0,0.7185244560241699
+",test,यः श्रद्धया पठति सुनुते विभोऽस्य रामायणस्य आदिकवितस्य सुरश्रेष्ठैः प्रशंसितस्य मनुजेश्वरहारि विश्वासमित्यनुदिनं विष्णुधाम याति ॥,,0.0,0.7185245156288147,54,0,0
 आहुश्च ते नलिननाभ पदारविन्दंयोगेश्वरैर्हृदि विचिन्त्यमगाधबोधैः संसारकूपपतितोत्तरणावलम्बंगेहंजुषामपि मनस्युदियात्सदा नः ॥,"[ गोपियोंने कहापूर्ण ज्ञानी योगेश्वरोंके द्वारा हृदयमें चिन्तन करनेयोग्य आपका चरणारविन्द,जो संसारकूपमें गिरे हुए जीवोंके उद्धारका सहारा है, घरपर रहती हुईभी हमलोगोंके हृदयमें सदा प्रकट हो ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -897,7 +897,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,गोप्यः शशंसुरखिलज्ञ योगिशङ्करैःचिन्तनीयमिदमवस्य चरणारविन्दम् यो जीवनार्णवकूपगतानुदेति तूर्णंस्तन्नो गृहे गृहगतान्मनसि स्फुरत्नुवन् ॥,,0,0.6823409795761108
+",test,गोप्यः शशंसुरखिलज्ञ योगिशङ्करैःचिन्तनीयमिदमवस्य चरणारविन्दम् यो जीवनार्णवकूपगतानुदेति तूर्णंस्तन्नो गृहे गृहगतान्मनसि स्फुरत्नुवन् ॥,,0.0,0.6823409199714661,59,0,0
 पूजावसानसमये दशवक्त्रगीतं यः शम्भुपूजनपरं पठति प्रदोषे तस्य स्थिरां रथगजेन्द्रतुरङ्गयुक्तां लक्ष्मीं सदैव सुमुखीं प्रददाति शम्भुः ॥,"सायङ्कालमें पूजा समाप्त होनेपर रावणके गाये हुए इस शम्भुपूजनसम्बन्धी स्तोत्रका जो पाठ करता है, भगवान् शङ्कर उस मनुष्यको रथ, हाथी, घोड़ोंसे युक्त सदा स्थिर रहनेवाली अनुकूल सम्पत्ति देते हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -926,7 +926,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,यः शम्भुपूजनसम्बन्धि स्तवं रवेः सायं पठति समाप्तपूजनेऽस्य देवः रथाश्वगजयुतां श्रियमाविशन्ती मानुकूल्यसम्पदमदाति नियत्स्थाम् ॥,,0,0.6861783266067505
+",test,यः शम्भुपूजनसम्बन्धि स्तवं रवेः सायं पठति समाप्तपूजनेऽस्य देवः रथाश्वगजयुतां श्रियमाविशन्ती मानुकूल्यसम्पदमदाति नियत्स्थाम् ॥,,0.0,0.6861783266067505,53,0,0
 वंशी विभूषितकरान्नवनीरदाभात्पीताम्बरादरुण विम्बफलाधरोष्ठात्पूर्णेन्दुसुन्दरमुखादरविन्दनेत्रात्कृष्णात्परं किमपि तत्त्वमहं न जाने ॥,"जिनके करकमल वंशीसेविभूषित हैं, जिनकी नवीन मेघकीसी आभा है, जिनके पीत वस्त्र हैं,अरुण विम्बफलके समान अधरोष्ठ है; पूर्णचन्द्रके सदृश सुन्दर मुख औरकमलकेसे नयन हैं ऐसे भगवान् श्रीकृष्णको छोड़कर अन्य किसी भीतत्त्वको मैं नहीं जानता ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -955,7 +955,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,वंशीविभूषितपदाम्बुजमयूखनव्यं श्चित्पीतवस्त्रवदनं दिविषद्विमूर्त्यधर्म् अन्यं न विज्ञामि भगवन्तमिन्दुचेलं यावन्ति चान्द्रमुखचारुविशेषवक्त्रम् ॥,,0,0.4787599742412567
+",test,वंशीविभूषितपदाम्बुजमयूखनव्यं श्चित्पीतवस्त्रवदनं दिविषद्विमूर्त्यधर्म् अन्यं न विज्ञामि भगवन्तमिन्दुचेलं यावन्ति चान्द्रमुखचारुविशेषवक्त्रम् ॥,,0.0,0.47875991463661194,58,0,0
 प्रायेण देव मुनयः स्वविमुक्तिकामा मौनं चरन्ति विजने न परार्थनिष्ठाः नैतान् विहाय कृपणान् विमुमुक्ष एको नान्यं त्वदस्य शरणं भ्रमतोऽनुपश्ये ॥,"देव ! मुनिजन प्रायः अपनी ही मुक्तिकी इच्छासे एकान्तमें रहकर मौनव्रत धारण कर लेते हैं, वे दूसरेके हितमें तत्पर नहीं होते किन्तु मुझे इन गरीबोंको छोड़कर अकेले ही मुक्त होनेकी इच्छा नहीं है और संसारमें भटकनेवाले इन लोगोंके लिये आपके सिवा और कोई मुझे उद्धार करनेवाला भी दिखायी नहीं देता ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -984,7 +984,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,एकान्तमाश्रितवतां च मौनवृत्ति राश्चान्ते स्वमुक्तिमिच्छतां न तत्परत्वम् इत्थं दयालुरहमप्यकेलमुक्ति मन्देऽस्माञ्जिहासि न मे च विभोऽन्यतः फलम् ॥,,0,0.6488588452339172
+",test,एकान्तमाश्रितवतां च मौनवृत्ति राश्चान्ते स्वमुक्तिमिच्छतां न तत्परत्वम् इत्थं दयालुरहमप्यकेलमुक्ति मन्देऽस्माञ्जिहासि न मे च विभोऽन्यतः फलम् ॥,,0.0,0.6488588452339172,55,0,0
 किं नाम रोदिषि सखे न च तेऽस्ति कामः किं नाम रोदिषि सखे न च ते प्रलोभः किं नाम रोदिषि सखे न च ते विमोहो ज्ञानामृतं समरसं गगनोपमोऽहम्॥,"हे सखे! तुम किसलिये रुदन करते हो, तुम्हारे अन्तःकरणमें कामना नहीं है हे सखे! तुम किसलिये रुदन करते हो, तुम्हारे अन्तःकरणमें लोभ नहीं है हे सखे! तुम किसलिये रुदन करते हो, तुम्हारे अन्तःकरणमें मोह नहीं है मैं ज्ञानरूपी अमृत हूँ, समरस हूँ तथा आकाशके समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1013,7 +1013,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,किं नाम रोदिषि सखे न च ते ऽस्ति कामः किं नाम रोदिषि सखे न च ते ऽस्ति लोभः किं नाम रोदिषि सखे न च ते ऽस्ति मोहो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,Vasantatilakā,1,0.83918297290802
+",test,किं नाम रोदिषि सखे न च ते ऽस्ति कामः किं नाम रोदिषि सखे न च ते ऽस्ति लोभः किं नाम रोदिषि सखे न च ते ऽस्ति मोहो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,Vasantatilakā,1.0,0.83918297290802,56,1,1
 भूयो भवन्निलयमेत्य मुनिं नमन्तं प्रोचे भवानहमृषे ननु भक्तदासः ज्ञानं तपश्च विनयान्वितमेव मान्यं याह्यम्बरीषपदमेव भजेति भूमन् ॥,"भूमन् ! फिर, दुर्वासा वैकुण्ठ में पहुंचकर आपके चरणों में जा गिरे उन्हें प्रणिपात करते देखकर आपने उनसे यों कहा 'ऋषे ! मैं तो भक्तों का ही दास हूँ ज्ञान और तप विनययुक्त होने पर ही आदरणीय होते हैं; अतः आप जाइये, अम्बरीष की ही शरण ग्रहण कीजिये' ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1042,7 +1042,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,दुर्वाससा त्वदङ्घ्रिमुखे प्रणिपातनेन भूमन् त्वदीयभक्तदास एव जाय� am इत्युक्त्वा विधौ तपोविनये ज्ञानिनं तं विसृज्य गच्छ विधाय विधाय श�्रणम् ॥,problem,,
+",test,दुर्वाससा त्वदङ्घ्रिमुखे प्रणिपातनेन भूमन् त्वदीयभक्तदास एव जाय� am इत्युक्त्वा विधौ तपोविनये ज्ञानिनं तं विसृज्य गच्छ विधाय विधाय श�्रणम् ॥,problem,,,,,
 अज्ञानपङ्कपरिमग्नमपेतसारं दुःखालयं मरणजन्मजरावसक्तम् संसारबन्धनमनित्यमवेक्ष्य धन्या ज्ञानासिना तदवशीर्य विनिश्चयन्ति ॥,"जो पङ्कमें सने हुए, अज्ञान, निःसार, दुःखरूप, जन्मजरामरणादिसमन्वित, संसारबन्धनको अनित्य देखकर उसको ज्ञानरूपी खड्गसे काटकर आत्मतत्त्वका निश्चय करते हैं, वे पुरुष धन्य हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1071,7 +1071,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,ये पङ्कसन्ततमजाब्जधवलं तमस्संसारबन्धनमनित्यमवलोक्य तत्खड्गेन हृदये विधृणुवन्ति तत्त्वम् धन्यास्त आत्मनि निश्चिते परमार्थदृष्टयः ॥,,0,0.45086005330085754
+",test,ये पङ्कसन्ततमजाब्जधवलं तमस्संसारबन्धनमनित्यमवलोक्य तत्खड्गेन हृदये विधृणुवन्ति तत्त्वम् धन्यास्त आत्मनि निश्चिते परमार्थदृष्टयः ॥,,0.0,0.45086002349853516,57,0,0
 दारिद्र्यदुःखदहनं कमनं सुराणां दीनार्तिदावदहनं दमनं रिपूणाम्‌ दानं श्रियां प्रणमनं भुवनाधिपानां मानं सतां वृषभवाहनमानमामः॥,"दारिद्र्य एवं दुःखका विनाश करनेवाले, देवताओंमें सुन्दर, दीनोंकी पीडाको विनष्ट करनेके लिये दावानलस्वरूप, शत्रुओंका विनाश करनेवाले, समस्त ऐश्वर्य प्रदान करनेवाले, भुवनाधिपोंके प्रणम्य और सत्पुरुषोंके मान्य वृषभवाहन भगवान्‌ शङ्करको हम भलीभाँति प्रणाम करते हैं॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1100,7 +1100,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,दारिद्र्यदुःखविनाशनमङ्गलं सुन्दरं दीनार्तिहारिणमद्य विनाशनं शत्रुणां ऐश्वर्यमूर्तिमभि�्यजतां भुवनाधिपात्‌ सत्पुरुषार्चितवृष्भवहनं शिवं विद्ध्यात्‌॥,,0,0.6831690073013306
+",test,दारिद्र्यदुःखविनाशनमङ्गलं सुन्दरं दीनार्तिहारिणमद्य विनाशनं शत्रुणां ऐश्वर्यमूर्तिमभि�्यजतां भुवनाधिपात्‌ सत्पुरुषार्चितवृष्भवहनं शिवं विद्ध्यात्‌॥,,0.0,0.6831690669059753,60,0,0
 तत्तस्थुषश्च जगतश्च भवानधीशो यन्माययोत्थगुणविक्रिययोपनीतान् अर्थाञ्जुषन्नपि हृषीकपतेन लिप्तो येऽन्ये स्वतः परिहृतादपि बिभ्यति स्म ॥,इसलिये हृषीकेश ! आप समस्त चराचर जगत् के अधीश्वर हैं यही कारण है कि माया की गुणविषमता के कारण बननेवाले विभिन्न पदार्थों का उपभोग करते हुए भी आप उनमें लिप्त नहीं होते यह केवल आपकी ही बात है आपके अतिरिक्त दूसरे तो स्वयं उनका त्याग करके भी उन विषयों से डरते रहते हैं ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1129,7 +1129,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,त्वं नानुबद्ध एव चराचराधिपत्या भुङ्क्तेऽन्यदृष्टदृग्गतिरस्य माया गुणविषम्य विभजत्यविभज्य ते ने ये त्यक्त्वापि भूतभया भजते त्वदन्याः ॥,,0,0.637969970703125
+",test,त्वं नानुबद्ध एव चराचराधिपत्या भुङ्क्तेऽन्यदृष्टदृग्गतिरस्य माया गुणविषम्य विभजत्यविभज्य ते ने ये त्यक्त्वापि भूतभया भजते त्वदन्याः ॥,,0.0,0.637969970703125,54,0,0
 सम्मोहनाय मिलिता मदनादयस्ते त्वद्दासिकापरिमलैः किल मोहमापुः दत्तां त्वया च जगृहुस्त्रपयैव सर्व स्वर्वासिगर्वशमनीं पुनरुर्वशीं ताम् ॥,"मदन आदि संगठित होकर आपको मोह में डालने के लिये आये थे, परंतु आपकी दासियों के अङ्गों की सुगन्ध से वे स्वयं ही मोह को प्राप्त हो गये तदनन्तर जो समस्त स्वर्गवासियों के गर्व का शमन करने वाली थी उस उर्वशी को आपने उन्हें प्रदान कर दिया और उन्होंने लजाते हुए ही उसे ग्रहण कर लिया ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1158,7 +1158,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,त्वां मदनादय विमोहयितुं संगताः स्वैरं तवैव दासीगवलेऽभिरता विगाढमोहाः त्वद्दितिं त्वमददाः सुरगर्वशमन्यां लज्जमानाश्च तया विबुधा विविध्यतां गताः ॥,,0,0.611729085445404
+",test,त्वां मदनादय विमोहयितुं संगताः स्वैरं तवैव दासीगवलेऽभिरता विगाढमोहाः त्वद्दितिं त्वमददाः सुरगर्वशमन्यां लज्जमानाश्च तया विबुधा विविध्यतां गताः ॥,,0.0,0.6117291450500488,62,0,0
 यन्मूनि मे श्रुतिशिरस्सु च भाति यस्मि नस्मन्मनोरथपथः सकलः समेति स्तोष्यामि नः कुलधनं कुलदैवतं तत्पादारविन्दमरविन्द विलोचनस्य,"कमलनयन भगवान् विष्णुके जो चरणारविन्द मेरेमस्तकपर तथा वेदोंके शिरपर सुशोभित होते हैं और जिनमें मेरे मनोरथोंकेसभी मार्ग मिलते हैं तथा जो मेरे कुलधन और कुलदेवता हैं, उनकी मैंवन्दना करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1187,7 +1187,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,विष्णोः पदारविन्दमस्तकशिरसि वेदश्रीराजते मनोरथविधिरमितान्तः कुल्धनं कुलदेवतमभिवन्दे ॥,,0,0.5659627914428711
+",test,विष्णोः पदारविन्दमस्तकशिरसि वेदश्रीराजते मनोरथविधिरमितान्तः कुल्धनं कुलदेवतमभिवन्दे ॥,,0.0,0.5659626722335815,41,0,0
 कल्पान्त एतदखिलं जठरेण गृह्णन् शेते पुमान् स्वदृगनन्तसखस्तदङ्के यन्नाभिसिन्धुरुहकाञ्चनलोकपद्म गर्भे द्युमान् भगवते प्रणतोऽस्मि तस्मै ॥,"हे नाथ ! कल्पके अन्तमें जो स्वयंप्रकाश परमपुरुष भगवान् इस सम्पूर्ण जगत्को अपने उदरमें लीन करके शेषनागका सहारा ले उनकी गोद में शयन करते हैं तथा जिनके नाभिसिन्धुसे प्रकट हुए सकल लोकोंक उत्पत्तिस्थान सुवर्णमय कमलसे परम तेजोमय ब्रह्माजी उत्पन्न हुए हैं, उन्हीं आप परमेश्वरको मैं प्रणाम करता हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1216,7 +1216,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,तं नाथ नाभिसिन्धुविभज्जतोऽभिरेजुष्टमूर्ति मातरिश्वजयोनिकृताण्डकोशम् लीनावयवं प्रणमामि कलौ शयन्तं योगीन्द्रमादिपुरुषं परमात्मतेजः ॥,,0,0.37781912088394165
+",test,तं नाथ नाभिसिन्धुविभज्जतोऽभिरेजुष्टमूर्ति मातरिश्वजयोनिकृताण्डकोशम् लीनावयवं प्रणमामि कलौ शयन्तं योगीन्द्रमादिपुरुषं परमात्मतेजः ॥,,0.0,0.3778194189071655,57,0,0
 कैलासशैलविनिवास वृषाकपे हे मृत्युञ्जय त्रिनयन त्रिजगन्निवास नारायणप्रिय मदापह शक्तिनाथ संसारदुःखगहनाज्जगदीश रक्ष॥,"हे कैलासशैलपर निवास करनेवाले, हे वृषाकपे, हे मृत्युञ्जय, हे त्रिनयन, हे तीनों लोकोंमें निवास करनेवाले, हे नारायणप्रिय, हे अहङ्कारको नष्ट करनेवाले, हे शक्तिनाथ, हे जगदीश्वर शिव! संसारके गहन दुःखोंसे मेरी रक्षा कीजिये॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1245,7 +1245,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,कैलासनिकेतन वृषाकपे मृत्युञ्जय त्रिनयन त्रिलोकनिकेतन नारायणप्रिय विभो विनाशय व्योम शक्तिनाथ जगदीश्वर रक्ष माम्,,0,0.8679074645042419
+",test,कैलासनिकेतन वृषाकपे मृत्युञ्जय त्रिनयन त्रिलोकनिकेतन नारायणप्रिय विभो विनाशय व्योम शक्तिनाथ जगदीश्वर रक्ष माम्,,0.0,0.8679076433181763,52,0,0
 अभ्यागताभिरभितो व्रजसुन्दरीभि र्मुग्धस्मितार्द्रवदनः करुणावलोकी निस्सीमकान्तिजलधिस्त्वमवेक्ष्यमाणो विश्वैकहृद्य हर मे पवनेश रोगान् ॥,चारों ओर से आयी हुई व्रजसुन्दरियों ने देखाआपका मुखारविन्द मुग्ध मुस्कान से आर्द्र है आप करुणामयी दृष्टि से सबको देख रहे हैं तथा असीम कान्ति के महासागर प्रतीत हो रहे हैं विश्व के एकमात्र हृदयहारी रूपवाले पवनेश ! मेरे रोगों को हर लीजिये ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1274,7 +1274,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,आद्रेण मुग्धमुसकर्शितमुख्य वक्त्रं दृग्गोचरं करुणमस्य विभाति रूपम् विश्वेकहृद्यमशेषकन्तिसागरं त्वं वातेश नाशय ममार्तिदशान्ति ॥,,0,0.73835688829422
+",test,आद्रेण मुग्धमुसकर्शितमुख्य वक्त्रं दृग्गोचरं करुणमस्य विभाति रूपम् विश्वेकहृद्यमशेषकन्तिसागरं त्वं वातेश नाशय ममार्तिदशान्ति ॥,,0.0,0.73835688829422,54,0,0
 त्वत्प्रेरितस्तदनु नन्दतनूजया ते व्यत्यासमारचयितुं स हि शूरसूनुः त्वां हस्तयोरधित चित्तविधार्यमार्यै रम्भोरुहस्थकलहंसकिशोररम्यम् ॥,तत्पश्चात् नन्दतनया के साथ अपना व्यत्यास करने के लिये आपद्वारा प्रेरित किये जानेपर शूरकुमार वसुदेवजी ने मुनियोंद्वारा चित्त से धारण करने योग्य आपको दोनों हाथों से उठाया उस समय कमलपर बैठे हुए कलहंसकिशोर के समान आपकी अद्भुत शोभा हो रही थी ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1303,7 +1303,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,शूरेण कुमारवयसा स वियोगमाप्त्या प्रेरित आपदि भवत्युभयाङ्कमुद्धृता थ शोभाद्भुतमाप तदा कलहंसकिश्रो र्मद्वद्नमन्वधारितमात्मचित्तयोग्यम् ॥,,0,0.394665002822876
+",test,शूरेण कुमारवयसा स वियोगमाप्त्या प्रेरित आपदि भवत्युभयाङ्कमुद्धृता थ शोभाद्भुतमाप तदा कलहंसकिश्रो र्मद्वद्नमन्वधारितमात्मचित्तयोग्यम् ॥,,0.0,0.3946647346019745,59,0,0
 शक्रादयः सुरगणा निहतेऽतिवीर्ये तस्मिन्दुरात्मनि सुरारिबले च देव्या तां तुष्टुवुः प्रणतिनम्रशिरोधरांसा वाग्भिः प्रहर्षपुलकोद्गमचारुदेहाः ॥,अत्यन्त पराक्रमी दुरात्मा महिषासुर तथा उसकी दैत्यसेनाके देवी के हाथसे मारे जानेपर इन्द्र आदि देवता प्रणामके लिये गर्दन तथा कंधे झुकाकर उन भगवती दुर्गाका उत्तम वचनोंद्वारा स्तवन करने लगे उस समय उनके सुन्दर अङ्गोंमें अत्यन्त हर्ष के कारण रोमाञ्च हो आया था ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1332,7 +1332,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,दुर्गाय दत्तप्रणमनाञ्जलिवक्त्रांस्तुष्टावुतत्वरुचिरैर्वचसा बलीयाः शक्रोऽथ दैत्यविवशेऽस्य तदा दुरात्मन्या विज्ञाय हर्षविवशेषु चाङ्गकम्पः ॥,,0,0.6278181076049805
+",test,दुर्गाय दत्तप्रणमनाञ्जलिवक्त्रांस्तुष्टावुतत्वरुचिरैर्वचसा बलीयाः शक्रोऽथ दैत्यविवशेऽस्य तदा दुरात्मन्या विज्ञाय हर्षविवशेषु चाङ्गकम्पः ॥,,0.0,0.6278181672096252,55,0,0
 रक्षश्चयैकचितकक्षकपूश्चितौ यः सीताशुचो निजविलोकनतो मृतायाः दाहं व्यधादिव तदन्त्यविधेयभूतं लाङ्गूलदत्तदहनेन मुदे स नोऽस्तु ॥,"जिन्होंने सीताजीकी पीड़ाको, जो उनके दर्शनमात्रसे मर चुकी थी, एकमात्र राक्षससमूहरूप काठकबाड़ोंसे बनी हुई लङ्कारूपिणी चितापर सुलाकर, अपनी पूँछकी लगायी हुई अग्निसे उसका मरणान्त कालोचित दाहसंस्कार किया, वे हनूमान्जी हमारी प्रसन्नताके कारण हों ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1361,7 +1361,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,यः सीतां चितान्तरगतां रिपुविश्वमूर्त्यै काष्ठागारचित्तयुगले कृतवान्त्वदर्शनार्द्याम् तस्याः स्वकूर्चविषण्डविधूतकृशानुवर्षै र्दाहं कुरुष्व विदधातु त्वमशेषमृत्युम् ॥,,0,0.39782771468162537
+",test,यः सीतां चितान्तरगतां रिपुविश्वमूर्त्यै काष्ठागारचित्तयुगले कृतवान्त्वदर्शनार्द्याम् तस्याः स्वकूर्चविषण्डविधूतकृशानुवर्षै र्दाहं कुरुष्व विदधातु त्वमशेषमृत्युम् ॥,,0.0,0.39782780408859253,63,0,0
 बाल्यस्पृशापि वपुषा दधुषा विभूती रुद्यत्किरीटकटकाङ्गदहारभासा शङ्खारिवारिजगदापरिभासितेन मेघासितेन परिलेसिथ सूतिगेहे ॥,"उस समय बाल्यभाव का स्पर्श करते हुए भी जिसने ईश्वरत्वद्योतक विभूतियाँ धारण कर रक्खी थीं, जिससे प्रकाशमान किरीट, कटक, बाजूबंद और हार की प्रभा छिटक रही थी, जो अपनी चारों भुजाओं में शङ्ख, चक्र, कमल और गदा धारण करने से उद्दीप्त हो रहा था तथा जिसकी कान्ति सजल जलधर के समान श्याम थी, अपने उस श्रीविग्रह से आप सूतिकागृह में शोभा पाने लगे ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1390,7 +1390,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,जाड्यं त्वदीयमविधूय विभूतिदेदीप्यमानकिरीटकटकबाजूबन्दहारप्रभोद्दामम् शङ्खाङ्कुशपद्मगदाधरणोद्दीप्तचारु श्यामावदातवपुर्विग्रहतो भवन्न सूतिकागृहे विरचितशोभनाय भूयाः ॥,,0,0.6062842607498169
+",test,जाड्यं त्वदीयमविधूय विभूतिदेदीप्यमानकिरीटकटकबाजूबन्दहारप्रभोद्दामम् शङ्खाङ्कुशपद्मगदाधरणोद्दीप्तचारु श्यामावदातवपुर्विग्रहतो भवन्न सूतिकागृहे विरचितशोभनाय भूयाः ॥,,0.0,0.6062842607498169,77,0,0
 निष्कर्मकर्मदहनो ज्वलनो भवामि निर्दुःखदुःखदहनो ज्वलनो भवामि निर्देहदेहदहनो ज्वलनो भवामि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"मैं कर्मरहित हूँ और कर्मोंको जलानेहेतु अग्निरूप हूँ; मैं दु:खरहित हूँ और दुःखोंको जलानेके लिये अग्निरूप हूँ; मैं देहरहित हूँ और देहाभिमानको जलानेके लिये अग्निरूप हूँ मैं ज्ञानरूपी अमृत हूँ, समरस हूँ और आकाशके समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1419,7 +1419,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,निष्कर्मकर्मदहनो ज्वलनो विदुर्हि निर्दुःखदुःखदहनो ज्वलनो विदुर्हि निर्देहदेहदहनो ज्वलनो विदुर्हि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,Vasantatilakā,1,0.8128067255020142
+",test,निष्कर्मकर्मदहनो ज्वलनो विदुर्हि निर्दुःखदुःखदहनो ज्वलनो विदुर्हि निर्देहदेहदहनो ज्वलनो विदुर्हि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,Vasantatilakā,1.0,0.8128069639205933,56,1,1
 कृत्स्नस्य योऽस्य जगतः सचराचरस्य कर्ता कृतस्य च तथा सुखदुःखहेतुः संहारहेतुरपि यः पुनरन्तकाले तं शङ्करं शरणदं शरणं व्रजामि॥,"अन्धकने कहाजो चराचर प्राणियोंसहित इस सम्पूर्ण जगत्को उत्पन्न करनेवाले हैं, उत्पन्न हुए जगत्के सुखदुःखमें एकमात्र कारण हैं तथा अन्तकालमें जो पुनः इस विश्वके संहारमें भी कारण बनते हैं, उन शरणदाता भगवान्‌ श्रीशङ्करकी मैं शरण लेता हूँ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1448,7 +1448,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,योऽयं चराचरसमस्तजगत्सृष्टिहेतुः संभवे सुखदुःखेऽखिले तदन्तकाले विश्वस्य संहरणहेतुरिति शङ्करं तं शरण्यमाश्रये॥,,0,0.7477681636810303
+",test,योऽयं चराचरसमस्तजगत्सृष्टिहेतुः संभवे सुखदुःखेऽखिले तदन्तकाले विश्वस्य संहरणहेतुरिति शङ्करं तं शरण्यमाश्रये॥,,0.0,0.7477680444717407,50,0,0
 दीर्घो लघुः पुनरितीह न मे विभागो विस्तारसङ्कटमितीह न मे विभागः कोणं हि वर्तुलमितीह न मे विभागो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"यह दीर्घ है और यह लघु है इस प्रकारका भेद इसी लोकमें है, मुझमें नहीं है, विस्तार और संकोच ऐसा विभाग भी इस लोकमें है, मुझमें नहीं है और कोण तथा गोलाकार ऐसा विभाग भी इसी संसारमें है, मुझमें नहीं है; मैं तो ज्ञानरूपी अमृत हूँ, समरस हूँ और आकाशके समान हूँ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1477,7 +1477,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,दीर्घं लघुं त्वयि न तु मयि विभागो विस्तारशङ्कुलमपि त्वयि न तु मयि विभागः और्वं गदाकरमपि त्वयि न तु मयि विभागो ज्ञानामृतं समरसं गगनोपमोऽहम्॥,,0,0.6997981071472168
+",test,दीर्घं लघुं त्वयि न तु मयि विभागो विस्तारशङ्कुलमपि त्वयि न तु मयि विभागः और्वं गदाकरमपि त्वयि न तु मयि विभागो ज्ञानामृतं समरसं गगनोपमोऽहम्॥,,0.0,0.6997982263565063,61,0,0
 तस्यात्मजास्त्वयुतमीश पुनः सहस्रं श्रीनारदस्य वचसा तव मार्गमापुः नैकत्र वासमृषये स मुमोच शापं भक्तोत्तमस्त्वृषिरनुग्रहमेव मेने ॥,ईश ! उन दक्ष हर्यश्वसंज्ञक दस हजार तथा शबलाश्व नामक एक हजार पुत्र उत्पन्न हुए वे सबकेसब श्रीनारदजी के निवृत्तिमार्गोपदेश से आपके मार्गमोक्ष को प्राप्त हो गये तब दक्ष ने देवर्षि नारद को शाप दिया कि तुम एक स्थान पर स्थिर नहीं रह सकते भक्तश्रेष्ठ देवर्षि ने उसे अपने लिये अनुग्रह ही माना ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1506,7 +1506,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,दक्षस्तु हर्यश्वसमाख्य दश सहस्र वित्सृष्टवान्पुत्रान्शबलाश्वसमाख्य वृन्दम् नारद्गिरा त्वदुपदेशविनिवृत्तै र्यातांस्तदा त्वमुदयान्मुकुलीभवन्नः श्रीनारदः श्रुतमनुग्रहवान्विभो त्वन्निष्ठः ॥,,0,0.6769723892211914
+",test,दक्षस्तु हर्यश्वसमाख्य दश सहस्र वित्सृष्टवान्पुत्रान्शबलाश्वसमाख्य वृन्दम् नारद्गिरा त्वदुपदेशविनिवृत्तै र्यातांस्तदा त्वमुदयान्मुकुलीभवन्नः श्रीनारदः श्रुतमनुग्रहवान्विभो त्वन्निष्ठः ॥,,0.0,0.6769723296165466,72,0,0
 निष्कामकाममिह नाम कथं वदामि निःसङ्गसङ्गमिह नाम कथं वदामि निःसारसाररहितं च कथं वदामि ज्ञानामृतं समरसं गगनोपमोऽहम्॥,"निष्काम होकर मैं स्वयंको सकाम कैसे कहूँ, निःसंग होकर संगवाला कैसे कहूँ और नि:सार होकर सारवान् कैसे कहूँ? मैं तो ज्ञानरूपी अमृत हूँ, समरस हूँ और आकाशके समान हूँ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1535,7 +1535,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,निष्कामकामतया स्वयमेव कथं वा निर्संगसंगतया स्वयमेव कथं वा निःसारसारतया स्वयमेव कथं वा ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0,0.853908896446228
+",test,निष्कामकामतया स्वयमेव कथं वा निर्संगसंगतया स्वयमेव कथं वा निःसारसारतया स्वयमेव कथं वा ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0.0,0.8539090156555176,56,1,0
 संध्यादिकालरहितं न च मे वियोगो ह्यन्तःप्रबोधरहितं बधिरो न मूकः ॥ एवं विकल्परहितं न च भावशुद्धं ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"में सन्ध्यादि कालों से रहित हूँ, मेरा बियोग नहीं है भीतर मेरे ज्ञान है, न बहिरा हूँ, न गूँगा हूँ, इस प्रकार विकल्प से रहित हूँ, भावना से शुद्ध नहीं हूँ, में ज्ञान और अमृत स्वरूप हूँ, समान रस हूँ, आकाश के समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1564,7 +1564,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,सन्ध्यादिकालरहितो न च मे बियोगो ज्ञानं हि तत्र न बहिर्न च मूक एवं विकल्परहितो न च मे भवेत्खलु शुद्धो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0,0.7930442094802856
+",test,सन्ध्यादिकालरहितो न च मे बियोगो ज्ञानं हि तत्र न बहिर्न च मूक एवं विकल्परहितो न च मे भवेत्खलु शुद्धो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0.0,0.7930443286895752,57,0,0
 जीवं हि कञ्चिदभिमानवशात्स्वकीयं मत्वा तनूज इति रागभरं वहन्त्यः आत्मानमेव तु भवन्तमवाप्य सूनुं प्रीतिं ययुर्न कियतीं वनिताश्च गावः ॥,"भला, जब किसी भी जीव को ममत्वारोप के कारण 'मेरा पुत्र है' यों अपना मानकर उनकी माताएँ स्नेहविह्वल हो जाती हैं, तब सर्वात्मस्वरूप आपको ही पुत्ररूप में पाकर गोपियों तथा गौओं को कितनी प्रसन्नता नहीं हुई ? अर्थात् वे परम आनन्दित हुईं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1593,7 +1593,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,यस्मात् प्रसादत एव किल जनन्य आस्नेहं विह्वलधियो जजनुर्निजातम् तस्मात् किमु त्वयि सर्वजनितात्मनि ते गोप्यश्च गोष्ठीश्च किं न परमं विहृता इह स्वान्तः ॥,,0,0.5060423612594604
+",test,यस्मात् प्रसादत एव किल जनन्य आस्नेहं विह्वलधियो जजनुर्निजातम् तस्मात् किमु त्वयि सर्वजनितात्मनि ते गोप्यश्च गोष्ठीश्च किं न परमं विहृता इह स्वान्तः ॥,,0.0,0.5060422420501709,59,0,0
 अङ्के पितुः सुरुचिपुत्रकमुत्तमं तं दृष्ट्वा ध्रुवः किल सुनीतिसुतोऽधिरोक्ष्यन् आचिक्षिपे किल शिशुः सुतरां सुरुच्या दुस्संत्यजा खलु भवद्विमुखैरसूया ॥,"किसी समय सुनीति के पुत्र ध्रुव ने सुरुचि के पुत्र उत्तम को पिता की गोद‍ में लालित होते देखकर स्वयं भी गोद में चढ़ने की इच्छा की, परंतु सुरुचि ने उस शिशु को कटुवचनोंद्वारा भलीभाँति फटकारा सच है, भगवद्विमुख लोगोंद्वारा ईर्ष्या एवं दोषदृष्टि का त्याग करना अत्यन्त कठिन है ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1622,7 +1622,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,दृष्ट्वा च धर्मवति गोदमुत्तमं तं स्वानुग्रहे गतिमिच्छति सुनीतिजोऽस्मिन् कट्वाशिषो विदधति सुरुचिना प्रभूणा स्वैर्ष्यदोषदृष्टिरपास्तु भगवद्विमुखैः ॥,,0,0.47798553109169006
+",test,दृष्ट्वा च धर्मवति गोदमुत्तमं तं स्वानुग्रहे गतिमिच्छति सुनीतिजोऽस्मिन् कट्वाशिषो विदधति सुरुचिना प्रभूणा स्वैर्ष्यदोषदृष्टिरपास्तु भगवद्विमुखैः ॥,,0.0,0.47798556089401245,57,0,0
 संसारसंततिरजो न च मे विकारः संताप संततितमो न च मे विकारः ॥ सत्त्वं स्वधर्मजनकं न च मे विकारः ज्ञानामृतं समरसं गगनोपपोऽहम् ॥,"संसार के बिस्तार की रज मेरे बीच में नहीं है न उसका बिकार है न मेरे दुःख का तमोगुण है न उसका बिकार है अपने धर्म को पैदा करने बाला तमोगुण भी नहीं है न बिकार है, में ज्ञान और अमृतरूप हूँ समान रस हूँ आकाश के समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1651,7 +1651,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,न संसृतिविभवरजः किञ्चन मध्यम् न दुःखतमो न तम उद्भव एव किञ्चित् नाहं तम उद्भव इति त्वनिवृत्ति रूपो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0,0.7237803936004639
+",test,न संसृतिविभवरजः किञ्चन मध्यम् न दुःखतमो न तम उद्भव एव किञ्चित् नाहं तम उद्भव इति त्वनिवृत्ति रूपो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0.0,0.7237805128097534,58,0,0
 किं नाम रोदिषि सखे न च ते स्वरूपं किं नाम रोदिषि सखे न च ते विरूपम् किं नाम रोदिषि सखे न च ते वयांसि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"हे सखे! तुम किसलिये रुदन करते हो, तुम्हारा स्वरूप नहीं है हे सखे! तुम किसलिये रुदन करते हो, तुम्हारा रूप नष्ट होनेवाला नहीं है हे सखे! तुम किसलिये रुदन करते हो, आयु आदि भी तुम्हारे नहीं हैं मैं ज्ञानरूपी अमृत हूँ, समरस हूँ और आकाशके समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1680,7 +1680,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,किं नाम रोदिषि सखे न च ते स्वरूपं किं नाम रोदिषि सखे न च ते रूपोच्छ्वासः किं नाम रोदिषि सखे न च ते आयुः स्वामिन्ज्ञानामृतमसद्विविधं गगनोपमः ॥,,0,0.7980799674987793
+",test,किं नाम रोदिषि सखे न च ते स्वरूपं किं नाम रोदिषि सखे न च ते रूपोच्छ्वासः किं नाम रोदिषि सखे न च ते आयुः स्वामिन्ज्ञानामृतमसद्विविधं गगनोपमः ॥,,0.0,0.7980799674987793,58,0,0
 निर्मोहमोहपदवीति न मे विकल्पो निःशोकशोकपदवीति न मे विकल्पः ॥ निर्लोभलोभपदवीति न मे विकल्पो ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"बैर और प्रति मुझमें नहीं है और भेद नहीं है सुख और दुःख नहीं हैं उदारता और लोभ ये मुझ में नहीं है भेद नहीं है में ज्ञान और अमृत रूप हूँ, समान हूँ, अकाश के समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1709,7 +1709,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,निर्वेदवैरप्रतिभिन्नदुःखसौख्य लोभोद्यमा न च मतिर्विभेदमृत्युः ॥,,0,0.513669490814209
+",test,निर्वेदवैरप्रतिभिन्नदुःखसौख्य लोभोद्यमा न च मतिर्विभेदमृत्युः ॥,,0.0,0.5136696696281433,26,0,0
 यः श्लोकपञ्चकमिदं प्रयतः पठेद्धि नित्यं प्रभातसमये पुरुषः प्रबुद्धः श्रीरामकिङ्करजनेषु स एव मुख्यो भूत्वा प्रयाति हरिलोकमनन्यलभ्यम् ॥,"जो पुरुष प्रातःकाल नींदसे जगकर जितेन्द्रियभावसे इन पाँचों श्लोकोंका नित्य पाठ करता है, वह श्रीरामजीके सेवकोंमें मुख्य होकर श्रीहरिके लोकको, जो दूसरोंके लिये दुर्लभ है, प्राप्त होता है ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1738,7 +1738,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,यः श्लोकपञ्चकमिदं जगतामयेन भावेन जितेन्द्रिय उदीयमानवायोः नित्यं पठत्यनुदिनं रघुवर्स्य सेवो मुख्यः स हरेः फलमवाप्नुते दुरापम् ॥,,0,0.6095477342605591
+",test,यः श्लोकपञ्चकमिदं जगतामयेन भावेन जितेन्द्रिय उदीयमानवायोः नित्यं पठत्यनुदिनं रघुवर्स्य सेवो मुख्यः स हरेः फलमवाप्नुते दुरापम् ॥,,0.0,0.6095478534698486,56,1,0
 माया विलासहसितं श्वसितं समीरो जिह्वा जलं वचनमीश शकुन्तपङ्क्तिः सिद्धादयस्स्वरगणा मुखरन्ध्रमग्नि र्देवा भुजाः स्तनयुगं तव धर्मदेवः ॥,"ईश ! आपकी लीला पूर्ण हँसी माया, श्वास वायुदेवता, जिह्वा जल, वचन पक्षिसमूह, षड्ज आदि स्वरसमुदाय सिद्धगण, मुखछिद्र अग्नि, भुजाएँ देवगण तथा स्तनयुगल धर्मदेव हैं ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1767,7 +1767,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,हासः प्रभो तव लीला पूर्णहासिनी त्वं श्वासो वयो जिह्वा वारि वचः पतङ्गाः षड्जादयः स्वरसमुद्दयश्च सिद्धाः छिद्रं त्वगग्निर्भुजगणश्च धर्मदः स्तनौ ॥,,0,0.8623024821281433
+",test,हासः प्रभो तव लीला पूर्णहासिनी त्वं श्वासो वयो जिह्वा वारि वचः पतङ्गाः षड्जादयः स्वरसमुद्दयश्च सिद्धाः छिद्रं त्वगग्निर्भुजगणश्च धर्मदः स्तनौ ॥,,0.0,0.8623024225234985,55,0,0
 सोऽयं रथेन सुकृती भवतो निवासं गच्छन् मनोरथगणांस्त्वयि धार्यमाणान् आस्वादयन् मुहुरपायभयेन दैवं सम्प्रार्थयन् पथि न किंचिदपि व्यजानात् ॥,"पुण्यात्मा अक्रूर रथ के द्वारा जब आपके निवासस्थान नन्दगाँव को जा रहे थे, उस समय उनके हृदय में आपको लेकर अनेक प्रकार के मनोरथ प्रकट हो रहे थे उन मनोरथों का बारंबार आस्वादन करते हुए अक्रूर, कोई विघ्न न आ जायइस भय से, देव की प्रार्थना करते जाते थे इस प्रकार उन्होंने उस मार्ग में कहाँ क्या हो रहा है, यह कुछ भी नहीं जाना ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1796,7 +1796,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,गच्छन्नक्रूररथवरेण भवद्गृहं त्वां मन्युः पुण्यहृदय आशिषि बारंबरं व्यधात् किं कुत्र वा भवति किं विधिरूपः किं वा नैव विबुधत इत्यविबुद्ध्य यातः ॥,,0,0.5287051200866699
+",test,गच्छन्नक्रूररथवरेण भवद्गृहं त्वां मन्युः पुण्यहृदय आशिषि बारंबरं व्यधात् किं कुत्र वा भवति किं विधिरूपः किं वा नैव विबुधत इत्यविबुद्ध्य यातः ॥,,0.0,0.5287051200866699,58,0,0
 निर्नेति नेति विमलो हि कथं वदामि निःशेषशेषविमलो हि कथं वदामि ॥ निर्लिङ्गलिंगविमलो हि कथं वदामि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,"अस्ति और नास्ति इनसे निश्चय शुद्ध है उसका वर्णन कैसे करूँ, अशेष और शेष इनसे शुद्ध हैं उसका वर्णन कैसे करूँ, चिह्न और अचिह्न इनसे वह निश्चय शुद्ध है उसका वर्णन कैसे करूँ, में ज्ञान और अमृत रूप हूँ, समानरस हूँ आकाश के समान हूँ ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1825,7 +1825,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,अस्ति नास्ति तयि नियमेण शुद्ध इति किं वदामि अशेषशेषतयि नियमेण शुद्ध इति किं वदामि चिह्नचिह्नतयि नियमेण शुद्ध इति किं वदामि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0,0.7773107290267944
+",test,अस्ति नास्ति तयि नियमेण शुद्ध इति किं वदामि अशेषशेषतयि नियमेण शुद्ध इति किं वदामि चिह्नचिह्नतयि नियमेण शुद्ध इति किं वदामि ज्ञानामृतं समरसं गगनोपमोऽहम् ॥,,0.0,0.7773107886314392,69,0,0
 अक्रूर एष भवदङ्घ्रि परश्चिराय त्वद्दर्शनाक्षममनाः क्षितिपालभीत्या तस्याज्ञयैव पुनरीक्षितुमुद्यतस्त्वा मानन्दभारमतिभूरितरं बभार ॥,ये अक्रूर चिरकाल से आपके चरणचिन्तन में लगे थे; परंतु राजा कंस के डर से उनका मन आपका दर्शन करने में अपने को असमर्थ पाता था फिर उसी कंस की आज्ञा से वे आपका दर्शन करने के लिये उद्यत हुए उस समय उनके चित्त में आनन्द का भारी भार भर गया ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1854,7 +1854,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,त्वाय चिरं रुरुच एव चरणचिन्तने त्वय्यवस्थितमनाः स किल राजभीत्या त्वां द्रष्टुमुद्यत आज्ञयतया तु भारो निर्वृत्त आनन्द इति विधाय चेतः ॥,,0,0.6981527805328369
+",test,त्वाय चिरं रुरुच एव चरणचिन्तने त्वय्यवस्थितमनाः स किल राजभीत्या त्वां द्रष्टुमुद्यत आज्ञयतया तु भारो निर्वृत्त आनन्द इति विधाय चेतः ॥,,0.0,0.6981528997421265,56,1,0
 स द्वादशीव्रतमथो भवदर्चनार्थं वर्षं दधौ मधुवने यमुनोपकण्ठे पत्न्या समं सुमनसा महतीं वितन्वन् पूजां द्विजेषु विसृजन् पशुपष्टिकोटिम् ॥,महाराज अम्बरीष ने आपकी अर्चना करने के लिये एक वर्ष तक द्वादशीव्रत करने का संकल्प किया फिर तो वे यमुना के तटपर स्थित मधुवन में जाकर अपनी भक्तिमती पत्नी के साथ आपकी महती पूजा में लग गये उस समय उन्होंने ब्राह्मणों को साठ करोड़ गौएँ दान कीं ॥,vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1883,7 +1883,7 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,द्वादशीव्रतमथ संवत्सरं त्वदर्चने संकल्प्य मधुकाननमयूखगात्रगेहम् यातः कृतार्थभक्तिपत्निसमेत आसीद् योऽष्टयोजनशतमत्सरवत्सराणि दत्तवान् गवां शतकोटिशतत्रिशत्क्रियाणि ॥,,0,0.5941782593727112
+",test,द्वादशीव्रतमथ संवत्सरं त्वदर्चने संकल्प्य मधुकाननमयूखगात्रगेहम् यातः कृतार्थभक्तिपत्निसमेत आसीद् योऽष्टयोजनशतमत्सरवत्सराणि दत्तवान् गवां शतकोटिशतत्रिशत्क्रियाणि ॥,,0.0,0.5941781997680664,74,0,0
 योगिन्यतीव कुशला खलु चित्रलेखा तस्याः सखी विलिखती तरुणानशेषान् तत्रानिरुद्धमुषया विदितं निशाया मानेष्ट योगबलतो भवतो निकेतात् ॥,"उषाकी एक सखी थी, जिसका नाम चित्रलेखा था वह योगिनी और चित्रकर्म में अत्यन्त निपुण थी उसने समस्त तरुण राजकुमारों का चित्र बनाना आरम्भ किया उन बनाये हुए चित्रों में उषा ने अनिरुद्ध को पहचाना, तब उसके मनोनीत पुरुष अनिरुद्ध को वह अपने योगबल से रात्रि के समय आपके महल से उठा लायी ॥",vasantatilakā [14: tBjjgg],56,Vasantatilakā,Vasantatilakā,,"Objective:
 
 Generate a sanskrit verse in Vasantatilakā meter based on a given meaning or theme while strictly following the metrical (?and rhyme) rules.
@@ -1912,4 +1912,4 @@ Do NOT include English words, transliteration, labels, or explanations.
 
 Output Format:
 (Output exactly 4 lines, one pada per line. Nothing else.)
-",test,उषायास्तु सखिरभूच्चित्रकृतिप्रवीणा योगिनी चित्रकृतवत्यखिलान्तरुण्ठान् तेषु चित्रेषु विदधे युवती त्वदीयं तं योगबल्याहृतवती रजनीशया त्वां ॥,,0,0.6078788638114929
+",test,उषायास्तु सखिरभूच्चित्रकृतिप्रवीणा योगिनी चित्रकृतवत्यखिलान्तरुण्ठान् तेषु चित्रेषु विदधे युवती त्वदीयं तं योगबल्याहृतवती रजनीशया त्वां ॥,,0.0,0.6078788042068481,58,0,0

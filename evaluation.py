@@ -2,17 +2,22 @@ import pandas as pd
 from tqdm import tqdm
 import sys
 from pathlib import Path
+
 sys.path.append(str(Path("chandas-detector").resolve()))
 import chandas_detector
 from chandas_detector import detect_meter, format_result
+
 from sentence_transformers import SentenceTransformer
+from skrutable.meter_identification import MeterIdentifier
 
 FILEPATH = sys.argv[1]
 
-INPUT_COL = "hi"           # source text fed to the model
-GROUND_TRUTH = "meter_cd"  # ground-truth meter
-PRED_COL = "model_out"     # generated Sanskrit verse
-PRED_METER = "out_meter"   # meter detected from model_out
+INPUT_COL = "hi"                    # source text fed to the model
+GROUND_TRUTH = "meter_cd"           # ground-truth meter
+GROUND_TRUTH_SYLLABLES = "syllable_count"   # ground-truth syllable count
+PRED_COL = "model_out"              # generated Sanskrit verse
+PRED_METER = "out_meter"            # meter detected from model_out
+PRED_SYLLABLES = "pred_syllable_count"      # syllable count detected from model_out
 
 df = pd.read_csv(FILEPATH)
 
@@ -25,13 +30,16 @@ print("------------------------------")
 print(f"- FILEPATH: {FILEPATH}")
 print(f"- INPUT_COL: {INPUT_COL}")
 print(f"- GROUND_TRUTH: {GROUND_TRUTH}")
+print(f"- GROUND_TRUTH_SYLLABLES: {GROUND_TRUTH_SYLLABLES}")
 print(f"- PRED_COL: {PRED_COL}")
 print(f"- PRED_METER: {PRED_METER}")
+print(f"- PRED_SYLLABLES: {PRED_SYLLABLES}")
 
 ########################################
 ####### Check for alphanum problems
 ########################################
 df[PRED_METER] = None
+df[PRED_SYLLABLES] = pd.NA
 
 mask_problem = df[PRED_COL].str.contains(r"[A-Za-z0-46-9]", na=False)
 
@@ -52,7 +60,38 @@ else:
     print(f"Marked {len(df_with_alnum)} rows as 'problem' in '{PRED_METER}'.")
 
 ########################################
-####### Getting output meters
+####### skrutable syllable counter
+########################################
+
+MI = MeterIdentifier()
+
+
+def get_pred_syllable_count(verse_text):
+    """
+    Count syllables in a generated verse using skrutable's MeterIdentifier.
+
+    Configuration per spec:
+      from_scheme="DEV", resplit_option="resplit_lite", resplit_keep_midpoint=True
+
+    skrutable.scansion.Verse exposes `syllable_weights`: a string of 'l'/'g'
+    characters (one per syllable), with pādas joined by '\n', e.g.
+      "gggglggg\nllgllglg\nllgglggl\nllgllgll"
+    Stripping whitespace/newlines and taking the length gives the syllable
+    count directly (confirmed against the installed skrutable package).
+    """
+    result = MI.identify_meter(
+        verse_text,
+        from_scheme="DEV",
+        resplit_option="resplit_lite",
+        resplit_keep_midpoint=True,
+    )
+
+    weights = (result.syllable_weights or "").replace("\n", "").replace(" ", "")
+    return len(weights) if weights else None
+
+
+########################################
+####### Getting output meters + syllable counts
 ########################################
 
 for idx in tqdm(df.index, total=len(df), desc="Detecting meters"):
@@ -66,34 +105,49 @@ for idx in tqdm(df.index, total=len(df), desc="Detecting meters"):
         result.meter if result.confidence == "exact" else None
     )
 
+    try:
+        df.at[idx, PRED_SYLLABLES] = get_pred_syllable_count(verse)
+    except Exception:
+        df.at[idx, PRED_SYLLABLES] = None
+
 ########################################
-####### Metric 1: Overall Accuracy
+####### Row-wise metrics: half_acc / full_acc
 ########################################
 
 eval_df = df[df[PRED_METER] != "problem"].copy()
 eval_df[PRED_METER] = eval_df[PRED_METER].fillna("UNKNOWN")
 
-eval_df["score"] = (eval_df[GROUND_TRUTH] == eval_df[PRED_METER]).astype(int)
+# Cast to a nullable numeric dtype so e.g. int64 vs object/NA comparisons
+# don't silently evaluate to False.
+eval_df[GROUND_TRUTH_SYLLABLES] = pd.to_numeric(
+    eval_df[GROUND_TRUTH_SYLLABLES], errors="coerce"
+).astype("Int64")
+eval_df[PRED_SYLLABLES] = pd.to_numeric(
+    eval_df[PRED_SYLLABLES], errors="coerce"
+).astype("Int64")
 
-df["score"] = pd.NA
-df.loc[eval_df.index, "score"] = eval_df["score"]
+eval_df["half_acc"] = (
+    eval_df[GROUND_TRUTH_SYLLABLES] == eval_df[PRED_SYLLABLES]
+).astype(int)
 
-overall_acc = eval_df["score"].mean()
+eval_df["full_acc"] = (
+    (eval_df[GROUND_TRUTH] == eval_df[PRED_METER])
+    & (eval_df[GROUND_TRUTH_SYLLABLES] == eval_df[PRED_SYLLABLES])
+).astype(int)
 
-print("\n## Metric 1: Overall Accuracy (meter_cd vs out_meter)")
-print("------------------")
-print(f"- Total samples      : {len(eval_df)}")
-print(f"- Correct predictions: {eval_df['score'].sum()}")
-print(f"- Accuracy           : {overall_acc:.2%}")
-print(f"- Null meters        : {(eval_df[PRED_METER] == 'UNKNOWN').sum()}")
-print(f"- Problem rows       : {(df[PRED_METER] == 'problem').sum()}")
+# sanity check: half accuracy should always be >= full accuracy
+assert (eval_df["half_acc"] >= eval_df["full_acc"]).all(), (
+    "Invariant violated: half_acc must be >= full_acc for every row"
+)
+
+df["half_acc"] = pd.NA
+df["full_acc"] = pd.NA
+df.loc[eval_df.index, "half_acc"] = eval_df["half_acc"]
+df.loc[eval_df.index, "full_acc"] = eval_df["full_acc"]
 
 ########################################
-####### Metric 2: Semantic Similarity
+####### Metric: Semantic Similarity
 ########################################
-
-print("\n## Metric 2: Semantic Similarity (input vs model_out)")
-print("------------------")
 
 sim_df = df.dropna(subset=[INPUT_COL, PRED_COL]).copy()
 sim_df = sim_df[sim_df[PRED_METER] != "problem"]
@@ -112,13 +166,31 @@ sims = sims.cpu().numpy()
 df["semsim"] = pd.NA
 df.loc[sim_df.index, "semsim"] = sims
 
-print(f"- Total samples          : {len(sim_df)}")
-print(f"- Mean semantic similarity: {sims.mean():.4f}")
-print(f"- Std semantic similarity : {sims.std():.4f}")
-print(f"- Min / Max               : {sims.min():.4f} / {sims.max():.4f}")
+# bring semsim into eval_df for aggregate reporting (only for non-problem rows)
+eval_df["semsim"] = df.loc[eval_df.index, "semsim"]
 
 ########################################
-####### Metric 3: Meter-wise Accuracy
+####### Overall Evaluation (Markdown)
+########################################
+
+half_acc_overall = eval_df["half_acc"].mean()
+full_acc_overall = eval_df["full_acc"].mean()
+semsim_overall = eval_df["semsim"].astype(float).mean()
+
+print("\n## Overall Evaluation\n")
+print("| Metric | Value |")
+print("|--------|------:|")
+print(f"| Half Accuracy | {half_acc_overall:.2%} |")
+print(f"| Full Accuracy | {full_acc_overall:.2%} |")
+print(f"| Mean Semantic Similarity | {semsim_overall:.4f} |")
+
+print("\n(supporting detail)")
+print(f"- Total samples      : {len(eval_df)}")
+print(f"- Problem rows       : {(df[PRED_METER] == 'problem').sum()}")
+print(f"- Null meters        : {(eval_df[PRED_METER] == 'UNKNOWN').sum()}")
+
+########################################
+####### Meter-wise Evaluation (Markdown)
 ########################################
 
 meters = sorted(eval_df[GROUND_TRUTH].dropna().unique())
@@ -126,32 +198,32 @@ meters = sorted(eval_df[GROUND_TRUTH].dropna().unique())
 results = []
 
 for meter in meters:
-    total = (eval_df[GROUND_TRUTH] == meter).sum()
+    temp_df = eval_df[eval_df[GROUND_TRUTH] == meter]
 
-    correct = (
-        (eval_df[GROUND_TRUTH] == meter) &
-        (eval_df[PRED_METER] == meter)
-    ).sum()
-
-    accuracy = 100 * correct / total if total else 0
-
-    null_preds = (
-        (eval_df[GROUND_TRUTH] == meter) &
-        (eval_df[PRED_METER] == "UNKNOWN")
-    ).sum()
+    samples = len(temp_df)
+    half_acc = temp_df["half_acc"].mean() if samples else 0
+    full_acc = temp_df["full_acc"].mean() if samples else 0
+    mean_semsim = temp_df["semsim"].astype(float).mean() if samples else float("nan")
 
     results.append({
         "Meter": meter,
-        "Total": total,
-        "Correct": correct,
-        "Accuracy (%)": round(accuracy, 2),
-        "Null": null_preds,
+        "Samples": samples,
+        "Half Accuracy": half_acc,
+        "Full Accuracy": full_acc,
+        "Mean Semantic Similarity": mean_semsim,
     })
 
 results_df = pd.DataFrame(results)
 
-print("\n## Metric 3: Meter-wise Accuracy\n")
-print(results_df.to_markdown(index=False))
+print("\n## Meter-wise Evaluation\n")
+print("| Meter | Samples | Half Accuracy | Full Accuracy | Mean Semantic Similarity |")
+print("|-------|--------:|--------------:|--------------:|-------------------------:|")
+for _, row in results_df.iterrows():
+    print(
+        f"| {row['Meter']} | {row['Samples']} | "
+        f"{row['Half Accuracy']:.2%} | {row['Full Accuracy']:.2%} | "
+        f"{row['Mean Semantic Similarity']:.4f} |"
+    )
 
 ########################################
 ####### Save
@@ -159,62 +231,3 @@ print(results_df.to_markdown(index=False))
 
 df.to_csv(FILEPATH, index=False)
 print(f"\nAll score/semsim updates saved back to {FILEPATH}")
-
-# ########################################
-# ####### Creating master csv
-# ########################################
-
-# master_csv = "master-score.csv"
-
-# ########################################
-# ####### Update master csv
-# ########################################
-
-# from pathlib import Path
-# import os
-
-# summary = {
-#     "experiment": Path(FILEPATH).parent.name,
-#     "Checkpoint": Path(FILEPATH).stem,
-#     "overall_acc": round(overall_acc * 100, 2),
-#     "sem-sim": round(float(sims.mean()), 4),
-#     "total": len(eval_df),
-#     "problem-rows": int((df[PRED_METER] == "problem").sum()),
-#     "correct": int(eval_df["score"].sum()),
-#     "null": int((eval_df[PRED_METER] == "UNKNOWN").sum()),
-# }
-
-# summary_df = pd.DataFrame([summary])
-
-# if os.path.exists(master_csv):
-#     master = pd.read_csv(master_csv)
-
-#     # Remove existing entry for same checkpoint (if rerunning)
-#     master = master[
-#         ~(
-#             (master["experiment"] == summary["experiment"]) &
-#             (master["Checkpoint"] == summary["Checkpoint"])
-#         )
-#     ]
-
-#     master = pd.concat([master, summary_df], ignore_index=True)
-
-# else:
-#     master = summary_df
-
-# # Sort checkpoints numerically within each experiment
-# def checkpoint_number(x):
-#     try:
-#         return int(str(x).split("-")[-1].split("c")[-1])
-#     except:
-#         return 999999
-
-# master = master.sort_values(
-#     by=["experiment", "Checkpoint"],
-#     key=lambda s: s.map(checkpoint_number) if s.name == "Checkpoint" else s
-# ).reset_index(drop=True)
-
-# master.to_csv(master_csv, index=False)
-
-# print(f"Updated master csv: {master_csv}")
-
