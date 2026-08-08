@@ -28,7 +28,7 @@ HYPERPARAMS = {
 
 "BATCH_SIZE": 8,
 "GRAD_ACC": 12,
-"EPOCHS": 5,
+"EPOCHS": 10,
 
 "LR": 0.0002,            
 
@@ -49,7 +49,7 @@ HYPERPARAMS = {
 "ES_PATIENCE": 8,
 
 "DATA_FILE_PATH": "Files/v3_gitapress_final_anustubh.csv",
-"OUTPUT_DIR": "Trained_Models/Gemma4-31B-anustubh",
+"OUTPUT_DIR": "Trained_Models/Gemma4-31B-anustubh-Run2-5TO10Epochs",
 }
 
 os.makedirs(HYPERPARAMS["OUTPUT_DIR"], exist_ok=True)
@@ -206,7 +206,7 @@ trainer = train_on_responses_only(
     num_proc=1,
 )
 
-trainer_stats = trainer.train()
+trainer_stats = trainer.train(resume_from_checkpoint="/home/shivraj-pg/v3_poetrygen_new/Trained_Models/Gemma4-31B-anustubh-Run1-5epochs/checkpoint-1135")
 trainer.save_state()
 
 # ---------------------------------------------------------------------------

@@ -65,7 +65,6 @@ else:
 
 MI = MeterIdentifier()
 
-
 def get_pred_syllable_count(verse_text):
     """
     Count syllables in a generated verse using skrutable's MeterIdentifier.
@@ -88,7 +87,6 @@ def get_pred_syllable_count(verse_text):
 
     weights = (result.syllable_weights or "").replace("\n", "").replace(" ", "")
     return len(weights) if weights else None
-
 
 ########################################
 ####### Getting output meters + syllable counts
@@ -114,11 +112,9 @@ for idx in tqdm(df.index, total=len(df), desc="Detecting meters"):
 ####### Row-wise metrics: half_acc / full_acc
 ########################################
 
-eval_df = df[df[PRED_METER] != "problem"].copy()
+eval_df = df.copy()
 eval_df[PRED_METER] = eval_df[PRED_METER].fillna("UNKNOWN")
 
-# Cast to a nullable numeric dtype so e.g. int64 vs object/NA comparisons
-# don't silently evaluate to False.
 eval_df[GROUND_TRUTH_SYLLABLES] = pd.to_numeric(
     eval_df[GROUND_TRUTH_SYLLABLES], errors="coerce"
 ).astype("Int64")
@@ -126,13 +122,20 @@ eval_df[PRED_SYLLABLES] = pd.to_numeric(
     eval_df[PRED_SYLLABLES], errors="coerce"
 ).astype("Int64")
 
-eval_df["half_acc"] = (
-    eval_df[GROUND_TRUTH_SYLLABLES] == eval_df[PRED_SYLLABLES]
+is_problem = eval_df[PRED_METER] == "problem"
+non_problem = ~is_problem
+
+eval_df["half_acc"] = 0
+eval_df["full_acc"] = 0
+
+eval_df.loc[non_problem, "half_acc"] = (
+    eval_df.loc[non_problem, GROUND_TRUTH_SYLLABLES]
+    == eval_df.loc[non_problem, PRED_SYLLABLES]
 ).astype(int)
 
-eval_df["full_acc"] = (
-    (eval_df[GROUND_TRUTH] == eval_df[PRED_METER])
-    & (eval_df[GROUND_TRUTH_SYLLABLES] == eval_df[PRED_SYLLABLES])
+eval_df.loc[non_problem, "full_acc"] = (
+    (eval_df.loc[non_problem, GROUND_TRUTH] == eval_df.loc[non_problem, PRED_METER])
+    & (eval_df.loc[non_problem, GROUND_TRUTH_SYLLABLES] == eval_df.loc[non_problem, PRED_SYLLABLES])
 ).astype(int)
 
 # sanity check: half accuracy should always be >= full accuracy
@@ -150,7 +153,6 @@ df.loc[eval_df.index, "full_acc"] = eval_df["full_acc"]
 ########################################
 
 sim_df = df.dropna(subset=[INPUT_COL, PRED_COL]).copy()
-sim_df = sim_df[sim_df[PRED_METER] != "problem"]
 
 semantic_model = SentenceTransformer('sanganaka/bge-m3-sanskritFT')
 
@@ -166,7 +168,6 @@ sims = sims.cpu().numpy()
 df["semsim"] = pd.NA
 df.loc[sim_df.index, "semsim"] = sims
 
-# bring semsim into eval_df for aggregate reporting (only for non-problem rows)
 eval_df["semsim"] = df.loc[eval_df.index, "semsim"]
 
 ########################################
