@@ -28,7 +28,7 @@ HYPERPARAMS = {
 
 "BATCH_SIZE": 8,
 "GRAD_ACC": 12,
-"EPOCHS": 5,
+"EPOCHS": 10,
 
 "LR": 1.0385e-4,            
 
@@ -206,7 +206,7 @@ trainer = train_on_responses_only(
     num_proc=1,
 )
 
-trainer_stats = trainer.train()
+trainer_stats = trainer.train(resume_from_checkpoint="/home/shivraj-pg/poetrygen_new/Trained_Models/Gemma4-31B-0shot-Run1-Epochs1TO5/checkpoint-1220")
 trainer.save_state()
 
 # ---------------------------------------------------------------------------

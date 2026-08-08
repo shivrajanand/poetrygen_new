@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 if len(sys.argv) < 3:
     print(
         "ERROR: Incorrect Usage\n"
-        "Command must be like: python myscript.py <config_file> <output_csv>"
+        "Command must be like: python myscript.py <input_csv_path> <lora_checkpoint_path> <output_csv_path>"
     )
     sys.exit(1)
     
@@ -21,7 +21,7 @@ if len(sys.argv) < 3:
 # PATHS
 # =========================
 BASE_MODEL = "unsloth/gemma-4-31B-it"          # must match training's MODEL_NAME
-INPUT_CSV = "Files/v3_gitapress_final_anustubh.csv"
+INPUT_CSV = sys.argc[1]
 
 MAX_LEN = 768          # must match training's MAX_LEN
 LOAD_IN_4BIT = True    # must match training's LOAD_IN_4BIT
@@ -29,8 +29,8 @@ MAX_NEW_TOKENS = 128
 SAVE_FREQUENCY = 1
 BATCH_SIZE = 16      
 
-CONFIG_FILE = sys.argv[1]  
-OUTPUT_CSV = sys.argv[2] 
+CONFIG_FILE = sys.argv[2]  
+OUTPUT_CSV = sys.argv[3] 
 
 print("Test File in use: ", INPUT_CSV)
 
