@@ -21,13 +21,13 @@ if len(sys.argv) < 3:
 # PATHS
 # =========================
 BASE_MODEL = "unsloth/gemma-4-31B-it"          # must match training's MODEL_NAME
-INPUT_CSV = sys.argc[1]
+INPUT_CSV = sys.argv[1]
 
 MAX_LEN = 768          # must match training's MAX_LEN
 LOAD_IN_4BIT = True    # must match training's LOAD_IN_4BIT
 MAX_NEW_TOKENS = 128
 SAVE_FREQUENCY = 1
-BATCH_SIZE = 16      
+BATCH_SIZE = 24      
 
 CONFIG_FILE = sys.argv[2]  
 OUTPUT_CSV = sys.argv[3] 
