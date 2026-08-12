@@ -8,6 +8,10 @@ from unsloth.chat_templates import get_chat_template, train_on_responses_only
 from datasets import load_dataset
 from trl import SFTConfig, SFTTrainer
 from transformers import EarlyStoppingCallback
+import sys
+
+if len(sys.argv) != 3:
+    print("Error\nCorrect Usage:\npython3 train_gemma4.py <data-file-path> <Output-folder-path>")
 
 import warnings
 
@@ -48,8 +52,8 @@ HYPERPARAMS = {
 "ES_THRESHOLD": 0.001,
 "ES_PATIENCE": 8,
 
-"DATA_FILE_PATH": "Files/v3_gitapress_final.csv",
-"OUTPUT_DIR": "Trained_Models/Gemma4-31B-0shot",
+"DATA_FILE_PATH": sys.argv[1],
+"OUTPUT_DIR": sys.argv[2],
 }
 
 os.makedirs(HYPERPARAMS["OUTPUT_DIR"], exist_ok=True)
@@ -206,7 +210,7 @@ trainer = train_on_responses_only(
     num_proc=1,
 )
 
-trainer_stats = trainer.train(resume_from_checkpoint="/home/shivraj-pg/poetrygen_new/Trained_Models/Gemma4-31B-0shot-Run1-Epochs1TO5/checkpoint-1220")
+trainer_stats = trainer.train()
 trainer.save_state()
 
 # ---------------------------------------------------------------------------
