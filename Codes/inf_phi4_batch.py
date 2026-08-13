@@ -7,20 +7,25 @@ import json
 import os
 import sys
 
+
+if len(sys.argv) < 4:
+    print(
+        "ERROR: Incorrect Usage\n"
+        "Command must be like: python myscript.py <input_csv_path> <lora_checkpoint_path> <output_csv_path>"
+    )
+    sys.exit(1)
+
 # =========================
 # PATHS
 # =========================
 BASE_MODEL = "unsloth/phi-4"
-INPUT_CSV = "Files/v3_gitapress_final_vasantatilaka.csv"
+INPUT_CSV = sys.argv[1]
 
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
-BATCH_SIZE = 12
-CONFIG_FILE = sys.argv[1] #Trained_Models/Phi4-14B-DEV-Vasantatalika-overfit/checkpoint-10
-OUTPUT_CSV = "Outputs/Vasantatalika-Overfit/unsloth_phi4_FT_vasant-c"+CONFIG_FILE.split('-')[-1]+".csv"
-
-SINGLE_METER_EXP = True
-FILTER_METER = "Vasantatilakā"
+BATCH_SIZE = 2
+CONFIG_FILE = sys.argv[2] #Trained_Models/Phi4-14B-DEV-Vasantatalika-overfit/checkpoint-10
+OUTPUT_CSV = sys.argv[3]
 
 print("Test File in use: ", INPUT_CSV)
 
@@ -158,11 +163,6 @@ else:
 
 df["model_out"] = df["model_out"].astype("object")
 size = len(df)
-
-if SINGLE_METER_EXP:
-    print(f"Filtering {FILTER_METER}... from", df.shape[0], "samples")
-    df = df[df['meter_cd']==FILTER_METER]
-    print("After filtering we have ", df.shape[0], "samples")
 
 # Find rows that still need inference
 pending_mask = (

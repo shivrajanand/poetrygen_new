@@ -10,7 +10,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-if len(sys.argv) < 3:
+if len(sys.argv) < 4:
     print(
         "ERROR: Incorrect Usage\n"
         "Command must be like: python myscript.py <input_csv_path> <lora_checkpoint_path> <output_csv_path>"
