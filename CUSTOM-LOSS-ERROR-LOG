@@ -1,0 +1,60 @@
+GETTING ERROR:
+
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
+   \\   /|    Num examples = 23,346 | Num Epochs = 5 | Total steps = 1,825
+O^O/ \_/ \    Batch size per device = 16 | Gradient accumulation steps = 4
+\        /    Data Parallel GPUs = 1 | Total batch size (16 x 4 x 1) = 64
+ "-____-"     Trainable parameters = 131,072,000 of 14,790,579,200 (0.89% trained)
+
+  0%|          | 0/1825 [00:00<?, ?it/s]`use_return_dict` is deprecated! Use `return_dict` instead!
+Traceback (most recent call last):
+  File "/home/shivraj-pg/poetrygen_new/Codes/train_phi4_custom_loss.py", line 377, in <module>
+    trainer.train()
+  File "/home/shivraj-pg/miniconda3/envs/stableenv/lib/python3.12/site-packages/unsloth/trainer.py", line 616, in _train_with_reset
+    return _orig_train(*train_args, **train_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shivraj-pg/poetrygen_new/unsloth_compiled_cache/UnslothSFTTrainer.py", line 101, in wrapper
+    output = f(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shivraj-pg/miniconda3/envs/stableenv/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 87, in _fast_inner_training_loop
+  File "/home/shivraj-pg/miniconda3/envs/stableenv/lib/python3.12/site-packages/transformers/trainer.py", line 1747, in _run_epoch
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shivraj-pg/poetrygen_new/unsloth_compiled_cache/UnslothSFTTrainer.py", line 1353, in training_step
+    return super().training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 40, in _unsloth_training_step
+  File "/home/shivraj-pg/poetrygen_new/Codes/train_phi4_custom_loss.py", line 301, in compute_loss
+    shift_logits = logits[..., :-1, :].contiguous()
+                   ~~~~~~^^^^^^^^^^^^^
+  File "/home/shivraj-pg/miniconda3/envs/stableenv/lib/python3.12/site-packages/unsloth/models/_utils.py", line 3365, in raise_logits_error
+    raise NotImplementedError(LOGITS_ERROR_STRING)
+NotImplementedError: Unsloth: Logits are empty from 2024.11 onwards. To get raw logits again, please set the environment variable `UNSLOTH_RETURN_LOGITS` to `"1" BEFORE starting to train ie before `trainer.train()`. For example:
+```
+import os
+os.environ['UNSLOTH_RETURN_LOGITS'] = '1'
+trainer.train()
+```
+No need to restart your console - just add `os.environ['UNSLOTH_RETURN_LOGITS'] = '1'` before trainer.train() and re-run the cell!
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+30-step smoke test: PASS
+
+Train loss:
+1.0643 → 0.5938 → 0.4564 → 0.4138 → 0.5784 → 0.4953
+
+Validation loss:
+0.12557 → 0.11827
+
+Validation loss improved: YES
+NaN/Inf observed: NO
+Gradient explosion observed: NO
+Checkpointing: PASS
