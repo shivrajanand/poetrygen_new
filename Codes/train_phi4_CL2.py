@@ -1,5 +1,4 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["HF_HUB_OFFLINE"] = "0"
 os.environ["TRANSFORMERS_OFFLINE"] = "0"
 
@@ -10,12 +9,10 @@ import torch.nn as nn
 from datasets import load_dataset
 from unsloth.chat_templates import get_chat_template
 from trl import SFTConfig, SFTTrainer
+from transformers.trainer_pt_utils import LengthGroupedSampler
 import json
 import random
 from collections import Counter
-
-import torch.utils.checkpoint as ckpt
-import torch.nn.functional as F
 
 random.seed(42)
 torch.manual_seed(42)
@@ -23,15 +20,15 @@ torch.cuda.manual_seed_all(42)
 
 HYPERPARAMS = {
     "MODEL_NAME": "unsloth/phi-4",
-    "MAX_LEN": 1536, #=3×512,  # Max len for prompt, hi, sa in gitapress final is 1529 
+    "MAX_LEN": 1536, #=3×512,  # Max len for prompt, hi, sa in gitapress final is 1529
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE": 16,
-    "GRAD_ACC": 4,
-    "EPOCHS": 5,
+    "BATCH_SIZE": 16,   # was 8 — doubled since 8×4 only used 18.7/46GB (huge headroom)
+    "GRAD_ACC": 2,      # was 4 — halved to keep effective batch at 32, but in fewer, bigger steps
+    "EPOCHS": 6,
     "LR": 2.4e-4,
     "LOG_STEPS": 25,
     "SAVE_STEPS": 365, #Once per epoch
-    "SAVE_LIMIT": 5, #Saves checkpoint for all 5 epcohs
+    "SAVE_LIMIT": 10, #Saves checkpoint for all 5 epcohs
     "EVAL_STEPS": 365, #Evaluates every epoch
     "WEIGHT_DECAY": 0.00465,
     "WARMUP_RATIO": 0.05,
@@ -41,11 +38,26 @@ HYPERPARAMS = {
     "LORA_ALPHA": 64,
     "LORA_DROPOUT": 0.1,
 
+    # --- Speed experiments (change ONE at a time and compare step time) ---
+    # "unsloth": recomputes + async-offloads activations/gradients to CPU RAM
+    #            over PCIe (the "smartly offload gradients" / "double buffering"
+    #            messages in your log come from this). Saves the most VRAM,
+    #            but the PCIe traffic is real overhead if you weren't VRAM-bound.
+    # True:      standard HF gradient checkpointing — recomputes on GPU only,
+    #            no CPU offload. Still ~30% recompute overhead, but no PCIe cost.
+    # False:     no checkpointing at all — most VRAM used, least compute overhead.
+    #            Only safe to try if you have headroom (watch nvidia-smi).
+    # -> Testing shows disabling this (False) does NOT meaningfully improve
+    #    step time vs "unsloth" (33s vs 30s at effective batch 32) — it only
+    #    spends VRAM headroom for no speed gain. Reverting to "unsloth" to
+    #    reclaim that headroom for the LOAD_IN_4BIT=False experiment instead.
+    "GRADIENT_CHECKPOINTING": "unsloth",
+
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
 
     "DATA_FILE_PATH": "Files/v3_gitapress_final.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-customLoss",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-customLoss-v2",
 }
 
 os.makedirs(HYPERPARAMS["OUTPUT_DIR"], exist_ok=True)
@@ -82,7 +94,12 @@ model = FastLanguageModel.get_peft_model(
     lora_alpha=HYPERPARAMS["LORA_ALPHA"],
     lora_dropout=HYPERPARAMS["LORA_DROPOUT"],
     bias="none",
-    use_gradient_checkpointing=True,
+    # "unsloth" checkpointing uses Unsloth's optimized offloaded checkpointing:
+    # noticeably faster and lower-memory than plain True for long sequences,
+    # which frees up headroom to push batch size / seq len if needed.
+    # See HYPERPARAMS["GRADIENT_CHECKPOINTING"] above for the trade-off between
+    # the three options — swap the hyperparam value to A/B test this.
+    use_gradient_checkpointing=HYPERPARAMS["GRADIENT_CHECKPOINTING"],
     random_state=3407,
     use_rslora=False,
     loftq_config=None,
@@ -149,8 +166,8 @@ print("-------------------------------------------------------------------------
 meter_weight_tensor = torch.zeros(NUM_METERS, dtype=torch.float32)
 for meter_name, meter_id in METER_TO_ID.items():
     meter_weight_tensor[meter_id] = meter_weights[meter_name]
-    
-    
+
+
 def format_and_tokenize(example):
     system_msg = {"role": "system", "content": example["prompt"]}
     user_msg = {"role": "user", "content": f"Meaning:\n{example['hi']}\n\nGenerate the Sanskrit verse.\n"}
@@ -194,13 +211,19 @@ def format_and_tokenize(example):
         "attention_mask": attention_mask,
         "labels": labels,
         "meter_id": meter_id,
+        "length": len(input_ids),  # used by group_by_length to bucket similar-length examples together
     }
 
 
-keep_cols = ["input_ids", "attention_mask", "labels", "meter_id"]
+keep_cols = ["input_ids", "attention_mask", "labels", "meter_id", "length"]
 
-train_ds_tok = train_ds.map(format_and_tokenize, batched=False)
-val_ds_tok = val_ds.map(format_and_tokenize, batched=False)
+# num_proc parallelizes the per-example Python/tokenizer work across CPU cores
+# instead of running it single-threaded — pure preprocessing speedup, no effect
+# on the trained model.
+_num_proc = max(1, (os.cpu_count() or 1) - 1)
+
+train_ds_tok = train_ds.map(format_and_tokenize, batched=False, num_proc=_num_proc)
+val_ds_tok = val_ds.map(format_and_tokenize, batched=False, num_proc=_num_proc)
 
 train_ds_tok = train_ds_tok.remove_columns(
     [c for c in train_ds_tok.column_names if c not in keep_cols]
@@ -208,6 +231,16 @@ train_ds_tok = train_ds_tok.remove_columns(
 val_ds_tok = val_ds_tok.remove_columns(
     [c for c in val_ds_tok.column_names if c not in keep_cols]
 )
+
+print("--------------------------------------------------------------------------------------")
+print("Token length stats (train, full sequence incl. prompt+hi+sa):")
+_lengths = sorted(train_ds_tok["length"])
+_n = len(_lengths)
+def _pct(p):
+    return _lengths[min(_n - 1, int(p * _n))]
+print(f"  min={_lengths[0]}  p50={_pct(0.50)}  p90={_pct(0.90)}  p99={_pct(0.99)}  max={_lengths[-1]}  "
+      f"mean={sum(_lengths)/_n:.1f}  MAX_LEN={HYPERPARAMS['MAX_LEN']}")
+print("--------------------------------------------------------------------------------------")
 
 print("--------------------------------------------------------------------------------------")
 print("Sample tokenized/labeled/meter-tagged training examples:")
@@ -220,6 +253,7 @@ for idx in sample_idx:
     print(f"target (sa): {row['sa']}")
     print()
 print("--------------------------------------------------------------------------------------")
+
 
 class MeterWeightedCollator:
     def __init__(self, tokenizer):
@@ -250,19 +284,27 @@ class MeterWeightedCollator:
             "labels": torch.tensor(batch_labels, dtype=torch.long),
             "meter_ids": torch.tensor(batch_meter_ids, dtype=torch.long),
         }
-        
 
-base_model = model.base_model.model
 
 class MeterWeightedSFTTrainer(SFTTrainer):
     def __init__(self, *args, meter_weight_tensor=None, **kwargs):
         super().__init__(*args, **kwargs)
         self.meter_weight_tensor = meter_weight_tensor
 
+    def _get_train_sampler(self, train_dataset=None, *_args, **_kwargs):
+        ds = train_dataset if train_dataset is not None else self.train_dataset
+        if ds is None:
+            return None
+        return LengthGroupedSampler(
+            batch_size=self.args.train_batch_size * max(1, self.args.gradient_accumulation_steps),
+            dataset=ds,
+            lengths=ds["length"],
+        )
+
     def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
         meter_ids = inputs.pop("meter_ids")
         labels = inputs["labels"]
-        
+
         outputs = model.base_model.model(
                     input_ids=inputs["input_ids"],
                     attention_mask=inputs["attention_mask"],
@@ -281,8 +323,9 @@ class MeterWeightedSFTTrainer(SFTTrainer):
 
         valid_mask = (shift_labels != -100).float()  # [B, T-1]
 
-        # L_i^CE = (1/T_i) * sum_t CE_{i,t}
-        sequence_loss = (token_loss * valid_mask).sum(dim=1) / valid_mask.sum(dim=1).clamp_min(1)
+        # Experiment 2: NO length normalization.
+        # L_i^CE = sum_t CE_{i,t}   (previously: (1/T_i) * sum_t CE_{i,t})
+        sequence_loss = (token_loss * valid_mask).sum(dim=1)
 
         # w_{m_i}
         weights = self.meter_weight_tensor.to(sequence_loss.device, sequence_loss.dtype)[meter_ids]
@@ -292,8 +335,8 @@ class MeterWeightedSFTTrainer(SFTTrainer):
         loss = weighted_sequence_loss.mean()
 
         return (loss, outputs) if return_outputs else loss
-    
-    
+
+
 trainer = MeterWeightedSFTTrainer(
     model=model,
     tokenizer=tokenizer,
@@ -327,21 +370,34 @@ trainer = MeterWeightedSFTTrainer(
 
         fp16=False,
         bf16=True,
-        
+
         # max_steps=30,
 
-        load_best_model_at_end=False,
+        load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
         greater_is_better=False,
 
         optim="adamw_8bit",
         seed=3407,
 
-        # Required so the `meter_id` metadata column survives into the collator.
+        # Required so the `meter_id` / `length` metadata columns survive into the collator.
         remove_unused_columns=False,
         # We already tokenized/labeled the dataset ourselves above.
         packing=False,
         dataset_kwargs={"skip_prepare_dataset": True},
+
+        # Dataloader is CPU-bound between GPU steps; a couple of worker processes
+        # with pinned memory + persistent workers removes that stall without
+        # touching anything about the model or the loss.
+        dataloader_num_workers=2,
+        dataloader_pin_memory=True,
+        dataloader_persistent_workers=True,
+
+        # NOTE: length-grouped batching is NOT configured here via group_by_length /
+        # length_column_name — Unsloth's compiled SFTConfig wrapper rejects those
+        # kwargs even though they're standard HF TrainingArguments fields. Instead,
+        # MeterWeightedSFTTrainer._get_train_sampler() below installs a
+        # LengthGroupedSampler directly, achieving the same effect.
     ),
 )
 

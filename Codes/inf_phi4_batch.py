@@ -23,7 +23,7 @@ INPUT_CSV = sys.argv[1]
 
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
-BATCH_SIZE = 2
+BATCH_SIZE = 28
 CONFIG_FILE = sys.argv[2] #Trained_Models/Phi4-14B-DEV-Vasantatalika-overfit/checkpoint-10
 OUTPUT_CSV = sys.argv[3]
 
@@ -42,20 +42,7 @@ if SET_LORA:
     #     config = json.load(f)
     # LORA_PATH = config["best_model"]["best_model_checkpoint"]
     LORA_PATH = CONFIG_FILE
-    
-# =========================
-# Existing file warning
-# =========================
 
-if os.path.exists(OUTPUT_CSV):
-    choice = input(
-        f"{OUTPUT_CSV} already exists.\n"
-        "Do you want to overwrite it? (y/n): "
-    ).strip().lower()
-
-    if choice not in ("y", "yes"):
-        print("Exiting without overwriting.")
-        sys.exit(0)
 
 # =========================
 # LOAD MODEL
