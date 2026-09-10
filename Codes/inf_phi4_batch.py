@@ -11,7 +11,7 @@ import sys
 if len(sys.argv) < 4:
     print(
         "ERROR: Incorrect Usage\n"
-        "Command must be like: python myscript.py <input_csv_path> <lora_checkpoint_path> <output_csv_path>"
+        "Command must be like: python inf_phi4_batch.py <input_csv_path> <lora_checkpoint_path> <output_csv_path>"
     )
     sys.exit(1)
 
@@ -23,7 +23,7 @@ INPUT_CSV = sys.argv[1]
 
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
-BATCH_SIZE = 28
+BATCH_SIZE = 24
 CONFIG_FILE = sys.argv[2] #Trained_Models/Phi4-14B-DEV-Vasantatalika-overfit/checkpoint-10
 OUTPUT_CSV = sys.argv[3]
 

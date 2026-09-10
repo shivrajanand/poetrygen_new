@@ -24,11 +24,11 @@ HYPERPARAMS = {
     "LOAD_IN_4BIT": True,
     "BATCH_SIZE": 16,   # was 8 — doubled since 8×4 only used 18.7/46GB (huge headroom)
     "GRAD_ACC": 2,      # was 4 — halved to keep effective batch at 32, but in fewer, bigger steps
-    "EPOCHS": 6,
+    "EPOCHS": 10,
     "LR": 2.4e-4,
     "LOG_STEPS": 25,
     "SAVE_STEPS": 365, #Once per epoch
-    "SAVE_LIMIT": 10, #Saves checkpoint for all 5 epcohs
+    "SAVE_LIMIT": 5, #Saves checkpoint for all 5 epcohs
     "EVAL_STEPS": 365, #Evaluates every epoch
     "WEIGHT_DECAY": 0.00465,
     "WARMUP_RATIO": 0.05,
@@ -401,7 +401,7 @@ trainer = MeterWeightedSFTTrainer(
     ),
 )
 
-trainer.train()
+trainer.train(resume_from_checkpoint="/home/shivraj-pg/poetrygen_new/Trained_Models/Phi4-14B-customLoss-v2/checkpoint-4380")
 
 trainer.save_model(HYPERPARAMS["OUTPUT_DIR"] + "/final_model")
 tokenizer.save_pretrained(HYPERPARAMS["OUTPUT_DIR"] + "/final_model")
