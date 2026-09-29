@@ -19,32 +19,33 @@ torch.cuda.manual_seed_all(42)
 
 HYPERPARAMS = {
     "MODEL_NAME": "unsloth/phi-4",
-    "MAX_LEN": 1408, #based on token length analysis
+    "MAX_LEN": 1536, #based on token length analysis
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE":16,
+    "BATCH_SIZE":8,
     "GRAD_ACC": 4,
-    "EPOCHS": 50,
+    "EPOCHS": 5,
     "LR": 2.4e-4,
-    "LOG_STEPS": 5,
-    "SAVE_STEPS": 10,
-    "SAVE_LIMIT": 50,
-    "EVAL_STEPS": 50,
+    "LOG_STEPS": 25,
+    "SAVE_STEPS": 100,
+    "SAVE_LIMIT": 3,
+    "EVAL_STEPS": 100,
     "WEIGHT_DECAY": 0.00465,
     "WARMUP_RATIO": 0.05,
     "MAX_GRAD_NORM": 1.0,
 
     "LORA_R": 32,
-    "LORA_ALPHA": 128,
+    "LORA_ALPHA": 64,
     "LORA_DROPOUT": 0.1,
     
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
     
-    "DATA_FILE_PATH": "Files/v3_gitapress_final_vasantatilaka.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-DEV-Vasantatalika-overfit",
+    "DATA_FILE_PATH": "Files/v3_gitapress_final_AnuReducedTo25p.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-AnuReducedTo25p",
 
 }
 
+os.makedirs(HYPERPARAMS["OUTPUT_DIR"], exist_ok=True)
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name=HYPERPARAMS["MODEL_NAME"],
@@ -115,7 +116,7 @@ trainer = SFTTrainer(
     max_seq_length=HYPERPARAMS["MAX_LEN"],
     packing=True,
     dataset_num_proc=1,
-    # callbacks=[EarlyStoppingCallback(early_stopping_patience=HYPERPARAMS["ES_PATIENCE"], early_stopping_threshold = HYPERPARAMS["ES_THRESHOLD"])],
+    callbacks=[EarlyStoppingCallback(early_stopping_patience=HYPERPARAMS["ES_PATIENCE"], early_stopping_threshold = HYPERPARAMS["ES_THRESHOLD"])],
     args=SFTConfig(
         output_dir=HYPERPARAMS["OUTPUT_DIR"],
 
