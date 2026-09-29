@@ -24,7 +24,7 @@ INPUT_CSV = sys.argv[1]
 MAX_NEW_TOKENS = 256
 SAVE_FREQUENCY = 1
 BATCH_SIZE = 20
-CONFIG_FILE = sys.argv[2] #Trained_Models/Phi4-14B-DEV-Vasantatalika-overfit/checkpoint-10
+CONFIG_FILE = sys.argv[2]
 OUTPUT_CSV = sys.argv[3]
 
 print("Test File in use: ", INPUT_CSV)

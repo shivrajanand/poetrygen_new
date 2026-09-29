@@ -21,11 +21,11 @@ HYPERPARAMS = {
     "MODEL_NAME": "unsloth/phi-4",
     "MAX_LEN": 1536, #based on token length analysis
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE":8,
-    "GRAD_ACC": 4,
+    "BATCH_SIZE":16,
+    "GRAD_ACC": 2,
     "EPOCHS": 5,
     "LR": 2.4e-4,
-    "LOG_STEPS": 25,
+    "LOG_STEPS": 10,
     "SAVE_STEPS": 100,
     "SAVE_LIMIT": 3,
     "EVAL_STEPS": 100,
@@ -40,8 +40,8 @@ HYPERPARAMS = {
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
     
-    "DATA_FILE_PATH": "Files/v3_gitapress_final_AnuReducedTo25p.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-AnuReducedTo25p",
+    "DATA_FILE_PATH": "Files/v3_gitapress_final_anustubh_upsampled.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-upsampled-copy",
 
 }
 
@@ -73,6 +73,18 @@ train_ds = ds.filter(lambda x: x["split"] == "train")
 val_ds = ds.filter(lambda x: x["split"] == "val")
 print(f"Train: {len(train_ds)}")
 print(f"Val: {len(val_ds)}")
+
+
+from collections import Counter
+train_dist = Counter(train_ds["meter_cd"])
+val_dist = Counter(val_ds["meter_cd"])
+print("Train distribution:")
+for meter, count in sorted(train_dist.items()):
+    print(f"{meter}: {count}")
+print("\nValidation distribution:")
+for meter, count in sorted(val_dist.items()):
+    print(f"{meter}: {count}")
+
 
 def format_and_tokenize(batch):
     texts = []
