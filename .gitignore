@@ -10,3 +10,4 @@ vasant-study.txt
 vasantatilaka_hpo.db
 *.sh
 analysis.ipynb
+vllm_server.log

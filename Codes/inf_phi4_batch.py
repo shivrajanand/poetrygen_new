@@ -18,7 +18,8 @@ if len(sys.argv) < 4:
 # =========================
 # PATHS
 # =========================
-BASE_MODEL = "unsloth/phi-4"
+# BASE_MODEL = "unsloth/phi-4"
+BASE_MODEL = "Trained_Models/phi4_sft_merged_bf16"
 INPUT_CSV = sys.argv[1]
 
 MAX_NEW_TOKENS = 256
