@@ -38,8 +38,8 @@ HP = {
 
     "BATCH_SIZE": 4,
     "GRAD_ACC": 8,
-    "MAX_STEPS": 0,         # fro testing
-    "EPOCHS": 2,           
+    "MAX_STEPS": 0,    
+    "EPOCHS": 1,           
     "LR": 5e-5,
     "LOG_STEPS": 1,
     "SAVE_STEPS": 100,
@@ -56,23 +56,20 @@ HP = {
 
     "SEMANTIC_DEVICE": "cpu", 
 
-    "DATA_FILE_PATH": "Files/v3_gitapress_final.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-grpo-vllm",
+    "DATA_FILE_PATH": "Files/v3_gitapress_grpo_train_balanced.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-grpo-vllm-balanced",
 }
 
 os.makedirs(HP["OUTPUT_DIR"], exist_ok=True)
 os.environ["TENSORBOARD_LOGGING_DIR"] = HP["OUTPUT_DIR"] + "/runs"
 
-# --------------------------------------------------------------------------------------
-# Model (plain transformers, bf16) + LoRA config (TRL wraps the model with it)
-# --------------------------------------------------------------------------------------
+
 tokenizer = AutoTokenizer.from_pretrained(HP["MODEL_NAME"])
 
 model = AutoModelForCausalLM.from_pretrained(
     HP["MODEL_NAME"],
-    dtype=torch.bfloat16,           # TODO: use torch_dtype= on transformers < 4.56
-    device_map={"": 0},             # GPU 0 only (CUDA_VISIBLE_DEVICES=0)
-    attn_implementation="sdpa",     # TODO: "flash_attention_2" if you install flash-attn for this env
+    dtype=torch.bfloat16,            
+    attn_implementation="sdpa",  
 )
 
 peft_config = LoraConfig(
@@ -84,13 +81,9 @@ peft_config = LoraConfig(
     task_type="CAUSAL_LM",
 )
 
-# --------------------------------------------------------------------------------------
-# Data (identical to your Unsloth script)
-# --------------------------------------------------------------------------------------
+
 ds = load_dataset("csv", data_files=HP["DATA_FILE_PATH"])["train"]
 train_ds = ds.filter(lambda x: x["split"] == "train")
-val_ds = ds.filter(lambda x: x["split"] == "val")
-print(f"Train: {len(train_ds)}  Val: {len(val_ds)}")
 print("Train distribution:", sorted(Counter(train_ds["meter_cd"]).items()))
 
 
@@ -105,12 +98,11 @@ def build_prompt(example):
 
 train_ds = train_ds.map(build_prompt)
 
-from datasets import concatenate_datasets
-anu   = train_ds.filter(lambda x: x["meter_cd"] == "Anuṣṭubh").shuffle(seed=42).select(range(1500))
-other = train_ds.filter(lambda x: x["meter_cd"] != "Anuṣṭubh")
-train_ds = concatenate_datasets([anu, other]).shuffle(seed=42)
+# from datasets import concatenate_datasets
+# anu   = train_ds.filter(lambda x: x["meter_cd"] == "Anuṣṭubh").shuffle(seed=42).select(range(1500))
+# other = train_ds.filter(lambda x: x["meter_cd"] != "Anuṣṭubh")
+# train_ds = concatenate_datasets([anu, other]).shuffle(seed=42)
 
-val_ds = val_ds.map(build_prompt)
 
 # TODO (sanity check, once): the SFT run used Unsloth's "phi-4" chat template. Print the rendered prompt and
 # compare it with what you trained on (<|im_start|>system<|im_sep|> ... <|im_end|> ... assistant<|im_sep|>):
@@ -258,7 +250,7 @@ training_args = GRPOConfig(
     num_train_epochs=HP["EPOCHS"],
     learning_rate=HP["LR"],
     lr_scheduler_type="cosine",
-    warmup_steps=max(1, int(HP["WARMUP_RATIO"] * HP["MAX_STEPS"])),
+    warmup_steps=50,
     weight_decay=HP["WEIGHT_DECAY"],
     max_grad_norm=HP["MAX_GRAD_NORM"],
     optim="adamw_torch",
@@ -284,11 +276,11 @@ trainer = GRPOTrainer(
     peft_config=peft_config,
 )
 
-trainer.train(resume_from_checkpoint="Trained_Models/Phi4-14B-grpo-vllm/checkpoint-770")
+trainer.train()
 
 trainer.save_model(HP["OUTPUT_DIR"] + "/final_model")   # saves the LoRA adapter
 tokenizer.save_pretrained(HP["OUTPUT_DIR"] + "/final_model")
 
 with open(HP["OUTPUT_DIR"] + "/essential_config.json", "w", encoding="utf-8") as f:
-    json.dump({"HYPER-PARAMETERS": HP, "TRAIN_DATASET_LEN": len(train_ds), "VAL_DATASET_LEN": len(val_ds)},
+    json.dump({"HYPER-PARAMETERS": HP, "TRAIN_DATASET_LEN": len(train_ds)},
               f, indent=4, default=str)
