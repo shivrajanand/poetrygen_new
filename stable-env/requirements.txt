@@ -20,7 +20,7 @@ dill==0.4.0
 docstring_parser==0.18.0
 einops==0.8.2
 filelock==3.29.0
-flash_attn @ https://github.com/lesj0610/flash-attention/releases/download/v2.8.3-cu12-torch2.11/flash_attn-2.8.3%2Bcu12torch2.11cxx11abiTRUE-cp312-cp312-linux_x86_64.whl#sha256=3d0c8e60f820321eedd7166e79c33cb816263d8be6e35c3f5ba8fe2df6fea697
+# flash_attn @ https://github.com/lesj0610/flash-attention/releases/download/v2.8.3-cu12-torch2.11/flash_attn-2.8.3%2Bcu12torch2.11cxx11abiTRUE-cp312-cp312-linux_x86_64.whl#sha256=3d0c8e60f820321eedd7166e79c33cb816263d8be6e35c3f5ba8fe2df6fea697
 frozenlist==1.8.0
 fsspec==2025.9.0
 grpcio==1.82.1
@@ -97,8 +97,8 @@ typer==0.27.0
 typing-inspection==0.4.2
 typing_extensions==4.15.0
 tyro==1.0.15
-unsloth @ git+https://github.com/unslothai/unsloth.git@e55d0e6c75437af79f3338aca1ec12c7ea16e3bd
-unsloth_zoo==2026.7.3
+# unsloth @ git+https://github.com/unslothai/unsloth.git@e55d0e6c75437af79f3338aca1ec12c7ea16e3bd
+# unsloth_zoo==2026.7.3
 urllib3==2.7.0
 Werkzeug==3.1.8
 wheel==0.47.0
