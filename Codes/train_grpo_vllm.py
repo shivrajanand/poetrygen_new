@@ -283,4 +283,7 @@ tokenizer.save_pretrained(HP["OUTPUT_DIR"] + "/final_model")
 
 with open(HP["OUTPUT_DIR"] + "/essential_config.json", "w", encoding="utf-8") as f:
     json.dump({"HYPER-PARAMETERS": HP, "TRAIN_DATASET_LEN": len(train_ds)},
-              f, indent=4, default=str)
+              f, indent=4, default=str) 
+    
+    
+print("Training Finished")
