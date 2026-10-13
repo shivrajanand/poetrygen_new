@@ -20,7 +20,7 @@ torch.manual_seed(42)
 torch.cuda.manual_seed_all(42)
 
 HP = {
-    "MODEL_NAME": "Trained_Models/phi4_sft_merged_bf16",
+    "MODEL_NAME": "unsloth/phi-4",
 
     "VLLM_HOST": "127.0.0.1",
     "VLLM_PORT": 8000,
@@ -57,7 +57,7 @@ HP = {
     "SEMANTIC_DEVICE": "cpu", 
 
     "DATA_FILE_PATH": "Files/v3_gitapress_grpo_train_balanced.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-grpo-vllm-balanced",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-base-grpo-vllm-balanced",
 }
 
 os.makedirs(HP["OUTPUT_DIR"], exist_ok=True)

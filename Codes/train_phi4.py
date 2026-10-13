@@ -40,8 +40,8 @@ HYPERPARAMS = {
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
     
-    "DATA_FILE_PATH": "Files/v3_gitapress_final_anustubh_upsampled.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-upsampled-copy",
+    "DATA_FILE_PATH": "Files/v3_gitapress_final_not_anustubh.csv",
+    "OUTPUT_DIR": "Trained_Models/Phi4-14B-not-anustubh",
 
 }
 
