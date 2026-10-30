@@ -197,3 +197,5 @@ scores) is written back to the original CSV path.
 |unsloth/gemma-4-E4B-it| Files/v3_gitapress_final.csv              |train|prompt, hi, sa|  23346| 446|   488| 491.63  | 507| 519 | 586 | 730|
 |unsloth/gemma-4-E4B-it| Files/v3_gitapress_final.csv              |train| sa           |  23346| 20 |   33 |  34.82  | 39 |  49 |  78 |102 |
 |unsloth/gemma-4-31B-it| Files/v3_gitapress_final.csv              |train|prompt, hi, sa|  23346| 446|  488 | 491.63  |507 | 519 | 586 |730 |
+| unsloth/Qwen3.8-27B  | Files/v3_gitapress_final.csv              |train|prompt, hi, sa|  23346| 495|  548 | 554.75  |579 | 599 | 701 |918 |
+| unsloth/Qwen3.8-27B  | Files/v3_gitapress_final_1shot_prompts.csv|train|prompt, hi, sa| 23336 |651 |  694 | 705.25  |730 | 780 | 953 |1166|

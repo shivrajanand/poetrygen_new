@@ -1,10 +1,12 @@
+# This script has used logic from unsloth official notebook for Qwen 3.8 27B model
+# LINK: https://www.kaggle.com/notebooks/welcome?src=https://github.com/unslothai/notebooks/blob/main/nb/Kaggle-Qwen3.8_(27B)-Conversational.ipynb&accelerator=nvidiaTeslaT4
+
 import unsloth
 from unsloth import FastLanguageModel
 import torch
 from datasets import load_dataset
-from unsloth.chat_templates import get_chat_template
+from unsloth.chat_templates import standardize_sharegpt, train_on_responses_only
 from trl import SFTConfig, SFTTrainer
-from unsloth.chat_templates import train_on_responses_only
 import json
 from transformers import EarlyStoppingCallback
 import random
@@ -18,8 +20,8 @@ torch.manual_seed(42)
 torch.cuda.manual_seed_all(42)
 
 HYPERPARAMS = {
-    "MODEL_NAME": "unsloth/phi-4",
-    "MAX_LEN": 1536, #based on token length analysis
+    "MODEL_NAME": "unsloth/Qwen3.8-27B",
+    "MAX_LEN": 918, #based on token length analysis
     "LOAD_IN_4BIT": True,
     "BATCH_SIZE":16,
     "GRAD_ACC": 2,
@@ -40,8 +42,8 @@ HYPERPARAMS = {
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
     
-    "DATA_FILE_PATH": "Files/v3_gitapress_final_not_anustubh.csv",
-    "OUTPUT_DIR": "Trained_Models/Phi4-14B-not-anustubh",
+    "DATA_FILE_PATH": "Files/v3_gitapress_final.csv",
+    "OUTPUT_DIR": "Trained_Models/Qwen/Qwen38-27B-0shotTrained",
 
 }
 
@@ -50,21 +52,23 @@ os.makedirs(HYPERPARAMS["OUTPUT_DIR"], exist_ok=True)
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name=HYPERPARAMS["MODEL_NAME"],
     max_seq_length=HYPERPARAMS["MAX_LEN"],
-    load_in_4bit=HYPERPARAMS["LOAD_IN_4BIT"]
+    load_in_4bit=HYPERPARAMS["LOAD_IN_4BIT"],
+    full_finetuning = False
 )
 
 model = FastLanguageModel.get_peft_model(
     model,
+    finetune_vision_layers     = False, # Turn off for just text!
+    finetune_language_layers   = True,  # Should leave on!
+    finetune_attention_modules = True,  # Reaches the linear_attn (gated delta) modules too
+    finetune_mlp_modules       = True,  # Should leave on always!
+    
     r=HYPERPARAMS["LORA_R"],
-    target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
-                    "gate_proj", "up_proj", "down_proj",],
     lora_alpha=HYPERPARAMS["LORA_ALPHA"],
     lora_dropout=HYPERPARAMS["LORA_DROPOUT"],
     bias="none",
-    use_gradient_checkpointing=True,
+    use_gradient_checkpointing="unsloth",
     random_state=3407,
-    use_rslora=False,
-    loftq_config=None,
 )
 
 ds = load_dataset('csv', data_files=HYPERPARAMS["DATA_FILE_PATH"])["train"]
@@ -88,25 +92,33 @@ for meter, count in sorted(val_dist.items()):
 
 def format_and_tokenize(batch):
     texts = []
-    
-    for prompt, hi, sa in zip(batch["prompt"], batch["hi"], batch["sa"]):
-        convo = [
+
+    for prompt, hi, sa in zip(
+        batch["prompt"], batch["hi"], batch["sa"]
+    ):
+        messages = [
             {"role": "system", "content": prompt},
-            {"role": "user", "content": f"Meaning:\n{hi}\n\nGenerate the Sanskrit verse.\n"},
+            {
+                "role": "user",
+                "content": f"Meaning:\n{hi}\n\nGenerate the Sanskrit verse.",
+            },
             {"role": "assistant", "content": sa},
         ]
-        
+
         text = tokenizer.apply_chat_template(
-            convo,
+            messages,
             tokenize=False,
-            add_generation_prompt=False
+            add_generation_prompt=False,
+            enable_thinking=False,
+            preserve_thinking=False,
         )
-        
+
+        text = text.replace("<think>\n\n</think>\n\n", "")
+
         texts.append(text)
-    
+
     return {"text": texts}
 
-tokenizer = get_chat_template(tokenizer, chat_template="phi-4")
 
 train_ds = train_ds.map(format_and_tokenize, batched=True)
 val_ds = val_ds.map(format_and_tokenize, batched=True)
@@ -115,6 +127,7 @@ print("-------------------------------------------------------------------------
 for key in train_ds[0].keys():
     print(key)
     print(train_ds[0][key])
+    print("--------------------------------------------------------------------------------------")
     print()
 print("--------------------------------------------------------------------------------------")
 
@@ -153,15 +166,11 @@ trainer = SFTTrainer(
         eval_strategy="steps",
         eval_steps=HYPERPARAMS["EVAL_STEPS"],
 
-
-        fp16=False,
-        bf16=True,
-
-        load_best_model_at_end=False,
+        load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
         greater_is_better=False,
         
-        # max_steps=30,
+        # max_steps=10,
         optim="adamw_8bit",
         seed=3407,
     ),
@@ -169,9 +178,9 @@ trainer = SFTTrainer(
 
 trainer = train_on_responses_only(
     trainer,
-    instruction_part="<|im_start|>user<|im_sep|>",
-    response_part="<|im_start|>assistant<|im_sep|>",
-)
+    instruction_part="<|im_start|>user\n",
+    response_part="<|im_start|>assistant\n",
+    )
 
 trainer.train()
 
