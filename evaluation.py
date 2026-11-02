@@ -131,12 +131,12 @@ eval_df["full_acc"] = 0
 eval_df.loc[non_problem, "half_acc"] = (
     eval_df.loc[non_problem, GROUND_TRUTH_SYLLABLES]
     == eval_df.loc[non_problem, PRED_SYLLABLES]
-).astype(int)
+).fillna(False).astype(int)
 
 eval_df.loc[non_problem, "full_acc"] = (
     (eval_df.loc[non_problem, GROUND_TRUTH] == eval_df.loc[non_problem, PRED_METER])
     & (eval_df.loc[non_problem, GROUND_TRUTH_SYLLABLES] == eval_df.loc[non_problem, PRED_SYLLABLES])
-).astype(int)
+).fillna(False).astype(int)
 
 # sanity check: half accuracy should always be >= full accuracy
 assert (eval_df["half_acc"] >= eval_df["full_acc"]).all(), (
