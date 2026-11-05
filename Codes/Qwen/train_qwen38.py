@@ -21,30 +21,32 @@ torch.cuda.manual_seed_all(42)
 
 HYPERPARAMS = {
     "MODEL_NAME": "unsloth/Qwen3.8-27B",
-    "MAX_LEN": 918, #based on token length analysis
+    "MAX_LEN": 918,
     "LOAD_IN_4BIT": True,
-    "BATCH_SIZE":16,
-    "GRAD_ACC": 2,
-    "EPOCHS": 5,
-    "LR": 2.4e-4,
+
+    "BATCH_SIZE": 8,
+    "GRAD_ACC": 4,
+    "EPOCHS": 20,
+    "LR": 1.2e-4,
+
     "LOG_STEPS": 10,
-    "SAVE_STEPS": 100,
-    "SAVE_LIMIT": 3,
-    "EVAL_STEPS": 100,
-    "WEIGHT_DECAY": 0.00465,
+    "SAVE_STEPS": 50,
+    "SAVE_LIMIT": 5,
+    "EVAL_STEPS": 50,
+
+    "WEIGHT_DECAY": 0.01,
     "WARMUP_RATIO": 0.05,
     "MAX_GRAD_NORM": 1.0,
 
-    "LORA_R": 32,
-    "LORA_ALPHA": 64,
-    "LORA_DROPOUT": 0.1,
-    
+    "LORA_R": 64,
+    "LORA_ALPHA": 128,
+    "LORA_DROPOUT": 0.05,
+
     "ES_THRESHOLD": 0.001,
     "ES_PATIENCE": 5,
-    
-    "DATA_FILE_PATH": "Files/v3_gitapress_final.csv",
-    "OUTPUT_DIR": "Trained_Models/Qwen/Qwen38-27B-0shotTrained",
 
+    "DATA_FILE_PATH": "/home/shivraj-pg/poetrygen_new/Files/v3_gitapress_final_vasantatilaka.csv",
+    "OUTPUT_DIR": "Trained_Models/Qwen/Qwen38-27B-0shot-vasantatilaka_Only_v2",
 }
 
 os.makedirs(HYPERPARAMS["OUTPUT_DIR"], exist_ok=True)

@@ -182,7 +182,7 @@ trainer = train_on_responses_only(
     response_part="<|im_start|>assistant\n",
     )
 
-trainer.train(resume_from_checkpoint="/home/shivraj-pg/poetrygen_new/Trained_Models/Qwen/Qwen38-27B-1shotTrained/checkpoint-1800")
+trainer.train()
 
 trainer.save_model(HYPERPARAMS["OUTPUT_DIR"] + "/final_model")
 tokenizer.save_pretrained(HYPERPARAMS["OUTPUT_DIR"] + "/final_model")
